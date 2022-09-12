@@ -1,0 +1,302 @@
+/*Global styles*/
+
+/*Text styles*/
+
+@font-face {
+  font-family: 'messina_sans';
+  src: url('./fonts/messinasans-regular.woff2') format('woff2'),
+    url('./fonts/messinasans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'messina_sans_light';
+  src: url('./fonts/messina-sans-light.woff2') format('woff2'),
+    url('./fonts/messina-sans-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'messina_sans_mono';
+  src: url('./fonts/messinasansmonotrial-light-webfont.woff2') format('woff2'),
+    url('./fonts/messinasansmonotrial-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: messina_sans;
+  font-weight: 500;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+}
+
+.tag {
+  font-size: 14px;
+  text-transform: none;
+  margin-right: 12px;
+  line-height: 28px;
+  opacity: 60%;
+}
+
+.routerLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.routerLink:hover {
+  opacity: 60%;
+}
+
+.headerLink {
+  font-size: 14px;
+  color: gray;
+  margin: 0px 0 0 0;
+}
+h1 {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39.5665px;
+  line-height: 55px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  width: auto;
+  white-space: nowrap;
+
+  color: #000000;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 100;
+  letter-spacing: 2%;
+  opacity: 85%;
+  margin-top: 0;
+}
+
+p {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  font-feature-settings: 'liga' off;
+  color: #000000;
+  margin: 0;
+}
+
+.headerText {
+  font-size: 20px;
+  margin-bottom: 2px;
+  text-transform: none;
+}
+
+.preamble {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  margin-bottom: '60px';
+}
+
+.detail {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14.3699px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  opacity: 0.6;
+}
+
+.detailStrong {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.3367px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  opacity: 0.8;
+}
+
+.marker {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #4a4949;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.date {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  opacity: 80%;
+}
+
+.copy {
+  font-family: 'messina_sans_light';
+  font-size: 18px;
+  letter-spacing: 2%;
+}
+
+a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: black;
+}
+a:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.squareImg {
+  width: 640px;
+  height: 640px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.t-right {
+  right: -2px;
+  top: 0;
+  transform: translateX(100%) scale(var(--s, 1));
+}
+
+.pictureContainer {
+  height: auto;
+  margin: auto 0;
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  color: gray;
+  line-height: 0;
+}
+
+.pictureContainer > [class] {
+  position: absolute;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  letter-spacing: 0.75px;
+}
+
+.container > [class]::before {
+  content: attr(class);
+}
+
+.caption {
+  padding: 0 10px 10px 10px;
+}
+.contentCaption {
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+
+  /* Gray 3 */
+
+  color: #828282;
+}
+
+.contentImg {
+  max-width: 900px;
+  max-height: 600px;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.flexImg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: flex-start;
+  gap: 20px;
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  height: 6rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: white;
+  z-index: 10;
+
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  width: 100%;
+}
+
+.header.down {
+  top: -6rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+.header.hide {
+  display: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
