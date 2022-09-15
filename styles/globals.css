@@ -80,8 +80,8 @@ h1 {
 
 h2 {
   font-size: 36px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+  text-transform: none;
+  margin-bottom: 0px;
   font-weight: 100;
   letter-spacing: 2%;
   opacity: 85%;
@@ -152,13 +152,25 @@ p {
   font-family: 'Messina Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 100px;
   line-height: 25px;
+  opacity: 20%;
   /* identical to box height */
 
-  color: #4a4949;
+  color: #000000;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.monoText {
+  font-family: 'Messina_sans_mono';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: 0.02em;
+
+  color: #000000;
 }
 
 .App-header {
@@ -186,7 +198,7 @@ p {
 
 a {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   text-decoration-line: underline;
   color: black;
@@ -285,7 +297,7 @@ img {
   -moz-transition: all 1s linear;
   -o-transition: all 1s linear;
   transition: all 1s linear;
-  width: 100%;
+  width: 200px;
 }
 
 .header.down {

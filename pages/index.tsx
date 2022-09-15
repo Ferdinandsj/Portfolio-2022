@@ -2,9 +2,9 @@ import type { NextPage } from 'next';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
-import Header from './components/Header';
+import Header from '../components/Header';
 import matter from 'gray-matter';
-import Post from './components/Post';
+import Post from '../components/Post';
 
 interface Props {
   posts: Array<any>;
@@ -17,7 +17,7 @@ export default function Home(props: Props) {
       <div style={style.wrapper}>
         <div style={style.projectWrapper}>
           {props.posts.map((post, index) => (
-            <Post post={post} />
+            <Post key={post} post={post} />
           ))}
         </div>
       </div>

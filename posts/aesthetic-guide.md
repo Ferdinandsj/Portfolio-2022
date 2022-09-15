@@ -1,7 +1,7 @@
 ---
 title: 'Aesthetic guide'
 
-date: '2021-2022'
+date: '2021-2022 // System and graphic design'
 
 image: '/images/aesthetic-guide/cover.jpg'
 
@@ -13,13 +13,13 @@ The latest city planning project in Oslo is the new district of Flipstad. To cre
 
 position: 'Voluntary work'
 
-tags: ['Graphic design', 'System design']
+tags: ['System and graphic design']
 
 externalLink: 'https://www.prosjektfilipstad.org/'
 
 linkText: 'Visit the page to download'
 
-topImg: 'images/aesthetic-guide/overview.png'
+topImg: '/images/aesthetic-guide/overview.png'
 ---
 
 #### Result
@@ -32,20 +32,20 @@ topImg: 'images/aesthetic-guide/overview.png'
 </figcaption>
 </div>
 
-<img src="images/aesthetic-guide/book-1.jpg" class="contentImg">
+<!-- <img src="images/aesthetic-guide/book-1.jpg" class="contentImg">
 
 <img src="images/aesthetic-guide/book-2.jpg" class="contentImg">
 
-<img src="images/aesthetic-guide/book-cover.jpg" class="contentImg">
+<img src="images/aesthetic-guide/book-cover.jpg" class="contentImg"> -->
 
 ## Cityplanning for all seasons
 
-<img src="images/aesthetic-guide/Hasvold-bad.png" class="contentImg">
+<!-- <img src="images/aesthetic-guide/Hasvold-bad.png" class="contentImg">
 
 <img src="images/aesthetic-guide/pool-winter-summer.
 png" class="contentImg">
 
-<img src="images/aesthetic-guide/sauna-winter-summer.png" class="contentImg">
+<img src="images/aesthetic-guide/sauna-winter-summer.png" class="contentImg"> -->
 
 #### Process
 
@@ -53,7 +53,7 @@ png" class="contentImg">
 
 <img src="images/aesthetic-guide/main-illustration_åshild-fostervold.png" class="contentImg">
 
-### Field study
+<!-- ### Field study
 
 <div class="flexImg">
 <img src="images/aesthetic-guide/field-study-1.jpg" class="contentImg">
@@ -67,12 +67,12 @@ png" class="contentImg">
 <img src="images/aesthetic-guide/Field-study-Hanne-Økland.jpg" class="contentImg">
 
 <img src="images/aesthetic-guide/filipstad-building-people.jpg" class="contentImg">
-</div>
+</div> -->
 
 ### Using the team size to our advantage
 
 ### The role as editor and graphic design lead
 
-<img src="images/aesthetic-guide/chapter-overview-wall.jpg" class="contentImg">
+<!-- <img src="images/aesthetic-guide/chapter-overview-wall.jpg" class="contentImg"> -->
 
 ## Working in a large and remote multidiciplinary team

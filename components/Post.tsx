@@ -12,6 +12,7 @@ interface Props {
     };
     slug: string;
   };
+  key: string;
 }
 
 export default function Post(props: Props) {
@@ -20,7 +21,13 @@ export default function Post(props: Props) {
       <div className="routerLink" style={style.projectContainer}>
         <Link href={`${props.post.slug}`}>
           <div style={style.imgContainer}>
-            <img className="sqaureImg" src={props.post.frontmatter.image} />
+            <Image
+              height="600px"
+              width="600px"
+              alt="Post header image"
+              className="sqaureImg"
+              src={props.post.frontmatter.image}
+            />
           </div>
         </Link>
         <Link href={`${props.post.slug}`}>
@@ -32,7 +39,9 @@ export default function Post(props: Props) {
               </text>
               <div style={style.flexType}>
                 {props.post.frontmatter.tags.map((tag) => (
-                  <text className="detail">{tag}</text>
+                  <text key={props.post.frontmatter.title} className="detail">
+                    {tag}
+                  </text>
                 ))}
               </div>
             </div>
@@ -72,8 +81,8 @@ const style = {
   },
 
   imgContainer: {
-    width: '640px',
-    height: '640px',
+    width: '600px',
+    height: '600px',
     overflow: 'hidden',
   },
 

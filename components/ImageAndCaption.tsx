@@ -1,8 +1,13 @@
+import Image from 'next/image';
+
 interface Props {
   src: string;
   altText: string;
   content?: string;
   creator?: string;
+  width?: string;
+  height?: string;
+  layout?: 'responsive' | 'fill' | 'intrinsic' | 'fixed';
 }
 
 export default function ExternalLink({
@@ -10,10 +15,23 @@ export default function ExternalLink({
   altText,
   content,
   creator,
+  width,
+  height,
+  layout,
 }: Props) {
   return (
     <div style={style.imageWrapper}>
-      <img src={src} alt={altText} />
+      <Image
+        layout={layout}
+        width={width}
+        height={height}
+        src={src}
+        alt={altText}
+        // sizes="(max-width: 768px) 100vw,
+        // (max-width: 1200px) 50vw,
+        // 33vw"
+        // placeholder="blur"
+      />
       <div style={style.captionFlex}>
         <text className="contentCaption">{content}</text>
         <text className="contentCaption" style={{ color: 'black' }}>

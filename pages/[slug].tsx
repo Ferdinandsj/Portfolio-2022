@@ -4,10 +4,11 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 import Link from 'next/link';
 import { title } from 'process';
-import Header from './components/Header';
-import ExternalLink from './components/ExternalLink';
-import AesthticGuideContent from './components/AestheticGuideContent';
-import GoBackHeader from './components/GoBackHeader';
+import Header from '../components/Header';
+import ExternalLink from '../components/ExternalLink';
+import AesthticGuideContent from '../components/AestheticGuideContent';
+import GoBackHeader from '../components/GoBackHeader';
+import Image from 'next/image';
 
 interface Props {
   frontmatter: {
@@ -44,7 +45,7 @@ export default function PostPage({
     <>
       <GoBackHeader />
       <div style={style.wrapper}>
-        <div style={style.topWrapper}>
+        {/* <div style={style.topWrapper}>
           <div style={style.informationContainer}>
             <p style={style.date}>{date}</p>
             <h1 style={style.projectTitle}>{title}</h1>
@@ -52,24 +53,20 @@ export default function PostPage({
               <text style={style.preamble}>{preamble}</text>
               <p>{description}</p>
             </div>
-            <div style={style.tagContainer}>
-              {tags.map((tag) => (
-                <h3 style={style.tag}>{tag}</h3>
-              ))}
-            </div>
+
             {externalLink === '' ? null : (
               <ExternalLink url={externalLink} text={linkText} />
             )}
           </div>
           <div style={style.topImg}>
-            <img style={style.topImg} src={topImg} />
+            <Image
+              width="687px"
+              height="485px"
+              style={style.topImg}
+              src={topImg}
+            />
           </div>
-        </div>
-
-        {/* <div
-          style={style.markdownContent}
-          dangerouslySetInnerHTML={{ __html: marked(props.content) }}
-        ></div> */}
+        </div> */}
         <AesthticGuideContent />
       </div>
     </>
@@ -121,9 +118,9 @@ const style = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-start',
-    margin: 'auto 100px',
+    margin: 'auto 150px',
     gap: '50px',
-    marginBottom: '150px',
+    marginBottom: '75px',
   },
 
   informationContainer: {

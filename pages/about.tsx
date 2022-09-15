@@ -2,10 +2,11 @@ import type { NextPage } from 'next';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
-import Header from './components/Header';
+import Header from '../components/Header';
 import matter from 'gray-matter';
-import Post from './components/Post';
+import Post from '../components/Post';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Props {
   posts: Array<any>;
@@ -16,21 +17,19 @@ export default function About(props: Props) {
     <>
       <Link href="/">
         <a style={style.linkContainer}>
-          <img src="/icons/leftArrow.svg" /> Go back
+          <Image
+            // width="20px"
+            // height="20px"
+            layout="fill"
+            src="/icons/leftArrow.png"
+            alt="left arrow"
+          />
+          Go back
         </a>
       </Link>
 
-      <div style={styles.wrapper}>
-        <div style={styles.leftContainer}></div>
-        <div style={styles.content}>
-          <div style={styles.projectContainer}>
-            {props.posts.map((post, index) => (
-              <Post post={post} />
-            ))}
-          </div>
-        </div>
-      </div>
-      <div style={styles.footer} />
+      <div style={style.wrapper}></div>
+      <div />
     </>
   );
 }

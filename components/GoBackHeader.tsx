@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { relative } from 'path';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function GoBackHeader() {
   const scrollDirection = useScrollDirection();
@@ -8,7 +9,13 @@ export default function GoBackHeader() {
     <div className={`header ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
       <Link href="/">
         <a style={style.linkContainer}>
-          <img src="/icons/leftArrow.svg" /> Go back
+          <Image
+            width="15px"
+            height="15px"
+            alt="go back arrow"
+            src="/icons/leftArrow.png"
+          />
+          Go back
         </a>
       </Link>
     </div>
@@ -51,6 +58,5 @@ const style = {
     position: 'fixed',
     top: '0',
     textDecoration: 'none',
-    opacity: '70%',
   },
 } as const;

@@ -1,4 +1,5 @@
 import { relative } from 'path';
+import Image from 'next/image';
 
 interface Props {
   url: string;
@@ -7,9 +8,14 @@ interface Props {
 
 export default function ExternalLink({ url, text }: Props) {
   return (
-    <a style={style.linkContainer} href={url} target="_blank">
+    <a style={style.linkContainer} href={url} target="_blank" rel="noreferrer">
       {text}
-      <img src="/icons/externalArrow.svg" />
+      <Image
+        width="15px"
+        height="15px"
+        alt="Arrow pointing upward-right"
+        src="/icons/externalArrow.svg"
+      />
     </a>
   );
 }
