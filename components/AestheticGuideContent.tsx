@@ -1,7 +1,7 @@
 import ExternalLink from './ExternalLink';
 import ImageAndCaption from './ImageAndCaption';
 import Image from 'next/image';
-import bookOnWallImage from '../public/images/aesthetic-guide/Book-on-wall.jpg';
+import bookOnWallImage from '../public/images/aesthetic-guide/book-on-wall.jpg';
 import overviewImage from '../public/images/aesthetic-guide/overview.png';
 
 interface Props {}
@@ -231,16 +231,16 @@ export default function PostPage(props: Props) {
               <h2>Crafting the book</h2>
               <br />
 
-              <ImageAndCaption
+              {/* <ImageAndCaption
                 width="4032px"
                 height="3024px"
                 layout="intrinsic"
                 content=""
                 creator="First iteration on the classroom wall"
                 altText="Layout of book on the wall"
-                src={bookOnWallImage.src}
+                src={bookOnWallImage}
                 placeholder="blur"
-              />
+              /> */}
               <div style={style.onlyTextSection}>
                 <div style={style.HeadingAndText}>
                   <p>
