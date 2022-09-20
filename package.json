@@ -1,9 +1,7 @@
 {
   "name": "portfolio2022",
   "version": "0.1.0",
-  "private": true,  "engines": {
-    "node": "16.17.0"
-  },
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,7 +17,7 @@
     "sharp": "^0.31.0"
   },
   "devDependencies": {
-    "@types/node": "16.17.0",
+    "@types/node": "18.7.14",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "eslint": "8.23.0",
