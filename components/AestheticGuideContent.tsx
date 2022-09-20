@@ -1,8 +1,17 @@
+//Dependencies
 import ExternalLink from './ExternalLink';
 import ImageAndCaption from './ImageAndCaption';
 import Image from 'next/image';
+
+// Image imports
 import bookOnWallImage from '../public/images/aesthetic-guide/book-on-wall.jpg';
 import overviewImage from '../public/images/aesthetic-guide/overview.png';
+import bookCollageImage from '../public/images/aesthetic-guide/book-collage.png';
+import personReadingImage from '../public/images/aesthetic-guide/person-reading.png';
+import winterHasvoldImage from '../public/images/aesthetic-guide/winter-hasvold-sjøbad.png';
+import poolImage from '../public/images/aesthetic-guide/pool-winter-summer.png';
+import fieldCollageImage from '../public/images/aesthetic-guide/field-study-collage.png';
+import MajaAuroraImage from '../public/images/aesthetic-guide/maja-aurora-tea.jpg';
 
 interface Props {}
 
@@ -56,7 +65,6 @@ export default function PostPage(props: Props) {
                 width="1200px"
                 height="848px"
                 src={overviewImage}
-                placeholder="blur"
                 priority
               />
             </div>
@@ -105,10 +113,8 @@ export default function PostPage(props: Props) {
               </div>
               <div style={style.collage}>
                 <Image
-                  width="871px"
-                  height="780px"
                   layout="intrinsic"
-                  src="/images/aesthetic-guide/collage-container.png"
+                  src={bookCollageImage}
                   alt="Filipstad book open"
                   style={style.collageImg}
                 />
@@ -132,24 +138,20 @@ export default function PostPage(props: Props) {
                 </div>
 
                 <ImageAndCaption
-                  width="542px"
-                  height="667px"
                   layout="intrinsic"
                   content="Illustrations"
                   creator="Maja Meland"
                   altText="Person reading a book on a bench"
-                  src="/images/aesthetic-guide/person-reading.png"
+                  src={personReadingImage}
                 />
               </div>
             </div>
             <ImageAndCaption
-              width="2000px"
-              height="1000px"
               layout="intrinsic"
               content="Hasvold sjøbad during winter"
               creator="Maja Meland"
               altText="Hasvold sjøbad during winter"
-              src="/images/aesthetic-guide/winter-hasvold-sjøbad.png"
+              src={winterHasvoldImage}
             />
             <div>
               <div style={style.onlyTextSection}>
@@ -166,13 +168,11 @@ export default function PostPage(props: Props) {
                 </div>
               </div>
               <ImageAndCaption
-                width="900px"
-                height="361px"
                 layout="intrinsic"
                 content="Heated swimmingpool"
                 creator="Maja Meland"
                 altText="Pool during both winter and summer"
-                src="/images/aesthetic-guide/pool-winter-summer.png"
+                src={poolImage}
               />
 
               {/* <ImageAndCaption
@@ -191,13 +191,11 @@ export default function PostPage(props: Props) {
               <h2 style={style.headerAndImage}>Field study</h2>
               <br />
               <ImageAndCaption
-                width="1500px"
-                height="1500px"
                 layout="intrinsic"
                 content="Foto"
                 creator="Einar Rosenhaug"
                 altText="Field study of the Filipstad area"
-                src="/images/aesthetic-guide/field-study-collage.png"
+                src={fieldCollageImage}
               />
             </div>
             <div style={style.spaceBetweenSection}>
@@ -217,13 +215,11 @@ export default function PostPage(props: Props) {
               </div>
 
               <ImageAndCaption
-                width="800px"
-                height="500px"
                 layout="intrinsic"
                 content=""
                 creator="Maja and Aurora"
                 altText="Maja and Aurora working"
-                src="/images/aesthetic-guide/maja-aurora-tea.jpg"
+                src={MajaAuroraImage}
               />
             </div>
 
@@ -231,16 +227,13 @@ export default function PostPage(props: Props) {
               <h2>Crafting the book</h2>
               <br />
 
-              {/* <ImageAndCaption
-                width="4032px"
-                height="3024px"
+              <ImageAndCaption
                 layout="intrinsic"
                 content=""
                 creator="First iteration on the classroom wall"
                 altText="Layout of book on the wall"
                 src={bookOnWallImage}
-                placeholder="blur"
-              /> */}
+              />
               <div style={style.onlyTextSection}>
                 <div style={style.HeadingAndText}>
                   <p>

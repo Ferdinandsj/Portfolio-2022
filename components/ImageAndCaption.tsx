@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface Props {
-  src: string;
+  src: StaticImageData;
   altText: string;
   content?: string;
   creator?: string;
@@ -31,7 +31,7 @@ export default function ExternalLink({
         // sizes="(max-width: 768px) 100vw,
         // (max-width: 1200px) 50vw,
         // 33vw"
-        // placeholder="blur"
+        placeholder="blur"
       />
       <div style={style.captionFlex}>
         <text className="contentCaption">{content}</text>
