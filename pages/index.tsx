@@ -21,19 +21,6 @@ export default function Home(props: Props) {
           ))}
         </div>
       </div>
-      {/* <div style={styles.wrapper}>
-        <div style={styles.leftContainer}></div>
-        <div style={styles.content}>
-          <div style={styles.projectContainer}>
-            {props.posts.map((post, index) => (
-              <Post post={post} />
-            ))}
-          </div>
-        </div>
-      </div> */}
-      <footer className="detail" style={style.footer}>
-        Created with Figma and Next.js
-      </footer>
     </>
   );
 }
@@ -88,13 +75,5 @@ const style = {
   imgContainer: {
     width: '640px',
     height: '640px',
-  },
-
-  footer: {
-    paddingTop: '50px',
-    display: 'flex',
-    justifyContent: 'center',
-    height: '100px',
-    textTransform: 'none',
   },
 } as const;

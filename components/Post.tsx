@@ -27,6 +27,7 @@ export default function Post(props: Props) {
               alt="Post header image"
               className="squareImg"
               src={props.post.frontmatter.image}
+              priority
             />
           </div>
         </Link>

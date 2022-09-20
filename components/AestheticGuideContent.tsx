@@ -2,6 +2,7 @@
 import ExternalLink from './ExternalLink';
 import ImageAndCaption from './ImageAndCaption';
 import Image from 'next/image';
+import Head from 'next/head';
 
 // Image imports
 import bookOnWallImage from '../public/images/aesthetic-guide/book-on-wall.jpg';
@@ -23,6 +24,10 @@ export default function PostPage(props: Props) {
 
   return (
     <>
+      <Head>
+        <title>{title} - Ferdinand portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div style={style.wrapper}>
         <div style={style.sectionContainer}>
           <div style={style.topWrapper}>
@@ -59,7 +64,7 @@ export default function PostPage(props: Props) {
                 />
               </div> */}
             </div>
-            <div style={style.topImage}>
+            <div>
               <Image
                 layout="fixed"
                 width="1200px"
@@ -279,11 +284,6 @@ const style = {
     overflow: 'hidden',
   },
 
-  topImage: {
-    // position: 'absolute',
-    // width: '800px',
-  },
-
   sectionContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -345,7 +345,6 @@ const style = {
     width: '125px',
     height: '25px',
 
-    // borderBottom: '1px solid #4A4949',
     transform: 'rotate(90deg)',
 
     flex: 'none',
