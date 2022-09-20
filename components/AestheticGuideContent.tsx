@@ -1,8 +1,8 @@
 import ExternalLink from './ExternalLink';
 import ImageAndCaption from './ImageAndCaption';
 import Image from 'next/image';
-import bookOnWallImage from './../public/images/aesthetic-guide/Book-on-wall.jpg';
-import overviewImage from './../public/images/aesthetic-guide/overview.png';
+import bookOnWallImage from '../public/images/aesthetic-guide/Book-on-wall.jpg';
+import overviewImage from '../public/images/aesthetic-guide/overview.png';
 
 interface Props {}
 
