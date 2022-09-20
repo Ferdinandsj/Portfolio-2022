@@ -8,6 +8,7 @@ interface Props {
   width?: string;
   height?: string;
   layout?: 'responsive' | 'fill' | 'intrinsic' | 'fixed';
+  placeholder?: string;
 }
 
 export default function ExternalLink({

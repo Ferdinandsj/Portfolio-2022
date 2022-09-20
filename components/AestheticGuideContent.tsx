@@ -1,6 +1,9 @@
 import ExternalLink from './ExternalLink';
 import ImageAndCaption from './ImageAndCaption';
 import Image from 'next/image';
+import bookOnWallImage from '/public/images/aesthetic-guide/Book-on-wall.jpg';
+import overviewImage from '/public/images/aesthetic-guide/overview.png';
+
 interface Props {}
 
 export default function PostPage(props: Props) {
@@ -52,7 +55,9 @@ export default function PostPage(props: Props) {
                 layout="fixed"
                 width="1200px"
                 height="848px"
-                src={topImage}
+                src={overviewImage}
+                placeholder="blur"
+                priority
               />
             </div>
           </div>
@@ -233,7 +238,8 @@ export default function PostPage(props: Props) {
                 content=""
                 creator="First iteration on the classroom wall"
                 altText="Layout of book on the wall"
-                src="/images/aesthetic-guide/book-on-wall.jpg"
+                src={bookOnWallImage.src}
+                placeholder="blur"
               />
               <div style={style.onlyTextSection}>
                 <div style={style.HeadingAndText}>

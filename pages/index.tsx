@@ -32,7 +32,7 @@ export default function Home(props: Props) {
         </div>
       </div> */}
       <footer className="detail" style={style.footer}>
-        Created with love, coffee, Figma and Next.js
+        Created with Figma and Next.js
       </footer>
     </>
   );

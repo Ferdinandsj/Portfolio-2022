@@ -22,10 +22,10 @@ export default function Post(props: Props) {
         <Link href={`${props.post.slug}`}>
           <div style={style.imgContainer}>
             <Image
-              height="600px"
-              width="600px"
+              height={600}
+              width={600}
               alt="Post header image"
-              className="sqaureImg"
+              className="squareImg"
               src={props.post.frontmatter.image}
             />
           </div>
