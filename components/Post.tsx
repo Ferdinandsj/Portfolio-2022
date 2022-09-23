@@ -35,33 +35,22 @@ export default function Post(props: Props) {
           <div style={style.textContainer}>
             <h1>{props.post.frontmatter.title}</h1>
             <div style={style.positionAndtype}>
-              <text className="detailStrong">
+              <span className="detailStrong">
                 {props.post.frontmatter.position}
-              </text>
+              </span>
               <div style={style.flexType}>
-                {props.post.frontmatter.tags.map((tag) => (
-                  <text key={props.post.frontmatter.title} className="detail">
-                    {tag}
-                  </text>
-                ))}
+                {props.post.frontmatter.tags.map((tag) => {
+                  console.log(tag);
+                  return (
+                    <span key={props.post.frontmatter.image} className="detail">
+                      {tag}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
         </Link>
-
-        {/* <figure className="pictureContainer routerLink">
-            <img src={props.post.frontmatter.image} />
-            <figcaption className="t-right">
-              <div style={styles.flextag}>
-                {props.post.frontmatter.tags.map((tag) => (
-                  <p>{tag}</p>
-                ))}
-              </div>
-            </figcaption>
-          </figure>
-          <h2 className="routerLink" style={styles.displayTitle}>
-            {props.post.frontmatter.title}
-          </h2> */}
       </div>
     </>
   );

@@ -14,9 +14,7 @@ import poolImage from '../public/images/aesthetic-guide/pool-winter-summer.png';
 import fieldCollageImage from '../public/images/aesthetic-guide/field-study-collage.png';
 import MajaAuroraImage from '../public/images/aesthetic-guide/maja-aurora-tea.jpg';
 
-interface Props {}
-
-export default function PostPage(props: Props) {
+export default function AestheticGuideContent() {
   const title = 'Aesthetic guide';
   const date = '2021-2022';
   const topImage = '/images/aesthetic-guide/overview.png';
@@ -33,15 +31,15 @@ export default function PostPage(props: Props) {
           <div style={style.topWrapper}>
             <div style={style.informationContainer}>
               <div style={style.dateAndCategory}>
-                <text className="monoText">{category}</text>
-                <text className="monoText">{date}</text>
+                <span className="monoText">{category}</span>
+                <span className="monoText">{date}</span>
               </div>
               <h1 style={style.projectTitle}>{title}</h1>
               <div style={style.preambleAndDescription}>
-                <text style={style.preamble}>
+                <span style={style.preamble}>
                   How can we ensure an aesthetic and sustainable urban
                   development for the city of Oslo?
-                </text>
+                </span>
                 <p>
                   In the last fifty years the city of Oslo has slowly begun to
                   neglect the value of aestethics in architecture and city
@@ -109,10 +107,10 @@ export default function PostPage(props: Props) {
                     allowFullScreen
                   ></iframe>
                   <div style={style.captionFlex}>
-                    <text className="contentCaption">Video</text>
-                    <text className="contentCaption" style={{ color: 'black' }}>
+                    <span className="contentCaption">Video</span>
+                    <span className="contentCaption" style={{ color: 'black' }}>
                       Ida Gulbrandsøy
-                    </text>
+                    </span>
                   </div>
                 </div>
               </div>

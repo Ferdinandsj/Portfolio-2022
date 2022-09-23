@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import AesthticGuideContent from '../components/IterateDemoContent';
+import AesthticGuideContent from '../components/AestheticGuideContent';
 import GoBackHeader from '../components/GoBackHeader';
 import IterateDemoContent from '../components/IterateDemoContent';
 
@@ -10,13 +10,18 @@ interface Props {
 }
 
 export default function PostPage({ slug }: Props) {
+  console.log(slug);
+  console.log(slug === 'aesthetic-guide');
+  console.log(slug === 'iterate-demo');
   return (
     <>
       <GoBackHeader />
       <div style={style.wrapper}>
-        {slug === 'aesthetic-guide' ? <AesthticGuideContent /> : ''}
-        {slug === 'iterate-demo' ? <IterateDemoContent /> : ''}
-        {slug === 'aesthetic-guide' ? <AesthticGuideContent /> : ''}
+        <>
+          {slug === 'aesthetic-guide' ? <AesthticGuideContent /> : null}
+          {slug === 'iterate-demo' ? <IterateDemoContent /> : null}
+          {/* {slug === 'quality-system' ? <AesthticGuideContent /> : null} */}
+        </>
       </div>
     </>
   );

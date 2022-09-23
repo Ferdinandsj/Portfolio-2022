@@ -6,18 +6,17 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 // Image imports
-import bookOnWallImage from '../public/images/aesthetic-guide/book-on-wall.jpg';
 import topImage from '../public/images/iterate-demo/dashboard-shadow.png';
-import bookCollageImage from '../public/images/aesthetic-guide/book-collage.png';
-import personReadingImage from '../public/images/aesthetic-guide/person-reading.png';
-import winterHasvoldImage from '../public/images/aesthetic-guide/winter-hasvold-sjøbad.png';
-import poolImage from '../public/images/aesthetic-guide/pool-winter-summer.png';
-import fieldCollageImage from '../public/images/aesthetic-guide/field-study-collage.png';
-import MajaAuroraImage from '../public/images/aesthetic-guide/maja-aurora-tea.jpg';
+import wave from '../public/images/iterate-demo/wave.gif';
+import developersWorking from '../public/images/iterate-demo/emil-max-working.jpg';
+import affinity from '../public/images/iterate-demo/affinity-diagram.jpg';
+import team from '../public/images/iterate-demo/team.png';
+import funnel from '../public/images/iterate-demo/funnel.jpg';
+import informationCollage from '../public/images/iterate-demo/information-collage.png';
+import begin from '../public/images/iterate-demo/begin.jpg';
+import circle from '../public/images/iterate-demo/circle.gif';
 
-interface Props {}
-
-export default function PostPage(props: Props) {
+export default function IterateDemoContent() {
   const title = 'Iterate Demo';
   const date = '2022';
   const category = 'UI / UX';
@@ -33,20 +32,26 @@ export default function PostPage(props: Props) {
           <div style={style.topWrapper}>
             <div style={style.informationContainer}>
               <div style={style.dateAndCategory}>
-                <text className="monoText">{category}</text>
-                <text className="monoText">{date}</text>
+                <span className="monoText">{category}</span>
+                <span className="monoText">{date}</span>
               </div>
               <h1 style={style.projectTitle}>{title}</h1>
               <div style={style.preambleAndDescription}>
-                <text style={style.preamble}>
+                <span style={style.preamble}>
                   Is it possible to test the market value of an idea earlier and
                   cheaper than we do today?
-                </text>
+                </span>
                 <p>
                   9 out of 10 start-ups fail according to{' '}
                   {
                     <Link href="https://startupgenome.com/reports/global-startup-ecosystem-report-2019">
-                      <text> Startup Genome</text>
+                      <a
+                        className="spanLink"
+                        target="_blank"
+                        style={{ textDecoration: 'none' }}
+                      >
+                        Startup Genome
+                      </a>
                     </Link>
                   }
                   . Most of them fail early in the seed or concept stage because
@@ -54,220 +59,241 @@ export default function PostPage(props: Props) {
                   that the product is more likely to succeed?
                   <br />
                   <br />
+                  During my summer internship at Iterate my team and I had 6
+                  weeks to dive into the challange. The team was the developers
+                  Emil Johannesen Haugstvedt and Maximilian von Stephanides and
+                  myself as a designer/developer.
                 </p>
               </div>
               <div style={style.externalLinkContainer}>
                 <ExternalLink
                   url={'https://demo.ventures/squads_demo_free'}
-                  text={'Test a live demo here (made for mobile)'}
+                  text={'Test a live demo here (Mobile)'}
                 />
               </div>
             </div>
             <div>
               <Image
-                width={1031}
-                height={872}
+                width={695}
+                height={628}
                 layout="fixed"
                 src={topImage}
+                alt="Iterate Demo dashboard"
                 priority
               />
-            </div>
-          </div>
-          <div className="marker" style={style.marker}>
-            Result
-          </div>
-          <div style={style.container}>
-            <div style={style.projectContent}>
-              <div style={style.headingAndVideo}>
-                <div style={style.textWrapper}>
-                  <div style={style.textAndLink}>
-                    <div style={style.HeadingAndText}>
-                      <h2>The book</h2>
-                      <p>
-                        After a years work the result was a 111 page book filled
-                        with ideas and recommendations. They included thought on
-                        materials, facades, principles for outdoor areas and
-                        specific colors that were found in the Oslo area. In may
-                        of 2022 the book was handed over to the head of urban
-                        development at the Oslo city council.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div style={style.imageWrapper}>
-                  <iframe
-                    src="https://player.vimeo.com/video/744638399?background=1&h=944437320d&autoplay=1&color=000000&title=0&byline=0&portrait=0&muted=1"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      overflow: 'hidden',
-                      justifySelf: 'end',
-                    }}
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                  <div style={style.captionFlex}>
-                    <text className="contentCaption">Video</text>
-                    <text className="contentCaption" style={{ color: 'black' }}>
-                      Ida Gulbrandsøy
-                    </text>
-                  </div>
-                </div>
-              </div>
-              <div style={style.collage}>
-                <Image
-                  layout="intrinsic"
-                  src={bookCollageImage}
-                  alt="Filipstad book open"
-                  style={style.collageImg}
-                />
-              </div>
-            </div>
-            <div>
-              <div style={style.headingAndVideo}>
-                <div>
-                  <div style={style.HeadingAndText}>
-                    <h2>Urban development for all seasons</h2>
-                    <p>
-                      Many building projects in the Oslo area are accepted based
-                      upon what they will look like during summer. Norway has
-                      however only 3 months of summer at the maximum. As a
-                      result many areas of the city are not used during winter
-                      becuase there are no public facilities to use. We wanted
-                      to research what we could do differently to have
-                      activities all year round.
-                    </p>
-                  </div>
-                </div>
-
-                <ImageAndCaption
-                  layout="intrinsic"
-                  content="Illustrations"
-                  creator="Maja Meland"
-                  altText="Person reading a book on a bench"
-                  src={personReadingImage}
-                />
-              </div>
-            </div>
-            <ImageAndCaption
-              layout="intrinsic"
-              content="Hasvold sjøbad during winter"
-              creator="Maja Meland"
-              altText="Hasvold sjøbad during winter"
-              src={winterHasvoldImage}
-            />
-            <div>
-              <div style={style.onlyTextSection}>
-                <div style={style.HeadingAndText}>
-                  <h2>Hasvold sjøbad</h2>
-                  <p>
-                    We conceptualized a bathing area by the sea with multiple
-                    cross-seasonal options. Hasvold sjøbad has two pools; one is
-                    heated during winter, the other freezes over and becomes an
-                    ice skating rink. There are also options for taking a
-                    stroll, sitting at the benches and enjoying a hot beverage
-                    in the café.
-                  </p>
-                </div>
-              </div>
-              <ImageAndCaption
-                layout="intrinsic"
-                content="Heated swimmingpool"
-                creator="Maja Meland"
-                altText="Pool during both winter and summer"
-                src={poolImage}
-              />
-
-              {/* <ImageAndCaption
-            content="Movement blueprint"
-            creator=""
-            altText="Movement blueprint of Hasvold sjøbad"
-            src="images/aesthetic-guide/movement-blueprint.png"
-          /> */}
             </div>
           </div>
           <div className="marker" style={style.marker}>
             Process
           </div>
           <div style={style.container}>
-            <div>
-              <h2 style={style.headerAndImage}>Field study</h2>
-              <br />
+            <div style={style.projectContent}>
+              <div style={style.textAndLandscapeContainer}>
+                <div>
+                  <div style={style.HeadingAndText}>
+                    <h2>Getting caught up to speed</h2>
+                    <p>
+                      A project team at Iterate had used 24 hours to come up
+                      with an MVP for an internal contest. Their idea was to
+                      take advantage of Figma prototypes and present it to
+                      possible costumers as if it was a real product. By doing
+                      this they could get real proof of concept by their
+                      customers actually buying a product rather than relying on
+                      their word for it.
+                    </p>
+                  </div>
+                </div>
+
+                <Image
+                  layout="intrinsic"
+                  alt="Animation of pixelated wave"
+                  src={'https://c.tenor.com/EnZGimQ0SQ8AAAAC/speed.gif'}
+                  width={500}
+                  height={300}
+                />
+              </div>
+              <div style={style.textAndSquareImageContainer}>
+                <div>
+                  <div style={style.HeadingAndText}>
+                    <h2>Where do we begin?</h2>
+                    <p>
+                      Because we already had a (somewhat) working prototype we
+                      wanted to interview possible users to discover their
+                      needs. As far as we could tell from the initial brief we
+                      wanted to talk to designers, developers, entrepreneurs and
+                      those who had a background in product management.
+                      Following the Lean startup methodology we set up seven
+                      problem interviews to harvest more information about the
+                      product and who we should focus on as the primary users.
+                      <br />
+                      <br />
+                      The interviewees were in-house designers, developers,
+                      start-up and scale-up entrepreneurs. In each interview we
+                      had a hypothesis to evaluate wether or not the interviewee
+                      was actually interested in the value of the product. To
+                      measure that intent we ended each interview asking the the
+                      user weather they wanted to continue with follow up
+                      interviews every week for the next 6 weeks. Five out of
+                      seven agreed and became co-creators in our process.
+                    </p>
+                  </div>
+                </div>
+                <ImageAndCaption
+                  layout="intrinsic"
+                  width={500}
+                  height={500}
+                  altText="Max and Emil working"
+                  src={begin}
+                />
+              </div>
               <ImageAndCaption
                 layout="intrinsic"
-                content="Foto"
-                creator="Einar Rosenhaug"
-                altText="Field study of the Filipstad area"
-                src={fieldCollageImage}
+                content="The developers"
+                creator="Emil and Maximilian"
+                altText="Max and Emil working"
+                src={developersWorking}
               />
-            </div>
-            <div style={style.spaceBetweenSection}>
-              <div>
-                <div style={style.HeadingAndText}>
-                  <h2>Multidiciplinary teams</h2>
-                  <p>
-                    After the field study we split into groups that included
-                    city planners, architects, landscape architects and
-                    industrial designers. We dug into Oslo&apos;s history and
-                    collected a survey on the locals in the area. Thats when we
-                    decided to bring the old colors of Oslo back to life with a
-                    new interpretation. My group also chose to look closer at
-                    how to bring the city to life during winter.
-                  </p>
+              <div style={style.textAndGifContainer}>
+                <Image
+                  height={200}
+                  width={250}
+                  layout="intrinsic"
+                  alt="Alternating circle animation"
+                  src={circle}
+                />
+
+                <div style={style.textWrapper}>
+                  <div style={style.textAndLink}>
+                    <div style={style.HeadingAndText}>
+                      <h2>Organizing information into context</h2>
+                      <p>
+                        During the internship i lead the design process in the
+                        team. Both the developers joined in on all the
+                        interviews and activities to make sure that we were all
+                        on the same page, and to teach them about human centered
+                        design. We discussed each interview together and made an
+                        affinity diagram to document our findings. From the
+                        affinity diagram we honed in on key findings, the target
+                        user and a problem statement to use as a north star in
+                        the development.
+                        <br />
+                        <br />
+                        To ensure that we stayed in touch with the market and
+                        our users we had weekly interviews and reflections to
+                        steer the team. Monday was for organizing and
+                        prioritizing tasks, Tuesday through thursday was for
+                        development and Friday was for solution interviews with
+                        our stakeholders.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <ImageAndCaption
-                layout="intrinsic"
-                content=""
-                creator="Maja and Aurora"
-                altText="Maja and Aurora working"
-                src={MajaAuroraImage}
-              />
-            </div>
-
-            <div>
-              <h2>Crafting the book</h2>
-              <br />
-
-              <ImageAndCaption
-                layout="intrinsic"
-                content=""
-                creator="First iteration on the classroom wall"
-                altText="Layout of book on the wall"
-                src={bookOnWallImage}
-              />
-              <div style={style.onlyTextSection}>
-                <div style={style.HeadingAndText}>
-                  <p>
-                    I had the role as lead graphic designer for the book. The
-                    industrial designers and I also worked as editors for both
-                    the content and the layout of the entire document. It was a
-                    huge challange seen as though none of us had ever created a
-                    book before - let alone with 30 different collaborators.{' '}
-                    <br />
-                    <br />
-                    We created systems for image and information collection and
-                    tried to automate as much of the process as possible. During
-                    the editing we learned the ins and outs of Adobe InDesign
-                    and the challanges with actually sending a ready made
-                    document to the publisher.
-                    <br />
-                    <br />
-                    After we finished the book Solveig Davies Vittersø and I
-                    created the website for the project. You can visit the site
-                    and download the document in the link below.
-                    <br />
-                    <br />
-                  </p>
-                  <ExternalLink
-                    url={'https://www.prosjektfilipstad.org/'}
-                    text={'Download the aesthetic guide here'}
+              <div>
+                <div style={style.textAndLandscapeContainer}>
+                  <div style={style.HeadingAndText}>
+                    <h2>Trying to become experts</h2>
+                    <p>
+                      In the process we were taught a lot on the subject of
+                      product management. We realized that to make our
+                      application have value for our users we needed to
+                      implement these theories in a simple way. In several of
+                      the interviews we experimented with how we could convey
+                      the information with explanations and visualizations. The
+                      result of our project relied heavily on what explanations
+                      worked with our stakeholders.
+                    </p>
+                  </div>
+                  <ImageAndCaption
+                    layout="intrinsic"
+                    content="First iterations of project management theory"
+                    altText="Pool during both winter and summer"
+                    src={funnel}
+                    width={500}
+                    height={300}
                   />
                 </div>
               </div>
+              <div style={style.headingAndVideo}></div>
             </div>
+          </div>
+          <div className="marker" style={style.marker}>
+            Result
+          </div>
+          <div style={style.container}>
+            <div>
+              <h2>Dashboard</h2>
+              <br />
+              <div>
+                <video
+                  loop
+                  className="videoContainer"
+                  autoPlay
+                  muted
+                  src={'/images/iterate-demo/dashboard.mp4'}
+                  style={{ width: '1000px', height: '100%' }}
+                  title="Video of the dashboard in the Iterate demo app"
+                />
+                <div style={style.HeadingAndText}>
+                  <br />
+                  <br />
+                  <p>
+                    In the process we were taught a lot on the subject of
+                    product management. We realized that to make our application
+                    have value for our users we needed to implement these
+                    theories in a simple way. In several of the interviews we
+                    experimented with how we could convey the information with
+                    explanations and visualizations. The result of our project
+                    relied heavily on what explanations worked with our
+                    stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2>Onboarding</h2>
+              <br />
+              <div>
+                <video
+                  loop
+                  className="videoContainer"
+                  autoPlay
+                  muted
+                  src={'/images/iterate-demo/onboarding.mp4'}
+                  style={{ width: '1000px', height: '100%' }}
+                  title="Video of onboarding in the Iterate demo app"
+                />
+              </div>
+            </div>
+            <div>
+              <h2>Project management theory</h2>
+              <video
+                loop
+                autoPlay
+                muted
+                src={'/images/iterate-demo/metrics-animation.mp4'}
+                style={{ width: '1000px', height: '100%' }}
+              />
+            </div>
+
+            <div style={style.onlyTextSection}>
+              <div style={style.HeadingAndText}>
+                <h2>Reflections</h2>
+                <p>
+                  I had a great experience working with the team and with the
+                  mentorship we received at Iterate. I learned a lot about how I
+                  work in a multidisciplinary team and methods to include the
+                  developers in the design process.
+                </p>
+              </div>
+            </div>
+            <ImageAndCaption
+              layout="intrinsic"
+              src={team}
+              altText="Maximian, Emil and I"
+              content="The team"
+              creator="Maximian, Emil and I"
+            />
           </div>
         </div>
       </div>
@@ -295,7 +321,7 @@ const style = {
     alignItems: 'flex-start',
     margin: 'auto 10em',
     gap: '150px',
-    marginBottom: '0',
+    marginBottom: '200px',
   },
 
   informationContainer: {
@@ -375,6 +401,54 @@ const style = {
     flexGrow: '0',
   },
 
+  textAndSquareImageContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'end',
+    padding: 'auto auto',
+    gap: '50px',
+    width: '100%',
+    margin: '0 0',
+
+    flex: 'none',
+    order: '0',
+    alignSelf: 'stretch',
+    flexGrow: '0',
+  },
+
+  textAndLandscapeContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'start',
+    padding: 'auto auto',
+    gap: '50px',
+    width: '100%',
+    margin: '0 0',
+
+    flex: 'none',
+    order: '0',
+    alignSelf: 'stretch',
+    flexGrow: '0',
+  },
+
+  textAndGifContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'end',
+    alignItems: 'center',
+    padding: '0',
+    gap: '150px',
+    width: '100%',
+    margin: '0 0',
+
+    flex: 'none',
+    order: '0',
+    alignSelf: 'stretch',
+    flexGrow: '0',
+  },
+
   headerAndImage: {
     display: 'flex',
     gap: '50px',
@@ -413,7 +487,7 @@ const style = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    padding: '120px 0px 115px',
+    // padding: '120px 0px 115px',
     gap: '24px',
     height: '100%',
   },

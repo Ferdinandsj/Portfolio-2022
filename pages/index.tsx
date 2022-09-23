@@ -11,14 +11,17 @@ interface Props {
 }
 
 export default function Home(props: Props) {
+  console.log('Running Home component');
+  console.log(props.posts);
   return (
     <>
       <Header />
       <div style={style.wrapper}>
         <div style={style.projectWrapper}>
-          {props.posts.map((post, index) => (
-            <Post key={post} post={post} />
-          ))}
+          {props.posts.map((post, index) => {
+            console.log(post.slug);
+            return <Post key={post.slug} post={post} />;
+          })}
         </div>
       </div>
     </>
@@ -27,6 +30,7 @@ export default function Home(props: Props) {
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('posts'));
+  // console.log(files);
 
   const posts = files.map((filename) => {
     const slug = filename.replace('.md', '');

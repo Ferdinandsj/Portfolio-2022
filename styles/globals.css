@@ -8,6 +8,7 @@
     url('./fonts/messinasans-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-feature-settings: 'liga' off;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
     url('./fonts/messina-sans-light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-feature-settings: 'liga' off;
 }
 
 @font-face {
@@ -24,6 +26,7 @@
     url('./fonts/messinasansmonotrial-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-feature-settings: 'liga' off;
 }
 
 * {
@@ -86,6 +89,7 @@ h2 {
   letter-spacing: 2%;
   opacity: 85%;
   margin-top: 0;
+  font-feature-settings: 'liga' off;
 }
 
 p {
@@ -208,6 +212,10 @@ a:hover {
   cursor: pointer;
 }
 
+.spanLink:hover {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -224,6 +232,11 @@ img {
   right: -2px;
   top: 0;
   transform: translateX(100%) scale(var(--s, 1));
+}
+
+.videoContainer {
+  border-radius: 16px;
+  filter: drop-shadow(-2.96422px 5.92843px 11.8569px rgba(0, 0, 0, 0.25));
 }
 
 .pictureContainer {

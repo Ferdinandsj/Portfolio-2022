@@ -5,8 +5,8 @@ interface Props {
   altText: string;
   content?: string;
   creator?: string;
-  width?: string;
-  height?: string;
+  width?: string | number;
+  height?: string | number;
   layout?: 'responsive' | 'fill' | 'intrinsic' | 'fixed';
   placeholder?: string;
 }
@@ -34,10 +34,10 @@ export default function ExternalLink({
         placeholder="blur"
       />
       <div style={style.captionFlex}>
-        <text className="contentCaption">{content}</text>
-        <text className="contentCaption" style={{ color: 'black' }}>
+        <span className="contentCaption">{content}</span>
+        <span className="contentCaption" style={{ color: 'black' }}>
           {creator}
-        </text>
+        </span>
       </div>
     </div>
   );
