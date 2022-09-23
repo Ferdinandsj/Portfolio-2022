@@ -9,7 +9,7 @@ import Link from 'next/link';
 import topImage from '../public/images/iterate-demo/dashboard-shadow.png';
 import wave from '../public/images/iterate-demo/wave.gif';
 import developersWorking from '../public/images/iterate-demo/emil-max-working.jpg';
-import affinity from '../public/images/iterate-demo/affinity-diagram.jpg';
+import affinity from '../public/images/iterate-demo/affinity.jpg';
 import team from '../public/images/iterate-demo/team.png';
 import funnel from '../public/images/iterate-demo/funnel.jpg';
 import informationCollage from '../public/images/iterate-demo/information-collage.png';
@@ -189,6 +189,12 @@ export default function IterateDemoContent() {
                   </div>
                 </div>
               </div>
+              <ImageAndCaption
+                layout="intrinsic"
+                content="Findings from first interviews"
+                altText="Affinity diagram "
+                src={affinity}
+              />
               <div>
                 <div style={style.textAndLandscapeContainer}>
                   <div style={style.HeadingAndText}>
@@ -357,7 +363,7 @@ const style = {
     gap: '200px',
     padding: '0px 15em',
     margin: '0 auto',
-    marginBottom: '150px',
+    // marginBottom: '150px',
   },
 
   marker: {
@@ -382,7 +388,7 @@ const style = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: '150px',
+    gap: '175px',
   },
 
   headingAndVideo: {
