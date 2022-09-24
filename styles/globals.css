@@ -116,7 +116,7 @@ p {
 }
 
 .headerText {
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 2px;
   text-transform: none;
   letter-spacing: 0.008em;
@@ -141,6 +141,18 @@ p {
 
   color: #000000;
 
+  opacity: 0.6;
+}
+
+.footer {
+  font-weight: 300;
+  font-size: 14.3699px;
+  line-height: 20px;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #000000;
+  padding-left: 19px;
   opacity: 0.6;
 }
 

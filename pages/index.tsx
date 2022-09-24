@@ -71,7 +71,7 @@ const style = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
-    padding: '0px 60px 116px 0px',
+    padding: '0px 60px 0 0px',
     gap: '213px',
     left: '0px',
     top: '0px',
