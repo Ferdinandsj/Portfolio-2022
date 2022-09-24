@@ -12,27 +12,29 @@ interface Props {
     };
     slug: string;
   };
-  key: string;
+  key: string | number;
 }
 
 export default function Post(props: Props) {
   return (
     <>
-      <div className="routerLink" style={style.projectContainer}>
-        <Link href={`${props.post.slug}`}>
+      <div style={style.projectContainer}>
+        <div></div>
+        <Link className="frontImageSquare" href={`${props.post.slug}`}>
           <div style={style.imgContainer}>
             <Image
               height={600}
               width={600}
+              layout="intrinsic"
               alt="Post header image"
-              className="squareImg"
+              className="frontImageSquare"
               src={props.post.frontmatter.image}
               priority
             />
           </div>
         </Link>
         <Link href={`${props.post.slug}`}>
-          <div style={style.textContainer}>
+          <div className="routerLink" style={style.textContainer}>
             <h1>{props.post.frontmatter.title}</h1>
             <div style={style.positionAndtype}>
               <span className="detailStrong">

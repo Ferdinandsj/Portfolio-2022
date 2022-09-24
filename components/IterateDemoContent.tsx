@@ -7,12 +7,10 @@ import Link from 'next/link';
 
 // Image imports
 import topImage from '../public/images/iterate-demo/dashboard-shadow.png';
-import wave from '../public/images/iterate-demo/wave.gif';
 import developersWorking from '../public/images/iterate-demo/emil-max-working.jpg';
 import affinity from '../public/images/iterate-demo/affinity.jpg';
 import team from '../public/images/iterate-demo/team.png';
 import funnel from '../public/images/iterate-demo/funnel.jpg';
-import informationCollage from '../public/images/iterate-demo/information-collage.png';
 import begin from '../public/images/iterate-demo/begin.jpg';
 import circle from '../public/images/iterate-demo/circle.gif';
 
@@ -80,6 +78,7 @@ export default function IterateDemoContent() {
                 src={topImage}
                 alt="Iterate Demo dashboard"
                 priority
+                className="animate-reveal animate-first"
               />
             </div>
           </div>
@@ -226,7 +225,38 @@ export default function IterateDemoContent() {
           <div className="marker" style={style.marker}>
             Result
           </div>
-          <div style={style.container}>
+          <div style={style.resultContainer}>
+            <div>
+              <h2>Onboarding</h2>
+              <br />
+              <div>
+                <video
+                  loop
+                  className="videoContainer"
+                  autoPlay
+                  muted
+                  src={'/images/iterate-demo/onboarding.mp4'}
+                  style={{ width: '1000px', height: '100%' }}
+                  title="Video of onboarding in the Iterate demo app"
+                />
+                <div style={style.HeadingAndText}>
+                  <br />
+                  <br />
+                  <p>
+                    The final product made it possible for designers and
+                    entrepreneurs to test their prototypes on real customers to
+                    measure engagement and willingness to buy their products. To
+                    do this the entrepreneur creates a Figma prototype, adds the
+                    link to Iterate Demo and shares the demo in an appropriate
+                    acquisition channel (newsletter, instagram etc). As the
+                    end-users interact with the Demo the application then lets
+                    you see the metrics and see how successful the product is in
+                    the market.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div>
               <h2>Dashboard</h2>
               <br />
@@ -244,41 +274,29 @@ export default function IterateDemoContent() {
                   <br />
                   <br />
                   <p>
-                    In the process we were taught a lot on the subject of
-                    product management. We realized that to make our application
-                    have value for our users we needed to implement these
-                    theories in a simple way. In several of the interviews we
-                    experimented with how we could convey the information with
-                    explanations and visualizations. The result of our project
-                    relied heavily on what explanations worked with our
-                    stakeholders.
+                    Through the Figma API we managed to track user engagement
+                    with the prototype and create useful statistics and visuals.
+                    We also incorporated a version control system to keep track
+                    of how your app performs as you create new prototypes.
+                    Together with the statistics the app will also recommend
+                    steps that you can do to increase value in respective
+                    domains.
                   </p>
                 </div>
               </div>
             </div>
-            <div>
-              <h2>Onboarding</h2>
-              <br />
-              <div>
-                <video
-                  loop
-                  className="videoContainer"
-                  autoPlay
-                  muted
-                  src={'/images/iterate-demo/onboarding.mp4'}
-                  style={{ width: '1000px', height: '100%' }}
-                  title="Video of onboarding in the Iterate demo app"
-                />
-              </div>
-            </div>
+
             <div>
               <h2>Project management theory</h2>
+              <br />
               <video
                 loop
+                className="videoContainer"
                 autoPlay
                 muted
                 src={'/images/iterate-demo/metrics-animation.mp4'}
                 style={{ width: '1000px', height: '100%' }}
+                title="Video of project management metrics adaptation the the app"
               />
             </div>
 
@@ -289,7 +307,26 @@ export default function IterateDemoContent() {
                   I had a great experience working with the team and with the
                   mentorship we received at Iterate. I learned a lot about how I
                   work in a multidisciplinary team and methods to include the
-                  developers in the design process.
+                  developers in the design process. We had a lot of fun during
+                  the internship and got to challenge ourselves with tasks we
+                  had never performed before.
+                  <br />
+                  <br />I got the opportunity to create a design system from
+                  scratch, lead more than twenty interviews, brand and animate a
+                  product and get a feel for the fast paced start-up environment
+                  at one of the worlds best{' '}
+                  {
+                    <Link href="https://www.fastcompany.com/90769112/best-workplaces-for-innovators-2022-2-international-standouts">
+                      <a
+                        className="spanLink"
+                        target="_blank"
+                        style={{ textDecoration: 'none' }}
+                      >
+                        workplaces for innovators
+                      </a>
+                    </Link>
+                  }
+                  .
                 </p>
               </div>
             </div>
@@ -309,7 +346,7 @@ export default function IterateDemoContent() {
 
 const style = {
   wrapper: {
-    margin: 'auto 0 200px auto',
+    margin: 'auto 0 100px auto',
     gap: '0',
     maxWidth: '1400px',
     overflow: 'hidden',
@@ -363,6 +400,15 @@ const style = {
     gap: '200px',
     padding: '0px 15em',
     margin: '0 auto',
+    // marginBottom: '150px',
+  },
+
+  resultContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '100px',
+    padding: '0px 15em',
+    margin: '0',
     // marginBottom: '150px',
   },
 

@@ -11,16 +11,13 @@ interface Props {
 }
 
 export default function Home(props: Props) {
-  console.log('Running Home component');
-  console.log(props.posts);
   return (
     <>
       <Header />
       <div style={style.wrapper}>
         <div style={style.projectWrapper}>
           {props.posts.map((post, index) => {
-            console.log(post.slug);
-            return <Post key={post.slug} post={post} />;
+            return <Post key={index} post={post} />;
           })}
         </div>
       </div>
@@ -30,23 +27,27 @@ export default function Home(props: Props) {
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('posts'));
-  // console.log(files);
+  console.log(files);
 
-  const posts = files.map((filename) => {
-    const slug = filename.replace('.md', '');
+  const posts = files
+    .map((filename) => {
+      const slug = filename.replace('.md', '');
 
-    const markdownWithMeta = fs.readFileSync(
-      path.join('posts', filename),
-      'utf-8'
-    );
+      const markdownWithMeta = fs.readFileSync(
+        path.join('posts', filename),
+        'utf-8'
+      );
 
-    const { data: frontmatter } = matter(markdownWithMeta);
+      const { data: frontmatter } = matter(markdownWithMeta);
+      console.log('inside get static props:');
+      console.log(frontmatter);
 
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+      return {
+        slug,
+        frontmatter,
+      };
+    })
+    .sort((a, b) => (a.frontmatter.id > b.frontmatter.id ? 1 : -1));
 
   return {
     props: {

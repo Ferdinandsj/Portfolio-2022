@@ -1,11 +1,12 @@
 ---
+id: 1
 title: 'Iterate Demo'
 date: '2022'
 image: '/images/iterate-demo/iterate-demo-1.gif'
 preamble: ''
 description: 'TRENGER IKKE BEKYMRE SEG: Foreløpig trenger ikke familien i Tromsdalen bekymre seg for strømprisene. Fra venstre: Henning Lind (18), Mathilde Årnes Guttvik (9), Petra Årnes Guttvik (6), Gunhild Årnes Guttvik og Øyvind Guttvik Årnes. Foto: iTromsø, Ronald Johansen
 '
-position: 'Summer intern 2022'
+position: 'Summer internship 2022'
 tags: ['UI & UX']
 externalLink: ''
 linkText: ''

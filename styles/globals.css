@@ -30,8 +30,8 @@
 }
 
 * {
-  font-family: messina_sans;
-  font-weight: 500;
+  font-family: 'messina_sans';
+  font-style: normal;
 }
 
 html {
@@ -62,13 +62,25 @@ body {
 }
 
 .headerLink {
-  font-size: 14px;
-  color: gray;
-  margin: 0px 0 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+  text-transform: none;
+
+  color: #000000;
+
+  opacity: 0.8;
 }
+
+.headerLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 h1 {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 39.5665px;
   line-height: 55px;
@@ -93,8 +105,7 @@ h2 {
 }
 
 p {
-  font-family: 'Messina Sans';
-  font-style: normal;
+  font-family: 'messina_sans_light';
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -105,14 +116,13 @@ p {
 }
 
 .headerText {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 2px;
   text-transform: none;
+  letter-spacing: 0.008em;
 }
 
 .preamble {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -121,8 +131,6 @@ p {
 }
 
 .detail {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 300;
   font-size: 14.3699px;
   line-height: 20px;
@@ -137,8 +145,6 @@ p {
 }
 
 .detailStrong {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 14.3367px;
   line-height: 20px;
@@ -153,8 +159,6 @@ p {
 }
 
 .marker {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 100px;
   line-height: 25px;
@@ -167,7 +171,7 @@ p {
 }
 
 .monoText {
-  font-family: 'Messina_sans_mono';
+  font-family: 'messina_sans_mono';
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -204,12 +208,13 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  text-decoration-line: underline;
   color: black;
+  opacity: 80%;
 }
 a:hover {
-  opacity: 60%;
+  opacity: 100%;
   cursor: pointer;
+  text-decoration: 'underline';
 }
 
 .spanLink:hover {
@@ -226,6 +231,112 @@ img {
   height: 640px;
   max-width: 100%;
   object-fit: contain;
+}
+
+.frontImageSquare {
+  width: 640px;
+  height: 640px;
+  max-width: 100%;
+  object-fit: contain;
+  transform: scale(1.05);
+  /* transform-origin: 0 0; */
+  transition: transform 1s, visibility 0.25s ease-in;
+}
+
+.frontImageSquare:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.topImage {
+  right: 500px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+.animate-reveal {
+  opacity: 0;
+  -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+  -moz-animation: reveal 1s ease-in 1 normal forwards;
+  -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+  animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-first {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(25%);
+    -moz-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 .t-right {
@@ -264,8 +375,6 @@ img {
   padding: 0 10px 10px 10px;
 }
 .contentCaption {
-  font-family: 'Messina Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
