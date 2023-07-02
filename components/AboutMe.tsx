@@ -18,11 +18,10 @@ export default function AboutMe() {
         <h2>👋 Hello</h2>
 
         <p>
-          Test for å sjekke commit: My name is Ferdinand and I am 24 years old.
-          I study Industrial Design at NTNU Trondheim, Norway. I love cooking,
-          playing music, fishing and photography. As a designer i enjoy most
-          complex problems - but at the moment especially animations and visual
-          communication.
+          My name is Ferdinand and I am 24 years old. I study Industrial Design
+          at NTNU Trondheim, Norway. I love cooking, playing music, fishing and
+          photography. As a designer i enjoy most complex problems - but at the
+          moment especially animations and visual communication.
           <br />
           <br />
           Now im on exchange in Copenhagen studying Design and Innovation. Come
