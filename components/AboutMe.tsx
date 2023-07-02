@@ -13,7 +13,7 @@ export default function AboutMe() {
     setAboutMe(true);
   };
   return (
-    <div className="aboutMeSection">
+    <div className="aboutMeSection" style={styles.aboutMeSection}>
       <div style={styles.textContainer}>
         <h2>👋 Hello</h2>
 
@@ -53,6 +53,10 @@ export default function AboutMe() {
 }
 
 const styles = {
+  aboutMeSection: {
+    zIndex: '10',
+  },
+
   textContainer: {
     display: 'flex',
     flexDirection: 'column',
