@@ -61,7 +61,6 @@ export default function Home(props: Props) {
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join('posts'));
-  console.log(files);
 
   const posts = files
     .map((filename) => {
@@ -73,8 +72,6 @@ export async function getStaticProps() {
       );
 
       const { data: frontmatter } = matter(markdownWithMeta);
-      console.log('inside get static props:');
-      console.log(frontmatter);
 
       return {
         slug,

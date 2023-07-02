@@ -29,7 +29,6 @@ export default function Header() {
     if (contactMe) {
       setAboutMe(true);
     }
-    console.log(contactMe);
   };
   return (
     <header style={styles.container}>

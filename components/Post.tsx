@@ -42,7 +42,6 @@ export default function Post(props: Props) {
               </span>
               <div style={style.flexType}>
                 {props.post.frontmatter.tags.map((tag) => {
-                  console.log(tag);
                   return (
                     <span key={props.post.frontmatter.image} className="detail">
                       {tag}

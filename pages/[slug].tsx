@@ -11,9 +11,6 @@ interface Props {
 }
 
 export default function PostPage({ slug }: Props) {
-  console.log(slug);
-  console.log(slug === 'aesthetic-guide');
-  console.log(slug === 'iterate-demo');
   return (
     <>
       <GoBackHeader />
