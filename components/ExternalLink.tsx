@@ -14,7 +14,8 @@ export default function ExternalLink({ url, text }: Props) {
         width="15px"
         height="15px"
         alt="Arrow pointing upward-right"
-        src="/icons/externalArrow.svg"
+        src="/icons/externalArrow.png"
+        priority
       />
     </a>
   );

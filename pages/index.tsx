@@ -1,27 +1,61 @@
-import type { NextPage } from 'next';
 import fs from 'fs';
 import path from 'path';
-import Head from 'next/head';
 import Header from '../components/Header';
 import matter from 'gray-matter';
 import Post from '../components/Post';
+import { useState } from 'react';
+import { useGlobalContext } from '../context/GlobalContext';
+import MobilePrompt from '../components/MobilePrompt';
+import AboutMe from '../components/AboutMe';
+import ContactMe from '../components/ContactMe';
 
 interface Props {
   posts: Array<any>;
 }
 
 export default function Home(props: Props) {
-  return (
-    <>
-      <Header />
-      <div style={style.wrapper}>
+  const { aboutMe } = useGlobalContext();
+  const { contactMe } = useGlobalContext();
+
+  if (!aboutMe) {
+    return (
+      <div>
+        <MobilePrompt />
+        <Header />
         <div style={style.projectWrapper}>
-          {props.posts.map((post, index) => {
-            return <Post key={index} post={post} />;
-          })}
+          <AboutMe />
         </div>
       </div>
-    </>
+    );
+  } else if (!contactMe) {
+    return (
+      <div>
+        <MobilePrompt />
+        <Header />
+        <div style={style.projectWrapper}>
+          <ContactMe />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <MobilePrompt />
+      <Header />
+      <div
+        className="projectWrapper animate-first-slide-up animate-slide-up"
+        style={style.projectWrapper}
+      >
+        {aboutMe ? (
+          props.posts.map((post, index) => {
+            return <Post key={index} post={post} />;
+          })
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -57,24 +91,24 @@ export async function getStaticProps() {
 }
 
 const style = {
-  wrapper: {
+  contentWrapper: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    padding: '3em 60px 116px 0px',
-    gap: '213px',
-    left: '0px',
-    top: '0px',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 
   projectWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
-    padding: '0px 60px 0 0px',
     gap: '213px',
     left: '0px',
     top: '0px',
+    padding: '4em 3em 5em 3em',
+  },
+
+  projectWrapperHidden: {
+    display: 'none',
   },
 
   imgContainer: {

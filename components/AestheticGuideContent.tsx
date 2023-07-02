@@ -26,7 +26,7 @@ export default function AestheticGuideContent() {
         <title>{title} - Ferdinand portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div style={style.wrapper}>
+      <div className="wrapper">
         <div style={style.sectionContainer}>
           <div style={style.topWrapper}>
             <div style={style.informationContainer}>
@@ -55,18 +55,13 @@ export default function AestheticGuideContent() {
                   of the youth heard in the public space.
                 </p>
               </div>
-              {/* <div style={style.externalLinkContainer}>
-                <ExternalLink
-                  url={'https://www.prosjektfilipstad.org/'}
-                  text={'Visit the page to download'}
-                />
-              </div> */}
             </div>
             <div>
               <Image
                 layout="fixed"
                 width="1200px"
                 height="848px"
+                alt="Overview of the Filipstad area"
                 src={overviewImage}
                 priority
               />
@@ -275,13 +270,6 @@ export default function AestheticGuideContent() {
 }
 
 const style = {
-  wrapper: {
-    margin: 'auto 0 200px auto',
-    gap: '0',
-    maxWidth: '1400px',
-    overflow: 'hidden',
-  },
-
   sectionContainer: {
     display: 'flex',
     flexDirection: 'column',

@@ -25,7 +25,7 @@ export default function IterateDemoContent() {
         <title>{title} - Ferdinand portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div style={style.wrapper}>
+      <div className="wrapper">
         <div style={style.sectionContainer}>
           <div style={style.topWrapper}>
             <div style={style.informationContainer}>
@@ -63,12 +63,6 @@ export default function IterateDemoContent() {
                   myself as a designer/developer.
                 </p>
               </div>
-              <div style={style.externalLinkContainer}>
-                <ExternalLink
-                  url={'https://demo.ventures/squads_demo_free'}
-                  text={'Test a live demo here (Mobile)'}
-                />
-              </div>
             </div>
             <div>
               <Image
@@ -78,7 +72,7 @@ export default function IterateDemoContent() {
                 src={topImage}
                 alt="Iterate Demo dashboard"
                 priority
-                className="animate-reveal animate-first"
+                className="animate-reveal animate-first topImage"
               />
             </div>
           </div>
@@ -141,7 +135,7 @@ export default function IterateDemoContent() {
                   layout="intrinsic"
                   width={500}
                   height={500}
-                  altText="Max and Emil working"
+                  altText="What do we have in the process so far?"
                   src={begin}
                 />
               </div>
@@ -337,6 +331,12 @@ export default function IterateDemoContent() {
               content="The team"
               creator="Maximian, Emil and I"
             />
+            <div style={style.externalLinkContainer}>
+              <ExternalLink
+                url={'https://demo.ventures/squads_demo_free'}
+                text={'Test a live demo here (Mobile)'}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -345,13 +345,6 @@ export default function IterateDemoContent() {
 }
 
 const style = {
-  wrapper: {
-    margin: 'auto 0 100px auto',
-    gap: '0',
-    maxWidth: '1400px',
-    overflow: 'hidden',
-  },
-
   sectionContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -391,7 +384,7 @@ const style = {
   },
 
   externalLinkContainer: {
-    marginTop: '40px',
+    margin: '0 auto 100px auto',
   },
 
   container: {

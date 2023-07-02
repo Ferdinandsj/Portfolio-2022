@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import AesthticGuideContent from '../components/AestheticGuideContent';
 import GoBackHeader from '../components/GoBackHeader';
 import IterateDemoContent from '../components/IterateDemoContent';
+import QualitySystemContent from '../components/QualitySystemContent';
 
 interface Props {
   slug: string;
@@ -20,7 +21,7 @@ export default function PostPage({ slug }: Props) {
         <>
           {slug === 'aesthetic-guide' ? <AesthticGuideContent /> : null}
           {slug === 'iterate-demo' ? <IterateDemoContent /> : null}
-          {/* {slug === 'quality-system' ? <AesthticGuideContent /> : null} */}
+          {slug === 'quality-system' ? <QualitySystemContent /> : null}
         </>
       </div>
     </>
