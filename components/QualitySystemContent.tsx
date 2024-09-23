@@ -1,28 +1,28 @@
 //Dependencies
-import ExternalLink from './ExternalLink';
-import ImageAndCaption from './ImageAndCaption';
-import Image from 'next/image';
-import Head from 'next/head';
+import ExternalLink from "./ExternalLink";
+import ImageAndCaption from "./ImageAndCaption";
+import Image from "next/image";
+import Head from "next/head";
 
 // Image imports
-import topImage from '../public/images/quality-system/giga-no-text.png';
-import pros from '../public/images/quality-system/pros-qms.png';
-import userCenteredDesign from '../public/images/quality-system/ucd-diagram.png';
-import interviewSetting from '../public/images/quality-system/interview-setting.jpg';
-import mapping from '../public/images/quality-system/mapping.png';
-import coCreation from '../public/images/quality-system/co-creation.jpg';
-import mappingPeople from '../public/images/quality-system/mapping-process.png';
-import firstWorkshop from '../public/images/quality-system/first-workshop.png';
-import secondWorkshop from '../public/images/quality-system/second-workshop.png';
-import team from '../public/images/quality-system/the-team.png';
-import gigaMap from '../public/images/quality-system/full-giga-map.png';
-import solutionGigaMap from '../public/images/quality-system/solution-giga-map.png';
-import creatingSolutions from '../public/images/quality-system/creating-solutions.jpg';
+import topImage from "../public/images/quality-system/giga-no-text.png";
+import pros from "../public/images/quality-system/pros-qms.png";
+import userCenteredDesign from "../public/images/quality-system/ucd-diagram.png";
+import interviewSetting from "../public/images/quality-system/interview-setting.jpg";
+import mapping from "../public/images/quality-system/mapping.png";
+import coCreation from "../public/images/quality-system/co-creation.jpg";
+import mappingPeople from "../public/images/quality-system/mapping-process.png";
+import firstWorkshop from "../public/images/quality-system/first-workshop.png";
+import secondWorkshop from "../public/images/quality-system/second-workshop.png";
+import team from "../public/images/quality-system/the-team.png";
+import gigaMap from "../public/images/quality-system/full-giga-map.png";
+import solutionGigaMap from "../public/images/quality-system/solution-giga-map.png";
+import creatingSolutions from "../public/images/quality-system/creating-solutions.jpg";
 
 export default function QualitySystemContent() {
-  const title = 'Quality system';
-  const date = '2022';
-  const category = 'Halogen // Service and system design';
+  const title = "Quality system";
+  const date = "2022";
+  const category = "Halogen // Service and system design";
 
   return (
     <>
@@ -107,7 +107,7 @@ export default function QualitySystemContent() {
                     layout="intrinsic"
                     alt="Man quality controlling chips on conveyor belt"
                     src={
-                      'https://thumbs.gfycat.com/IdioticHonoredAltiplanochinchillamouse-size_restricted.gif'
+                      "https://thumbs.gfycat.com/IdioticHonoredAltiplanochinchillamouse-size_restricted.gif"
                     }
                     width={400}
                     height={400}
@@ -350,9 +350,9 @@ export default function QualitySystemContent() {
             <div style={style.externalLinkContainer}>
               <ExternalLink
                 url={
-                  'https://drive.google.com/file/d/11ND9y8SxmHXYyOEOuDfZfN47phHxI_BD/view?usp=sharing'
+                  "https://drive.google.com/file/d/11ND9y8SxmHXYyOEOuDfZfN47phHxI_BD/view?usp=sharing"
                 }
-                text={'Download the bachelor report here (Norwegian)'}
+                text={"Download the bachelor report here (Norwegian)"}
               />
             </div>
           </div>
@@ -364,369 +364,369 @@ export default function QualitySystemContent() {
 
 const style = {
   sectionContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0',
+    display: "flex",
+    flexDirection: "column",
+    gap: "0",
   },
 
   topWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    margin: 'auto 10em',
-    gap: '200px',
-    marginBottom: '50px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    margin: "auto 10em",
+    gap: "200px",
+    marginBottom: "50px",
   },
 
   topImage: {
-    margin: '0 200px 0 0',
+    margin: "0 200px 0 0",
   },
 
   informationContainer: {
-    margin: '0 auto',
-    width: '500px',
-    height: '100%',
+    margin: "0 auto",
+    width: "500px",
+    height: "100%",
   },
 
   dateAndCategory: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '0px 0px 4px',
-    gap: '10px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "0px 0px 4px",
+    gap: "10px",
 
-    fontFamily: 'messina_sans_mono',
-    fontStyle: 'normal',
-    fontWeight: '300',
-    fontSize: '12px',
-    lineHeight: '13px',
-    textTransform: 'uppercase',
-    opacity: '80%',
+    fontFamily: "messina_sans_mono",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "12px",
+    lineHeight: "13px",
+    textTransform: "uppercase",
+    opacity: "80%",
   },
 
   firstContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '200px',
-    padding: '0px 15em',
-    margin: '0 auto',
-    marginBottom: '200px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "200px",
+    padding: "0px 15em",
+    margin: "0 auto",
+    marginBottom: "200px",
     // marginBottom: '150px',
   },
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '200px',
-    padding: '0px 15em',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "column",
+    gap: "200px",
+    padding: "0px 15em",
+    margin: "0 auto",
     // marginBottom: '150px',
   },
 
   resultContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '100px',
-    padding: '0px 15em',
-    margin: '0',
+    display: "flex",
+    flexDirection: "column",
+    gap: "100px",
+    padding: "0px 15em",
+    margin: "0",
     // marginBottom: '150px',
   },
 
   marker: {
-    display: 'flex',
-    position: 'relative',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '4px',
+    display: "flex",
+    position: "relative",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "4px",
 
-    width: '125px',
-    height: '25px',
+    width: "125px",
+    height: "25px",
 
-    transform: 'rotate(90deg)',
+    transform: "rotate(90deg)",
 
-    flex: 'none',
-    order: '0',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    flexGrow: "0",
   },
 
   projectContent: {
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '175px',
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "175px",
   },
 
   headingAndVideo: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '100px auto',
-    gap: '50px',
-    width: '800px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "100px auto",
+    gap: "50px",
+    width: "800px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   underH2section: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '150px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "150px",
   },
 
   textAndSquareContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'end',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "end",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndLandscapeContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'start',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "start",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndPortraitContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyItems: 'center',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyItems: "center",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   conceptsContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyItems: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyItems: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndGifContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'end',
-    alignItems: 'center',
-    padding: '0',
-    gap: '150px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "end",
+    alignItems: "center",
+    padding: "0",
+    gap: "150px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   headingAndUserCenteredDiagram: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '60px',
-    marginBottom: '40px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "60px",
+    marginBottom: "40px",
   },
 
   workshopSection: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '40px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "40px",
   },
 
   mappingSection: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '50px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "50px",
   },
 
   headerAndImage: {
-    display: 'flex',
-    gap: '50px',
+    display: "flex",
+    gap: "50px",
   },
 
   onlyTextSection: {
-    margin: '0 auto',
-    padding: '0 auto',
+    margin: "0 auto",
+    padding: "0 auto",
   },
 
   spaceBetweenSection: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    gap: '50px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: "50px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   collage: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "0px",
+    gap: "16px",
   },
 
   textWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
     // padding: '120px 0px 115px',
-    gap: '24px',
-    height: '100%',
+    gap: "24px",
+    height: "100%",
   },
 
   textAndLink: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '60px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "60px",
+    width: "414px",
   },
 
   HeadingAndText: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '8px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "8px",
+    width: "414px",
   },
   conceptTextContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    marginBottom: '100px',
-    gap: '8px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    marginBottom: "100px",
+    gap: "8px",
+    width: "414px",
   },
 
   imageWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    padding: '0px',
-    gap: '12px',
-    width: 'auto',
-    height: '550px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    padding: "0px",
+    gap: "12px",
+    width: "auto",
+    height: "550px",
   },
 
   captionFlex: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '4px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    padding: "0px",
+    gap: "4px",
   },
 
   collageContainer: {
-    width: '100%',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '16px',
+    width: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "16px",
   },
 
-  imgContainer: { height: '300px', position: 'relative' },
+  imgContainer: { height: "300px", position: "relative" },
 
   collageImg: {
-    objectFit: 'cover',
-    width: '100%',
-    height: '100%',
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
   },
 
   projectTitle: {
-    borderTop: '1px solid #000000',
-    paddingTop: '8px',
-    lineHeight: '70px',
-    letterSpacing: '2%',
-    fontSize: '48px',
+    borderTop: "1px solid #000000",
+    paddingTop: "8px",
+    lineHeight: "70px",
+    letterSpacing: "2%",
+    fontSize: "48px",
   },
 
   preamble: {
-    marginTop: '2px',
-    fontFamily: 'messina_sans_light',
-    fontSize: '22px',
-    opacity: '90%',
+    marginTop: "2px",
+    fontFamily: "messina_sans_light",
+    fontSize: "22px",
+    opacity: "90%",
   },
 
   preambleAndDescription: {
-    width: '435px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '32px',
+    width: "435px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "32px",
   },
 
   tagContainer: {
-    display: 'flex',
-    marginBottom: '24px',
+    display: "flex",
+    marginBottom: "24px",
   },
 
   tag: {
-    fontFamily: 'messina_sans_light',
-    fontSize: '14px',
+    fontFamily: "messina_sans_light",
+    fontSize: "14px",
 
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: '4px 9px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    padding: "4px 9px",
+    gap: "16px",
 
-    border: '0.5px solid #000000',
-    borderRadius: '16px',
-    marginRight: '8px',
+    border: "0.5px solid #000000",
+    borderRadius: "16px",
+    marginRight: "8px",
   },
 
   externalLinkContainer: {
-    margin: '0 auto 100px auto',
+    margin: "0 auto 100px auto",
   },
 } as const;

@@ -1,24 +1,24 @@
 //Dependencies
-import ExternalLink from './ExternalLink';
-import ImageAndCaption from './ImageAndCaption';
-import Image from 'next/image';
-import Head from 'next/head';
+import ExternalLink from "./ExternalLink";
+import ImageAndCaption from "./ImageAndCaption";
+import Image from "next/image";
+import Head from "next/head";
 
 // Image imports
-import bookOnWallImage from '../public/images/aesthetic-guide/book-on-wall.jpg';
-import overviewImage from '../public/images/aesthetic-guide/overview.png';
-import bookCollageImage from '../public/images/aesthetic-guide/book-collage.png';
-import personReadingImage from '../public/images/aesthetic-guide/person-reading.png';
-import winterHasvoldImage from '../public/images/aesthetic-guide/winter-hasvold-sjøbad.png';
-import poolImage from '../public/images/aesthetic-guide/pool-winter-summer.png';
-import fieldCollageImage from '../public/images/aesthetic-guide/field-study-collage.png';
-import MajaAuroraImage from '../public/images/aesthetic-guide/maja-aurora-tea.jpg';
+import bookOnWallImage from "../public/images/aesthetic-guide/book-on-wall.jpg";
+import overviewImage from "../public/images/aesthetic-guide/overview.png";
+import bookCollageImage from "../public/images/aesthetic-guide/book-collage.png";
+import personReadingImage from "../public/images/aesthetic-guide/person-reading.png";
+import winterHasvoldImage from "../public/images/aesthetic-guide/winter-hasvold-sjobad.png";
+import poolImage from "../public/images/aesthetic-guide/pool-winter-summer.png";
+import fieldCollageImage from "../public/images/aesthetic-guide/field-study-collage.png";
+import MajaAuroraImage from "../public/images/aesthetic-guide/maja-aurora-tea.jpg";
 
 export default function AestheticGuideContent() {
-  const title = 'Aesthetic guide';
-  const date = '2021-2022';
-  const topImage = '/images/aesthetic-guide/overview.png';
-  const category = 'System, graphic and web design';
+  const title = "Aesthetic guide";
+  const date = "2021-2022";
+  const topImage = "/images/aesthetic-guide/overview.png";
+  const category = "System, graphic and web design";
 
   return (
     <>
@@ -59,8 +59,6 @@ export default function AestheticGuideContent() {
             <div>
               <Image
                 layout="fixed"
-                width="1200px"
-                height="848px"
                 alt="Overview of the Filipstad area"
                 src={overviewImage}
                 priority
@@ -92,10 +90,10 @@ export default function AestheticGuideContent() {
                   <iframe
                     src="https://player.vimeo.com/video/744638399?background=1&h=944437320d&autoplay=1&color=000000&title=0&byline=0&portrait=0&muted=1"
                     style={{
-                      width: '100%',
-                      height: '100%',
-                      overflow: 'hidden',
-                      justifySelf: 'end',
+                      width: "100%",
+                      height: "100%",
+                      overflow: "hidden",
+                      justifySelf: "end",
                     }}
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"
@@ -103,7 +101,7 @@ export default function AestheticGuideContent() {
                   ></iframe>
                   <div style={style.captionFlex}>
                     <span className="contentCaption">Video</span>
-                    <span className="contentCaption" style={{ color: 'black' }}>
+                    <span className="contentCaption" style={{ color: "black" }}>
                       Ida Gulbrandsøy
                     </span>
                   </div>
@@ -239,7 +237,7 @@ export default function AestheticGuideContent() {
                     industrial designers and I also worked as editors for both
                     the content and the layout of the entire document. It was a
                     huge challange seen as though none of us had ever created a
-                    book before - let alone with 30 different collaborators.{' '}
+                    book before - let alone with 30 different collaborators.{" "}
                     <br />
                     <br />
                     We created systems for image and information collection and
@@ -256,8 +254,8 @@ export default function AestheticGuideContent() {
                     <br />
                   </p>
                   <ExternalLink
-                    url={'https://www.prosjektfilipstad.org/'}
-                    text={'Download the aesthetic guide here'}
+                    url={"https://www.prosjektfilipstad.org/"}
+                    text={"Download the aesthetic guide here"}
                   />
                 </div>
               </div>
@@ -271,231 +269,231 @@ export default function AestheticGuideContent() {
 
 const style = {
   sectionContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0',
+    display: "flex",
+    flexDirection: "column",
+    gap: "0",
   },
 
   topWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    margin: 'auto 10em',
-    gap: '50px',
-    marginBottom: '0',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    margin: "auto 10em",
+    gap: "50px",
+    marginBottom: "0",
   },
 
   informationContainer: {
-    margin: '0 auto',
-    width: '500px',
-    height: '100%',
+    margin: "0 auto",
+    width: "500px",
+    height: "100%",
   },
 
   dateAndCategory: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '0px 0px 4px',
-    gap: '10px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "0px 0px 4px",
+    gap: "10px",
 
-    fontFamily: 'messina_sans_mono',
-    fontStyle: 'normal',
-    fontWeight: '300',
-    fontSize: '12px',
-    lineHeight: '13px',
-    textTransform: 'uppercase',
-    opacity: '80%',
+    fontFamily: "messina_sans_mono",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "12px",
+    lineHeight: "13px",
+    textTransform: "uppercase",
+    opacity: "80%",
   },
 
   externalLinkContainer: {
-    marginTop: '40px',
+    marginTop: "40px",
   },
 
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '200px',
-    padding: '0px 15em',
-    margin: '0 auto',
-    marginBottom: '150px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "200px",
+    padding: "0px 15em",
+    margin: "0 auto",
+    marginBottom: "150px",
   },
 
   marker: {
-    display: 'flex',
-    position: 'relative',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '4px',
+    display: "flex",
+    position: "relative",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "4px",
 
-    width: '125px',
-    height: '25px',
+    width: "125px",
+    height: "25px",
 
-    transform: 'rotate(90deg)',
+    transform: "rotate(90deg)",
 
-    flex: 'none',
-    order: '0',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    flexGrow: "0",
   },
 
   projectContent: {
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '150px',
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "150px",
   },
 
   headingAndVideo: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '100px auto',
-    gap: '50px',
-    width: '800px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "100px auto",
+    gap: "50px",
+    width: "800px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   headerAndImage: {
-    display: 'flex',
-    gap: '50px',
+    display: "flex",
+    gap: "50px",
   },
 
   onlyTextSection: {
-    margin: '0 auto',
-    padding: '0 auto',
+    margin: "0 auto",
+    padding: "0 auto",
   },
 
   spaceBetweenSection: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    gap: '50px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: "50px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   collage: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "0px",
+    gap: "16px",
   },
 
   textWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    padding: '120px 0px 115px',
-    gap: '24px',
-    height: '100%',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    padding: "120px 0px 115px",
+    gap: "24px",
+    height: "100%",
   },
 
   textAndLink: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '60px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "60px",
+    width: "414px",
   },
 
   HeadingAndText: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '8px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "8px",
+    width: "414px",
   },
 
   imageWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    padding: '0px',
-    gap: '12px',
-    width: 'auto',
-    height: '550px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    padding: "0px",
+    gap: "12px",
+    width: "auto",
+    height: "550px",
   },
 
   captionFlex: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '4px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    padding: "0px",
+    gap: "4px",
   },
 
   collageContainer: {
-    width: '100%',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '16px',
+    width: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "16px",
   },
 
-  imgContainer: { height: '300px', position: 'relative' },
+  imgContainer: { height: "300px", position: "relative" },
 
   collageImg: {
-    objectFit: 'cover',
-    width: '100%',
-    height: '100%',
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
   },
 
   projectTitle: {
-    borderTop: '1px solid #000000',
-    paddingTop: '8px',
-    lineHeight: '70px',
-    letterSpacing: '2%',
-    fontSize: '48px',
+    borderTop: "1px solid #000000",
+    paddingTop: "8px",
+    lineHeight: "70px",
+    letterSpacing: "2%",
+    fontSize: "48px",
   },
 
   preamble: {
-    marginTop: '2px',
-    fontFamily: 'messina_sans_light',
-    fontSize: '22px',
-    opacity: '90%',
+    marginTop: "2px",
+    fontFamily: "messina_sans_light",
+    fontSize: "22px",
+    opacity: "90%",
   },
 
   preambleAndDescription: {
-    width: '435px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '32px',
+    width: "435px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "32px",
   },
 
   tagContainer: {
-    display: 'flex',
-    marginBottom: '24px',
+    display: "flex",
+    marginBottom: "24px",
   },
 
   tag: {
-    fontFamily: 'messina_sans_light',
-    fontSize: '14px',
+    fontFamily: "messina_sans_light",
+    fontSize: "14px",
 
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: '4px 9px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    padding: "4px 9px",
+    gap: "16px",
 
-    border: '0.5px solid #000000',
-    borderRadius: '16px',
-    marginRight: '8px',
+    border: "0.5px solid #000000",
+    borderRadius: "16px",
+    marginRight: "8px",
   },
 } as const;

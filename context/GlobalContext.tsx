@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useContext } from 'react';
+import React, { useState } from "react";
+import { useContext } from "react";
 
 interface IGlobalContextProps {
   aboutMe: boolean;

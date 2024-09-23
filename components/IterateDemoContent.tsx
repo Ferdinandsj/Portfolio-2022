@@ -1,23 +1,23 @@
 //Dependencies
-import ExternalLink from './ExternalLink';
-import ImageAndCaption from './ImageAndCaption';
-import Image from 'next/image';
-import Head from 'next/head';
-import Link from 'next/link';
+import ExternalLink from "./ExternalLink";
+import ImageAndCaption from "./ImageAndCaption";
+import Image from "next/image";
+import Head from "next/head";
+import Link from "next/link";
 
 // Image imports
-import topImage from '../public/images/iterate-demo/dashboard-shadow.png';
-import developersWorking from '../public/images/iterate-demo/emil-max-working.jpg';
-import affinity from '../public/images/iterate-demo/affinity.jpg';
-import team from '../public/images/iterate-demo/team.png';
-import funnel from '../public/images/iterate-demo/funnel.jpg';
-import begin from '../public/images/iterate-demo/begin.jpg';
-import circle from '../public/images/iterate-demo/circle.gif';
+import topImage from "../public/images/iterate-demo/dashboard-shadow.png";
+import developersWorking from "../public/images/iterate-demo/emil-max-working.jpg";
+import affinity from "../public/images/iterate-demo/affinity.jpg";
+import team from "../public/images/iterate-demo/team.png";
+import funnel from "../public/images/iterate-demo/funnel.jpg";
+import begin from "../public/images/iterate-demo/begin.jpg";
+import circle from "../public/images/iterate-demo/circle.gif";
 
 export default function IterateDemoContent() {
-  const title = 'Iterate Demo';
-  const date = '2022';
-  const category = 'UI / UX';
+  const title = "Iterate Demo";
+  const date = "2022";
+  const category = "UI / UX";
 
   return (
     <>
@@ -40,16 +40,10 @@ export default function IterateDemoContent() {
                   cheaper than we do today?
                 </span>
                 <p>
-                  9 out of 10 start-ups fail according to{' '}
+                  9 out of 10 start-ups fail according to{" "}
                   {
                     <Link href="https://startupgenome.com/reports/global-startup-ecosystem-report-2019">
-                      <a
-                        className="spanLink"
-                        target="_blank"
-                        style={{ textDecoration: 'none' }}
-                      >
-                        Startup Genome
-                      </a>
+                      Startup Genome
                     </Link>
                   }
                   . Most of them fail early in the seed or concept stage because
@@ -100,7 +94,7 @@ export default function IterateDemoContent() {
                 <Image
                   layout="intrinsic"
                   alt="Animation of pixelated wave"
-                  src={'https://c.tenor.com/EnZGimQ0SQ8AAAAC/speed.gif'}
+                  src={"https://c.tenor.com/EnZGimQ0SQ8AAAAC/speed.gif"}
                   width={500}
                   height={300}
                 />
@@ -229,8 +223,8 @@ export default function IterateDemoContent() {
                   className="videoContainer"
                   autoPlay
                   muted
-                  src={'/images/iterate-demo/onboarding.mp4'}
-                  style={{ width: '1000px', height: '100%' }}
+                  src={"/images/iterate-demo/onboarding.mp4"}
+                  style={{ width: "1000px", height: "100%" }}
                   title="Video of onboarding in the Iterate demo app"
                 />
                 <div style={style.HeadingAndText}>
@@ -260,8 +254,8 @@ export default function IterateDemoContent() {
                   className="videoContainer"
                   autoPlay
                   muted
-                  src={'/images/iterate-demo/dashboard.mp4'}
-                  style={{ width: '1000px', height: '100%' }}
+                  src={"/images/iterate-demo/dashboard.mp4"}
+                  style={{ width: "1000px", height: "100%" }}
                   title="Video of the dashboard in the Iterate demo app"
                 />
                 <div style={style.HeadingAndText}>
@@ -288,8 +282,8 @@ export default function IterateDemoContent() {
                 className="videoContainer"
                 autoPlay
                 muted
-                src={'/images/iterate-demo/metrics-animation.mp4'}
-                style={{ width: '1000px', height: '100%' }}
+                src={"/images/iterate-demo/metrics-animation.mp4"}
+                style={{ width: "1000px", height: "100%" }}
                 title="Video of project management metrics adaptation the the app"
               />
             </div>
@@ -308,16 +302,10 @@ export default function IterateDemoContent() {
                   <br />I got the opportunity to create a design system from
                   scratch, lead more than twenty interviews, brand and animate a
                   product and get a feel for the fast paced start-up environment
-                  at one of the worlds best{' '}
+                  at one of the worlds best{" "}
                   {
                     <Link href="https://www.fastcompany.com/90769112/best-workplaces-for-innovators-2022-2-international-standouts">
-                      <a
-                        className="spanLink"
-                        target="_blank"
-                        style={{ textDecoration: 'none' }}
-                      >
-                        workplaces for innovators
-                      </a>
+                      workplaces for innovators
                     </Link>
                   }
                   .
@@ -333,8 +321,8 @@ export default function IterateDemoContent() {
             />
             <div style={style.externalLinkContainer}>
               <ExternalLink
-                url={'https://demo.ventures/squads_demo_free'}
-                text={'Test a live demo here (Mobile)'}
+                url={"https://demo.ventures/squads_demo_free"}
+                text={"Test a live demo here (Mobile)"}
               />
             </div>
           </div>
@@ -346,288 +334,288 @@ export default function IterateDemoContent() {
 
 const style = {
   sectionContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0',
+    display: "flex",
+    flexDirection: "column",
+    gap: "0",
   },
 
   topWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    margin: 'auto 10em',
-    gap: '150px',
-    marginBottom: '200px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    margin: "auto 10em",
+    gap: "150px",
+    marginBottom: "200px",
   },
 
   informationContainer: {
-    margin: '0 auto',
-    width: '500px',
-    height: '100%',
+    margin: "0 auto",
+    width: "500px",
+    height: "100%",
   },
 
   dateAndCategory: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '0px 0px 4px',
-    gap: '10px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "0px 0px 4px",
+    gap: "10px",
 
-    fontFamily: 'messina_sans_mono',
-    fontStyle: 'normal',
-    fontWeight: '300',
-    fontSize: '12px',
-    lineHeight: '13px',
-    textTransform: 'uppercase',
-    opacity: '80%',
+    fontFamily: "messina_sans_mono",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "12px",
+    lineHeight: "13px",
+    textTransform: "uppercase",
+    opacity: "80%",
   },
 
   externalLinkContainer: {
-    margin: '0 auto 100px auto',
+    margin: "0 auto 100px auto",
   },
 
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '200px',
-    padding: '0px 15em',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "column",
+    gap: "200px",
+    padding: "0px 15em",
+    margin: "0 auto",
     // marginBottom: '150px',
   },
 
   resultContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '100px',
-    padding: '0px 15em',
-    margin: '0',
+    display: "flex",
+    flexDirection: "column",
+    gap: "100px",
+    padding: "0px 15em",
+    margin: "0",
     // marginBottom: '150px',
   },
 
   marker: {
-    display: 'flex',
-    position: 'relative',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '4px',
+    display: "flex",
+    position: "relative",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "4px",
 
-    width: '125px',
-    height: '25px',
+    width: "125px",
+    height: "25px",
 
-    transform: 'rotate(90deg)',
+    transform: "rotate(90deg)",
 
-    flex: 'none',
-    order: '0',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    flexGrow: "0",
   },
 
   projectContent: {
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '175px',
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "175px",
   },
 
   headingAndVideo: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '100px auto',
-    gap: '50px',
-    width: '800px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: "100px auto",
+    gap: "50px",
+    width: "800px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndSquareImageContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'end',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "end",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndLandscapeContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'start',
-    padding: 'auto auto',
-    gap: '50px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "start",
+    padding: "auto auto",
+    gap: "50px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   textAndGifContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'end',
-    alignItems: 'center',
-    padding: '0',
-    gap: '150px',
-    width: '100%',
-    margin: '0 0',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "end",
+    alignItems: "center",
+    padding: "0",
+    gap: "150px",
+    width: "100%",
+    margin: "0 0",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   headerAndImage: {
-    display: 'flex',
-    gap: '50px',
+    display: "flex",
+    gap: "50px",
   },
 
   onlyTextSection: {
-    margin: '0 auto',
-    padding: '0 auto',
+    margin: "0 auto",
+    padding: "0 auto",
   },
 
   spaceBetweenSection: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    gap: '50px',
-    margin: '0 auto',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: "50px",
+    margin: "0 auto",
 
-    flex: 'none',
-    order: '0',
-    alignSelf: 'stretch',
-    flexGrow: '0',
+    flex: "none",
+    order: "0",
+    alignSelf: "stretch",
+    flexGrow: "0",
   },
 
   collage: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "0px",
+    gap: "16px",
   },
 
   textWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
     // padding: '120px 0px 115px',
-    gap: '24px',
-    height: '100%',
+    gap: "24px",
+    height: "100%",
   },
 
   textAndLink: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '60px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "60px",
+    width: "414px",
   },
 
   HeadingAndText: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    padding: '0px',
-    gap: '8px',
-    width: '414px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    padding: "0px",
+    gap: "8px",
+    width: "414px",
   },
 
   imageWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    padding: '0px',
-    gap: '12px',
-    width: 'auto',
-    height: '550px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    padding: "0px",
+    gap: "12px",
+    width: "auto",
+    height: "550px",
   },
 
   captionFlex: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '4px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    padding: "0px",
+    gap: "4px",
   },
 
   collageContainer: {
-    width: '100%',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '16px',
+    width: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "16px",
   },
 
-  imgContainer: { height: '300px', position: 'relative' },
+  imgContainer: { height: "300px", position: "relative" },
 
   collageImg: {
-    objectFit: 'cover',
-    width: '100%',
-    height: '100%',
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
   },
 
   projectTitle: {
-    borderTop: '1px solid #000000',
-    paddingTop: '8px',
-    lineHeight: '70px',
-    letterSpacing: '2%',
-    fontSize: '48px',
+    borderTop: "1px solid #000000",
+    paddingTop: "8px",
+    lineHeight: "70px",
+    letterSpacing: "2%",
+    fontSize: "48px",
   },
 
   preamble: {
-    marginTop: '2px',
-    fontFamily: 'messina_sans_light',
-    fontSize: '22px',
-    opacity: '90%',
+    marginTop: "2px",
+    fontFamily: "messina_sans_light",
+    fontSize: "22px",
+    opacity: "90%",
   },
 
   preambleAndDescription: {
-    width: '435px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '32px',
+    width: "435px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "32px",
   },
 
   tagContainer: {
-    display: 'flex',
-    marginBottom: '24px',
+    display: "flex",
+    marginBottom: "24px",
   },
 
   tag: {
-    fontFamily: 'messina_sans_light',
-    fontSize: '14px',
+    fontFamily: "messina_sans_light",
+    fontSize: "14px",
 
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: '4px 9px',
-    gap: '16px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    padding: "4px 9px",
+    gap: "16px",
 
-    border: '0.5px solid #000000',
-    borderRadius: '16px',
-    marginRight: '8px',
+    border: "0.5px solid #000000",
+    borderRadius: "16px",
+    marginRight: "8px",
   },
 } as const;

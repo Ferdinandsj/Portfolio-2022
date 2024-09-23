@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/image";
 
 interface Props {
   src: StaticImageData;
@@ -7,7 +7,7 @@ interface Props {
   creator?: string;
   width?: string | number;
   height?: string | number;
-  layout?: 'responsive' | 'fill' | 'intrinsic' | 'fixed';
+  layout?: "responsive" | "fill" | "intrinsic" | "fixed";
   placeholder?: string;
 }
 
@@ -35,7 +35,7 @@ export default function ExternalLink({
       />
       <div style={style.captionFlex}>
         <span className="contentCaption">{content}</span>
-        <span className="contentCaption" style={{ color: 'black' }}>
+        <span className="contentCaption" style={{ color: "black" }}>
           {creator}
         </span>
       </div>
@@ -45,19 +45,19 @@ export default function ExternalLink({
 
 const style = {
   imageWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    padding: '0px',
-    gap: '12px',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    padding: "0px",
+    gap: "12px",
   },
 
   captionFlex: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    padding: '0px',
-    gap: '4px',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    padding: "0px",
+    gap: "4px",
   },
 } as const;

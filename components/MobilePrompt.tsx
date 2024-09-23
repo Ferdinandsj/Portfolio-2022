@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 export default function MobilePrompt() {
   return (
     <div className="mobilePrompt">
@@ -11,7 +11,7 @@ export default function MobilePrompt() {
           layout="intrinsic"
           alt="Animation of pixelated wave"
           src={
-            'https://c.tenor.com/V6viLE6UQPEAAAAC/john-travolta-where-are-you-guys.gif'
+            "https://c.tenor.com/V6viLE6UQPEAAAAC/john-travolta-where-are-you-guys.gif"
           }
           width={498}
           height={247}
