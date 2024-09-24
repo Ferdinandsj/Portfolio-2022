@@ -62,7 +62,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {/* Project Details and tags*/}
           <div
             className="flex flex-col w-full h-full gap-10
-          lg:border-gray-300 lg:border-r-[1px] lg:pr-5 lg:items-end lg:pr-10"
+          lg:border-gray-300 lg:border-r-[1px] lg:items-end lg:pr-10"
           >
             <div
               className="flex justify-start gap-10
