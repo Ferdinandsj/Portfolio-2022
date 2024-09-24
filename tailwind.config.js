@@ -120,13 +120,8 @@ module.exports = {
         customSemiBold: "550",
       },
       fontFamily: {
-        inter: [
-          "Inter",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
-        source: ["Source Serif pro", "serif"],
+        sans: ["Inter", "sans-serif"],
+        serif: ["source-serif-pro", "serif"], // Use Source Serif Pro as the default serif font
         fontSize: {
           h1: "32px",
           h2: "24px",
