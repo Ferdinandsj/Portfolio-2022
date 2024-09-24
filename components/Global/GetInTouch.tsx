@@ -5,11 +5,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Linkedin } from "lucide-react";
 
-interface GetInTouchProps {}
-
-const GetInTouch: React.FC<
-  GetInTouchProps
-> = ({}) => {
+const GetInTouch: React.FC = ({}) => {
   return (
     <div className="gap-3 flex flex-col justify-center items-center grow-0">
       <div className="flex flex-col justify-center gap-0">
@@ -20,11 +16,7 @@ const GetInTouch: React.FC<
           <PhoneIcon number="+4748085049" />
           <MailIcon mail="ferdinand@steen-johnsen.com" />
           <Link href="https://www.linkedin.com/in/ferdinandsj/">
-            <Button
-              className="h-8 w-8"
-              variant="ghost"
-              size="icon"
-            >
+            <Button className="h-8 w-8" variant="ghost" size="icon">
               <Linkedin className="h-5 w-5 stroke-gray-700" />
             </Button>
           </Link>

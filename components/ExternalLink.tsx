@@ -1,4 +1,3 @@
-import { relative } from "path";
 import Image from "next/image";
 
 interface Props {

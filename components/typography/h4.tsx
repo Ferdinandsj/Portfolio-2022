@@ -11,7 +11,7 @@ const H4: React.FC<H4Props> = ({ children, className }) => {
     <div
       className={classNames(
         "className= text-xs uppercase text-gray-500 font-medium tracking-wide",
-        className
+        className,
       )}
     >
       {children}

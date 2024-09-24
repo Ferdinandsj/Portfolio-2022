@@ -1,17 +1,15 @@
 import { FC } from "react";
 import { ProjectDetail } from "@/types";
 import H3 from "../typography/h3";
-import { projects } from "@/data/projects";
 import { Badge } from "../ui/badge";
 import Subtle from "../typography/subtle";
+import Image from "next/image";
 
 interface ProjectHeaderProps {
   project: ProjectDetail;
 }
 
-const ProjectOverview: FC<ProjectHeaderProps> = ({
-  project,
-}) => {
+const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
   return (
     <div
       className="flex flex-col gap-14 mx-auto font-inter text-base leading-7 text-gray-700 tracking-normal
@@ -24,15 +22,13 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {project.title}
         </h1>
         {/* Project Image */}
-        <img
+        <Image
           src={project.overview.heroImage}
           alt="Project overview"
           className=""
         />
         {/* Challenge text */}
-        <p className="text-lg text-gray-700">
-          {project.overview.challenge}
-        </p>
+        <p className="text-lg text-gray-700">{project.overview.challenge}</p>
       </div>
 
       {/* Two-Column Layout for Challenge & Result */}
@@ -45,9 +41,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {/* Responsibilities */}
           <div className="flex flex-col gap-[2px]">
             <H3>Responsibilities</H3>
-            <p>
-              {project.overview.responsabilitites}
-            </p>
+            <p>{project.overview.responsabilitites}</p>
           </div>
           <div className="flex flex-col gap-[2px]">
             <H3>Result</H3>
@@ -86,9 +80,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               {project.overview.crew && (
                 <div>
                   <Subtle>Crew</Subtle>
-                  <p className="text-gray-800">
-                    {project.overview.crew}
-                  </p>
+                  <p className="text-gray-800">{project.overview.crew}</p>
                 </div>
               )}
             </div>
@@ -97,13 +89,14 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               className="flex flex-wrap justify-start gap-3 w-full
             lg:justify-end"
             >
-              {project.overview.tags.map(
-                (tag) => (
-                  <Badge className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white">
-                    {tag}
-                  </Badge>
-                )
-              )}
+              {project.overview.tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
+                >
+                  {tag}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>

@@ -8,26 +8,15 @@ interface ArticleSectionProps {
   index: number; // Add index as a prop
 }
 
-const ProjectProcess: FC<ArticleSectionProps> = ({
-  section,
-  index,
-}) => {
+const ProjectProcess: FC<ArticleSectionProps> = ({ section, index }) => {
   switch (section.type) {
     case "image-left-text-right":
       return (
         <div className="flex flex-col">
-          <RenderHeading
-            h2title={section.h2title}
-            h3title={section.h3title}
-          />
+          <RenderHeading h2title={section.h2title} h3title={section.h3title} />
           <div className="grid grid-cols-1 md:grid-cols-[468px_346px] items-center justify-between">
-            <img
-              src={section.src}
-              alt={section.alt || ""}
-            />
-            <p className="text-gray-700">
-              {section.text}
-            </p>
+            <img src={section.src} alt={section.alt || ""} />
+            <p className="text-gray-700">{section.text}</p>
           </div>
         </div>
       );
@@ -37,17 +26,13 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
         <div className="flex gap-5  md:flex items-center">
           <div>
             {index === 0 ? (
-              <H2 className="mb-5 h-12">
-                {section.h2title}
-              </H2>
+              <H2 className="mb-5 h-12">{section.h2title}</H2>
             ) : (
               <H3 className="text-gray-700 text-xl font-semibold mb-1">
                 {section.h3title}
               </H3>
             )}
-            <p className="text-gray-700 md:w-[468px]">
-              {section.text}
-            </p>
+            <p className="text-gray-700 md:w-[468px]">{section.text}</p>
           </div>
           <video
             className="w-[346px] h-auto max-w-lg"
@@ -57,12 +42,8 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
             playsInline
             controls={false}
           >
-            <source
-              src={section.src}
-              type="video/mp4"
-            />
-            Your browser does not support the
-            video tag.
+            <source src={section.src} type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
         </div>
       );
@@ -78,26 +59,18 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
             playsInline
             controls={false}
           >
-            <source
-              src={section.src}
-              type="video/mp4"
-            />
-            Your browser does not support the
-            video tag.
+            <source src={section.src} type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           <div>
             {index === 0 ? (
-              <H2 className="mb-5 h-12">
-                {section.h3title}
-              </H2>
+              <H2 className="mb-5 h-12">{section.h3title}</H2>
             ) : (
               <H3 className="text-gray-700 text-xl font-semibold mb-1">
                 {section.h3title}
               </H3>
             )}
-            <p className="text-gray-700">
-              {section.text}
-            </p>
+            <p className="text-gray-700">{section.text}</p>
           </div>
         </div>
       );
@@ -114,10 +87,7 @@ interface HeadingProps {
   h3title?: string; // Optional string value for H3 title
 }
 
-const RenderHeading: React.FC<HeadingProps> = ({
-  h2title,
-  h3title,
-}) => {
+const RenderHeading: React.FC<HeadingProps> = ({ h2title, h3title }) => {
   if (h2title) {
     return <H2 className="mb-5">{h2title}</H2>; // If there's an h2title, render the H2 tag
   }

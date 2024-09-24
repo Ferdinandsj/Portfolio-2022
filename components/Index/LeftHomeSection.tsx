@@ -1,14 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import LinkedInIcon from "../icons/LinkedinIcon";
 import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import { Button } from "@/components/ui/button";
 import FlagMenu from "./FlagMenu";
 
 import { Linkedin } from "lucide-react";
-import { Phone } from "lucide-react";
-import { Mail } from "lucide-react";
 
 export default function LeftHomeSection() {
   return (
@@ -24,24 +21,19 @@ export default function LeftHomeSection() {
         >
           <div className="flex w-[300px] gap-4 flex-col items-center">
             <Image
-              src={
-                "/images/home-page/portrait.png"
-              }
+              src={"/images/home-page/portrait.png"}
               alt={"Portrait image"}
               width={148}
               height={148}
             />
             <Image
-              src={
-                "/images/home-page/hi-message.svg"
-              }
+              src={"/images/home-page/hi-message.svg"}
               alt={"Portrait image"}
               width={240}
               height={38}
             />
             <p className="text-center text-gray-500 text-wrap grow-0 break-normal">
-              An interaction designer with
-              experience in UX, UI, Service Design
+              An interaction designer with experience in UX, UI, Service Design
               and Front-End
             </p>
           </div>
@@ -54,11 +46,7 @@ export default function LeftHomeSection() {
                 <PhoneIcon number="+4748085049" />
                 <MailIcon mail="ferdinand@steen-johnsen.com" />
                 <Link href="https://www.linkedin.com/in/ferdinandsj/">
-                  <Button
-                    className="h-8 w-8"
-                    variant="ghost"
-                    size="icon"
-                  >
+                  <Button className="h-8 w-8" variant="ghost" size="icon">
                     <Linkedin className="h-5 w-5 stroke-gray-700" />
                   </Button>
                 </Link>

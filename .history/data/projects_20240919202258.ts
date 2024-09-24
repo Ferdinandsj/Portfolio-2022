@@ -12,10 +12,8 @@ export const projects: ProjectDetail[] = [
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    squareImage:
-      "/images/naer/naer-square-image.png",
-    title:
-      "A Cross-Platform Design System for Web and VR",
+    squareImage: "/images/naer/naer-square-image.png",
+    title: "A Cross-Platform Design System for Web and VR",
     categories: ["UI", "UX", "XR"],
     date: "2024",
     employer: "Naer",
@@ -53,8 +51,7 @@ export const projects: ProjectDetail[] = [
       },
     ],
     overview: {
-      heroImage:
-        "/images/naer/naer-hero-image.png",
+      heroImage: "/images/naer/naer-hero-image.png",
       challenge:
         "Naer, a Norwegian XR startup, needed a robust design system for its web app and VR application to streamline development and improve design consistency. With a small startup team and limited resources, the challenge was to create a flexible, scalable system that could be easily implemented by developers while also being adaptable for future iterations across both 2D and 3D platforms.",
       responsabilitites:
@@ -63,22 +60,13 @@ export const projects: ProjectDetail[] = [
         "Launched the design system, ensuring seamless UI/UX for Naer’s web app and supporting its expansion in VR. The system provides consis-tent UI and improved development speeds across both Web and VR.",
       role: "UI & UX Designer",
       timeline: "9 months",
-      tags: [
-        "Atomic Design system",
-        "UX",
-        "UI",
-        "VR",
-        "Unity",
-        "Tailwind",
-      ],
+      tags: ["Atomic Design system", "UX", "UI", "VR", "Unity", "Tailwind"],
     },
   },
   {
     id: 2,
-    squareImage:
-      "/images/iterate-demo/iterate-demo-1.gif",
-    title:
-      "Testing Market Interest of Product Ideas Early",
+    squareImage: "/images/iterate-demo/iterate-demo-1.gif",
+    title: "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],
     date: "2022",
     employer: "Iterate",
@@ -106,8 +94,7 @@ export const projects: ProjectDetail[] = [
       // More sections as needed
     ],
     overview: {
-      heroImage:
-        "/images/iterate/iterate-hero.png",
+      heroImage: "/images/iterate/iterate-hero.png",
       challenge:
         "Startups often fail at the seed or concept stage due to a lack of product-market fit. The challenge was to create a tool that could help entrepreneurs test their prototypes on real customers and gather market feedback earlier and more cheaply than traditional methods, improving the chances of success. We developed a tool that allows startups to test market interest in their products by using Figma prototypes to gather real-world user engagement data and assess product-market fit.",
       responsabilitites:
@@ -135,22 +122,15 @@ export const projects: ProjectDetail[] = [
   {
     id: 3,
     slug: slugify("Koi-color-studio"), // Add the slug here
-    squareImage:
-      "/images/aesthetic-guide/hero-square.jpg",
+    squareImage: "/images/aesthetic-guide/hero-square.jpg",
     title:
       "How can we ensure an aesthetic and sustainable urban development for the city of Oslo?",
-    categories: [
-      "Service",
-      "graphic",
-      "web design",
-    ],
+    categories: ["Service", "graphic", "web design"],
     date: "2022",
-    employer:
-      "KOI Color studio \n Oslo Municipality",
+    employer: "KOI Color studio \n Oslo Municipality",
     article: [],
     overview: {
-      heroImage:
-        "/images/aesthetic-guide/aesthetic-hero-image.png",
+      heroImage: "/images/aesthetic-guide/aesthetic-hero-image.png",
       challenge:
         "With minimal regulatory oversight on materials and design, Oslo’s city-development has increasingly overlooked aesthetic consi-derations, impacting the quality of life for its residents. How can we help stakeholders make better aesthetic city planning decisions? \n For Oslo’s revamp of the Filipstad District, a team of thirty students in collaboration with KOI Color-studio was tasked with proposing a new approach to integrating aesthetics and functionality into urban design. The goal was to advocate for the importance of aesthetics to policymakers in shaping the city’s future.",
       responsabilitites:
