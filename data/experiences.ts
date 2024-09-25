@@ -49,7 +49,7 @@ export const experiences: ExperienceDetail[] = [
   {
     id: 5,
     employer: "Pango",
-    position: "Design lead, UX, UI and graphic Designer",
+    position: "Design lead, UX, UI and graphic",
     startDate: "Jan 2022",
     endDate: "May 2023",
     summary: [

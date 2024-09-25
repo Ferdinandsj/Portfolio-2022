@@ -8,20 +8,35 @@ interface ArticleSectionProps {
   section: ArticleSection;
 }
 
-const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
+const ProjectProcess: FC<ArticleSectionProps> = ({
+  section,
+}) => {
   switch (section.type) {
     case "image-left-text-right":
       return (
-        <div className="flex flex-col gap-0">
-          <RenderHeading h2title={section.h2title} h3title={section.h3title} />
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-[1fr_1fr] items-center">
+        <div className="flex flex-col gap-0 h-auto">
+          <RenderHeading
+            h2title={section.h2title}
+            h3title={section.h3title}
+          />
+          <div
+            className="flex flex-col w-full gap-5 items-start
+          sm:flex-row"
+          >
             <Image
-              src={section.src || "/fallback-image.jpg"}
+              className=""
+              src={
+                section.src ||
+                "/fallback-image.jpg"
+              }
               alt={section.alt || ""}
               width={468}
               height={336}
+              unoptimized={true}
             />
-            <p className="text-gray-700">{section.text}</p>
+            <p className="max-w-[346px] text-gray-700">
+              {section.text}
+            </p>
           </div>
         </div>
       );
@@ -29,27 +44,34 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
     case "text-left-video-right":
       return (
         <div
-          className="flex flex-col-reverse md:flex-row gap-5 items-center
-        sm:flex-col"
+          className="flex flex-col-reverse w-full gap-5 justify-between   
+        sm:flex-col
+        md:flex-row"
         >
-          <div className="md:w-1/2 ">
+          <div className="w-auto max-w-[346px]">
             <RenderHeading
               h2title={section.h2title}
               h3title={section.h3title}
             />
-            <p className="text-gray-700">{section.text}</p>
+            <p className="text-gray-700">
+              {section.text}
+            </p>
           </div>
-          <div className="w-auto md:w-1/2">
+          <div className="w-auto m-5">
             <video
-              className="w-full h-auto border shadow-inner b-radius rounded-md"
+              className="w-auto h-auto max-h-[600px] border shadow-inner b-radius rounded-md"
               autoPlay
               loop
               muted
               playsInline
               controls={false}
             >
-              <source src={section.src} type="video/mp4" />
-              Your browser does not support the video tag.
+              <source
+                src={section.src}
+                type="video/mp4"
+              />
+              Your browser does not support the
+              video tag.
             </video>
           </div>
         </div>
@@ -58,25 +80,31 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
     case "video-left-text-right":
       return (
         <div className="flex flex-col md:flex-row gap-5 items-center">
-          <div className="w-full md:w-1/2">
+          <div className="w-full ">
             <video
-              className="w-full h-auto border shadow-inner b-radius rounded-md"
+              className="w-full max-w-[468px] h-auto border shadow-inner b-radius rounded-md"
               autoPlay
               loop
               muted
               playsInline
               controls={false}
             >
-              <source src={section.src} type="video/mp4" />
-              Your browser does not support the video tag.
+              <source
+                src={section.src}
+                type="video/mp4"
+              />
+              Your browser does not support the
+              video tag.
             </video>
           </div>
-          <div className="md:w-1/2">
+          <div className="w-auto max-w-[346px]">
             <RenderHeading
               h2title={section.h2title}
               h3title={section.h3title}
             />
-            <p className="text-gray-700">{section.text}</p>
+            <p className="text-gray-700">
+              {section.text}
+            </p>
           </div>
         </div>
       );
@@ -98,9 +126,40 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
             playsInline
             controls={false}
           >
-            <source src={section.src} type="video/mp4" />
-            Your browser does not support the video tag.
+            <source
+              src={section.src}
+              type="video/mp4"
+            />
+            Your browser does not support the
+            video tag.
           </video>
+        </div>
+      );
+
+    case "full-img-full-text":
+      return (
+        <div className="flex flex-col items-center w-full gap-10">
+          {/* Project Image */}
+          <Image
+            src={section.src || ""}
+            alt="Project overview"
+            className="w-full h-[400px] sm:w-auto sm:h-auto object-cover"
+            width={834}
+            height={336}
+            unoptimized={true}
+          />
+          <div className="flex flex-col gap-0">
+            {/* Title */}
+            <RenderHeading
+              h2title={section.h2title}
+              h3title={section.h3title}
+            />
+
+            {/* Challenge text */}
+            <p className="text-lg text-gray-700">
+              {section.text}
+            </p>
+          </div>
         </div>
       );
 
@@ -116,7 +175,10 @@ interface HeadingProps {
   h3title?: string; // Optional string value for H3 title
 }
 
-const RenderHeading: React.FC<HeadingProps> = ({ h2title, h3title }) => {
+const RenderHeading: React.FC<HeadingProps> = ({
+  h2title,
+  h3title,
+}) => {
   if (h2title) {
     return <H2 className="mb-2">{h2title}</H2>; // If there's an h2title, render the H2 tag
   }

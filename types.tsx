@@ -34,6 +34,7 @@ export interface ArticleSection {
     | "image-left-text-right"
     | "text-left-video-right"
     | "video-left-text-right"
+    | "full-img-full-text"
     | "full-video";
 
   text?: string;

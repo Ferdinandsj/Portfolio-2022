@@ -6,10 +6,16 @@ type H3Props = {
   className?: string; // Optional className prop
 };
 
-const H3: React.FC<H3Props> = ({ children, className }) => {
+const H3: React.FC<H3Props> = ({
+  children,
+  className,
+}) => {
   return (
     <div
-      className={classNames("text-gray-700 text-xl font-semibold", className)}
+      className={classNames(
+        "text-gray-700 text-xl font-semibold",
+        className
+      )}
     >
       {children}
     </div>
