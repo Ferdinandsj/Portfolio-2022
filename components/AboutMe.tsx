@@ -16,11 +16,9 @@ const AboutMe: React.FC = () => {
       md:px-10 md:ml-[30%] sm:ml-[30%] sm:max-w-[400px] lg:ml-[35%] xl:ml-[30%] "
       >
         <p>
-          Aside from design, I love cooking, music
-          and photography! I am eager to dive deep
-          into anything that captures my interest.
-          Reach out for a coffee so we can get to
-          know each other ☕
+          Aside from design, I love cooking, music and photography! I am eager
+          to dive deep into anything that captures my interest. Reach out for a
+          coffee so we can get to know each other ☕
         </p>
         <div className="flex flex-col gap-2">
           <div className="flex gap-2">
@@ -32,9 +30,7 @@ const AboutMe: React.FC = () => {
 
           <div className="flex gap-2">
             <Phone className="h-6 w-6" />
-            <h4 className="text-semibold text-gray-700">
-              +47 480 80 549
-            </h4>
+            <h4 className="text-semibold text-gray-700">+47 480 80 549</h4>
           </div>
         </div>
         <a href="https://github.com/Ferdinandsj">
@@ -42,17 +38,9 @@ const AboutMe: React.FC = () => {
             <GitHubLogoIcon className="h-6 w-6 text-gray-700" />
             <p className="text-semibold text-gray-500 hover:text-gray-700 transition duration-300">
               Portfolio made by Ferdinand with{" "}
-              <span className="text-gray-700">
-                React
-              </span>
-              ,{" "}
-              <span className="text-gray-700">
-                Next.js
-              </span>
-              ,{" "}
-              <span className="text-gray-700">
-                Tailwind
-              </span>
+              <span className="text-gray-700">React</span>,{" "}
+              <span className="text-gray-700">Next.js</span>,{" "}
+              <span className="text-gray-700">Tailwind</span>
             </p>
           </div>
         </a>
