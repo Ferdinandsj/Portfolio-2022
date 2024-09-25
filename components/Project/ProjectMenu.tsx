@@ -1,32 +1,22 @@
-import React, {
-  useState,
-  useEffect,
-} from "react";
+import React, { useState, useEffect } from "react";
 import FlagButton from "@/components/ui/flagButton"; // Ensure the path is correct
 import { Button } from "../ui/button";
 import { ChevronsLeft } from "lucide-react";
 import Link from "next/link";
 
-const sections = [
-  "Overview",
-  "Process",
-  "Result",
-];
+const sections = ["Overview", "Process", "Result"];
 
 const ProjectMenu: React.FC = () => {
-  const [activeSection, setActiveSection] =
-    useState<string>(sections[0]);
+  const [activeSection, setActiveSection] = useState<string>(sections[0]);
 
   // Function to handle scroll events
   const handleScroll = () => {
     let currentSection = "";
 
     sections.forEach((section) => {
-      const element =
-        document.getElementById(section);
+      const element = document.getElementById(section);
       if (element) {
-        const rect =
-          element.getBoundingClientRect();
+        const rect = element.getBoundingClientRect();
         if (
           rect.top <= window.innerHeight / 2 &&
           rect.bottom >= window.innerHeight / 2
@@ -40,22 +30,13 @@ const ProjectMenu: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
-    return () =>
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Function to handle button click
   const handleButtonClick = (section: string) => {
-    document
-      .getElementById(section)
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -76,9 +57,7 @@ const ProjectMenu: React.FC = () => {
               variantType={"ghost"}
               key={section}
               isActive={section === activeSection}
-              onClick={() =>
-                handleButtonClick(section)
-              }
+              onClick={() => handleButtonClick(section)}
               label={section}
             />
           ))}

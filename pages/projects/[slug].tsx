@@ -1,7 +1,4 @@
-import {
-  GetStaticPaths,
-  GetStaticProps,
-} from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { projects } from "@/data/projects";
 import ProjectOverview from "@/components/Project/ProjectOverview";
 import ProjectProcess from "@/components/Project/ProjectProcess";
@@ -16,9 +13,7 @@ interface ProjectPageProps {
   project: ProjectDetail;
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({
-  project,
-}) => {
+const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
   return (
     <div className="font-inter flex flex-col items-center justify-between w-full min-h-screen mt-10">
       <div
@@ -59,39 +54,21 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
             {/* Project Overview */}
             <div className="flex flex-col gap-40 max-w-[834px] justify-center w-full pt-10 px-5">
               <div id="Overview">
-                <ProjectOverview
-                  project={project}
-                />
+                <ProjectOverview project={project} />
               </div>
 
               {/* Process Section */}
-              <div
-                id="Process"
-                className="flex flex-col gap-20 sm:gap-20"
-              >
-                {project.process.map(
-                  (section, index) => (
-                    <ProjectProcess
-                      key={index}
-                      section={section}
-                    />
-                  )
-                )}
+              <div id="Process" className="flex flex-col gap-20 sm:gap-20">
+                {project.process.map((section, index) => (
+                  <ProjectProcess key={index} section={section} />
+                ))}
               </div>
 
               {/* Result Section */}
-              <div
-                id="Result"
-                className="flex flex-col gap-10 sm:gap-20"
-              >
-                {project.result.map(
-                  (section, index) => (
-                    <ProjectProcess
-                      key={index}
-                      section={section}
-                    />
-                  )
-                )}
+              <div id="Result" className="flex flex-col gap-10 sm:gap-20">
+                {project.result.map((section, index) => (
+                  <ProjectProcess key={index} section={section} />
+                ))}
               </div>
             </div>
           </div>
@@ -107,36 +84,32 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 };
 
 // Generate paths for all projects based on slug
-export const getStaticPaths: GetStaticPaths =
-  async () => {
-    const paths = projects.map((project) => ({
-      params: { slug: project.slug },
-    }));
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
 
-    return {
-      paths,
-      fallback: false, // Means other routes will 404
-    };
+  return {
+    paths,
+    fallback: false, // Means other routes will 404
   };
+};
 
 // Fetch the correct project based on the slug in the URL
-export const getStaticProps: GetStaticProps =
-  async ({ params }) => {
-    const project = projects.find(
-      (p) => p.slug === params!.slug
-    );
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const project = projects.find((p) => p.slug === params!.slug);
 
-    if (!project) {
-      return {
-        notFound: true, // If no project is found, show 404
-      };
-    }
-
+  if (!project) {
     return {
-      props: {
-        project,
-      },
+      notFound: true, // If no project is found, show 404
     };
+  }
+
+  return {
+    props: {
+      project,
+    },
   };
+};
 
 export default ProjectPage;
