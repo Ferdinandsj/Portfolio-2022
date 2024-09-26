@@ -12,8 +12,10 @@ export const projects: ProjectDetail[] = [
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    squareImage: "/images/naer/naer-square-image.png",
-    title: "A Cross-Platform Design System for Web and VR",
+    squareImage:
+      "/images/naer/naer-square-image.png",
+    title:
+      "A Cross-Platform Design System for Web and VR",
     categories: ["UI", "UX", "XR"],
     date: "2024",
     employer: "Naer",
@@ -28,7 +30,14 @@ export const projects: ProjectDetail[] = [
         "Launched the design system, ensuring seamless UI/UX for Naer’s web app and supporting its expansion in VR. The system provides consis-tent UI and improved development speeds across both Web and VR.",
       role: "UI & UX Designer",
       timeline: "9 months",
-      tags: ["Atomic Design system", "UX", "UI", "VR", "Unity", "Tailwind"],
+      tags: [
+        "Atomic Design system",
+        "UX",
+        "UI",
+        "VR",
+        "Unity",
+        "Tailwind",
+      ],
     },
 
     process: [
@@ -80,7 +89,8 @@ export const projects: ProjectDetail[] = [
     ],
 
     footer: {
-      title: "Curious about building cross-platform design systems?",
+      title:
+        "Curious about building cross-platform design systems?",
       description:
         "Read my university report on how 3D UI differs from 2D UI and its design principles.",
       link: "https://drive.google.com/file/d/1kxaarvNgw-LlHyHxIS7Z3h-Mby9b2Ren/view",
@@ -88,7 +98,7 @@ export const projects: ProjectDetail[] = [
     },
   },
 
-  /*   {
+  {
     id: 2,
     squareImage:
       "/images/iterate-demo/iterate-demo-1.gif",
@@ -97,7 +107,7 @@ export const projects: ProjectDetail[] = [
     categories: ["UI", "UX"],
     date: "2022",
     employer: "Iterate",
-    slug: slugify("Iterate"), 
+    slug: slugify("Iterate"),
     overview: {
       heroImage:
         "/images/iterate/iterate-hero.png",
@@ -115,11 +125,9 @@ export const projects: ProjectDetail[] = [
     footer: {
       title: "Title",
     },
-    process: [
-
-    ],
+    process: [],
     result: [],
-  }, */
+  },
 
   /*   {
     id: 3,
