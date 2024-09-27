@@ -1,6 +1,6 @@
 export interface ProjectDetail {
   id: number;
-  squareImage: string;
+  indexImage: string;
   title: string;
   categories: string[];
   date: string;
@@ -10,6 +10,7 @@ export interface ProjectDetail {
   result: ArticleSection[];
   overview: {
     heroImage: string;
+    heroImage2?: string;
     challenge: string;
     responsabilitites: string;
     result: string;

@@ -20,7 +20,7 @@ const ProjectDetailCard: React.FC<
               height={403}
               width={403}
               alt={project.title}
-              src={project.squareImage}
+              src={project.indexImage}
               priority
               className="object-cover w-full h-full"
             />

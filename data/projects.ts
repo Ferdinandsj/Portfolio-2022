@@ -12,7 +12,7 @@ export const projects: ProjectDetail[] = [
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    squareImage:
+    indexImage:
       "/images/naer/naer-square-image.png",
     title:
       "A Cross-Platform Design System for Web and VR",
@@ -100,7 +100,7 @@ export const projects: ProjectDetail[] = [
 
   {
     id: 2,
-    squareImage:
+    indexImage:
       "/images/iterate-demo/iterate-demo-1.gif",
     title:
       "Testing Market Interest of Product Ideas Early",
@@ -109,12 +109,13 @@ export const projects: ProjectDetail[] = [
     employer: "Iterate",
     slug: slugify("Iterate"),
     overview: {
-      heroImage:
-        "/images/iterate/iterate-hero.png",
+      heroImage: "/images/iterate/demo-hero1.png",
+      heroImage2:
+        "/images/iterate/demo-hero2.png",
       challenge:
         "Startups often fail at the seed or concept stage due to a lack of product-market fit. The challenge was to create a tool that could help entrepreneurs test their prototypes on real customers and gather market feedback earlier and more cheaply than traditional methods, improving the chances of success. We developed a tool that allows startups to test market interest in their products by using Figma prototypes to gather real-world user engagement data and assess product-market fit.",
       responsabilitites:
-        "As the sole designer, I led the design process, conducted over 20 interviews, and worked closely with two developers. I was responsible for developing the UI, branding, and animating the product, as well as creating the design system from scratch. I also led user testing, workshops, and maintained stakeholder relationships.",
+        "As the sole designer, I led the design process, conducted over 20 interviews, and worked closely with two developers. I was responsible for developing the UI, branding and animating the product. I also led user testing, workshops, and maintained stakeholder relationships.",
       result:
         "Successfully developed a tool that allows entrepreneurs to test their Figma prototypes in real-world settings. The tool tracks user interactions, provides engagement metrics, and offers actionable insights to improve product-market fit. The MVP was validated by two startups, with Iterate continuing development post-internship.",
       role: "UX & UI Designer",
