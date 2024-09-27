@@ -34,7 +34,6 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                     className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
                     width={834}
                     height={336}
-                    objectFit="true"
                     src={
                       project.overview.heroImage
                     }

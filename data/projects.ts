@@ -123,11 +123,18 @@ export const projects: ProjectDetail[] = [
       crew: "Product Trio",
       tags: ["User Testing", "UX", "UI"],
     },
+    process: [
+      {
+        h2title: "Humble beginnings",
+        type: "image-left-text-right",
+        src: "/images/iterate/rocketship-adventure.webp",
+        text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
+      },
+    ],
+    result: [],
     footer: {
       title: "Title",
     },
-    process: [],
-    result: [],
   },
 
   /*   {
