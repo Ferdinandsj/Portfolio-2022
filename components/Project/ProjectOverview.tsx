@@ -10,15 +10,11 @@ interface ProjectHeaderProps {
   project: ProjectDetail;
 }
 
-const ProjectOverview: FC<ProjectHeaderProps> = ({
-  project,
-}) => {
+const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
   // Check if a file is a video based on its extension
   const isVideo = (src: string) => {
     return (
-      src.endsWith(".mp4") ||
-      src.endsWith(".webm") ||
-      src.endsWith(".ogg")
+      src.endsWith(".mp4") || src.endsWith(".webm") || src.endsWith(".ogg")
     );
   };
 
@@ -41,9 +37,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               {/* Conditional rendering based on heroImage2 existence */}
               {project.overview.heroImage2 ? (
                 <div className="flex gap-5">
-                  {isVideo(
-                    project.overview.heroImage
-                  ) ? (
+                  {isVideo(project.overview.heroImage) ? (
                     <video
                       className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
                       width={834}
@@ -55,10 +49,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                       controls={false}
                     >
                       <source
-                        src={
-                          project.overview
-                            .heroImage
-                        }
+                        src={project.overview.heroImage}
                         type="video/mp4"
                       />
                     </video>
@@ -67,16 +58,12 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                       className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
                       width={834}
                       height={336}
-                      src={
-                        project.overview.heroImage
-                      }
+                      src={project.overview.heroImage}
                       alt="Primary Hero Image"
                     />
                   )}
 
-                  {isVideo(
-                    project.overview.heroImage2
-                  ) ? (
+                  {isVideo(project.overview.heroImage2) ? (
                     <video
                       className="max-w-[468px] hidden lg:block"
                       width={834}
@@ -88,10 +75,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                       controls={false}
                     >
                       <source
-                        src={
-                          project.overview
-                            .heroImage2
-                        }
+                        src={project.overview.heroImage2}
                         type="video/mp4"
                       />
                     </video>
@@ -100,17 +84,12 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                       className="max-w-[468px] hidden lg:block"
                       width={834}
                       height={336}
-                      src={
-                        project.overview
-                          .heroImage2
-                      }
+                      src={project.overview.heroImage2}
                       alt="Secondary Hero Image"
                     />
                   )}
                 </div>
-              ) : isVideo(
-                  project.overview.heroImage
-                ) ? (
+              ) : isVideo(project.overview.heroImage) ? (
                 <video
                   width={834}
                   height={336}
@@ -120,21 +99,13 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                   playsInline
                   controls={false}
                 >
-                  <source
-                    src={
-                      project.overview.heroImage
-                    }
-                    type="video/mp4"
-                  />
+                  <source src={project.overview.heroImage} type="video/mp4" />
                 </video>
               ) : (
                 <Image
                   width={834}
                   height={336}
-                  src={
-                    project.overview.heroImage ||
-                    ""
-                  }
+                  src={project.overview.heroImage || ""}
                   alt="Primary Hero Image"
                 />
               )}
@@ -143,9 +114,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
         </div>
 
         {/* Challenge text */}
-        <p className="text-lg text-gray-700">
-          {project.overview.challenge}
-        </p>
+        <p className="text-lg text-gray-700">{project.overview.challenge}</p>
       </div>
 
       {/* Two-Column Layout for Challenge & Result */}
@@ -158,9 +127,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {/* Responsibilities */}
           <div className="flex flex-col gap-[2px]">
             <H3>Responsibilities</H3>
-            <p>
-              {project.overview.responsabilitites}
-            </p>
+            <p>{project.overview.responsabilitites}</p>
           </div>
           <div className="flex flex-col gap-[2px]">
             <H3>Result</H3>
@@ -199,9 +166,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               {project.overview.crew && (
                 <div>
                   <Subtle>Crew</Subtle>
-                  <p className="text-gray-800">
-                    {project.overview.crew}
-                  </p>
+                  <p className="text-gray-800">{project.overview.crew}</p>
                 </div>
               )}
             </div>
@@ -210,16 +175,14 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               className="flex flex-wrap justify-start gap-3 w-full
             lg:justify-end"
             >
-              {project.overview.tags.map(
-                (tag, index) => (
-                  <Badge
-                    key={index}
-                    className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
-                  >
-                    {tag}
-                  </Badge>
-                )
-              )}
+              {project.overview.tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
+                >
+                  {tag}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>
