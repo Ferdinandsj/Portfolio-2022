@@ -11,7 +11,9 @@ interface ArticleSectionProps {
 // Utility function to determine if the media is a video
 const isVideo = (src?: string) => {
   return (
-    src?.endsWith(".mp4") || src?.endsWith(".webm") || src?.endsWith(".ogg")
+    src?.endsWith(".mp4") ||
+    src?.endsWith(".webm") ||
+    src?.endsWith(".ogg")
   );
 };
 
@@ -22,7 +24,9 @@ const textSizeClass = {
   full: "w-full",
 };
 
-const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
+const ProjectProcess: FC<ArticleSectionProps> = ({
+  section,
+}) => {
   // Helper function to render media (image or video)
   const renderMedia = () => {
     if (!section.src) return null;
@@ -37,8 +41,12 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
           playsInline
           controls={false}
         >
-          <source src={section.src} type="video/mp4" />
-          Your browser does not support the video tag.
+          <source
+            src={section.src}
+            type="video/mp4"
+          />
+          Your browser does not support the video
+          tag.
         </video>
       </div>
     ) : (
@@ -58,8 +66,16 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
   // Helper function to render the heading
   const renderHeading = () => (
     <>
-      {section.h2title && <H2 className="mb-2 w-full">{section.h2title}</H2>}
-      {section.h3title && <H3 className="mb-2">{section.h3title}</H3>}
+      {section.h2title && (
+        <H2 className="mb-2 w-full">
+          {section.h2title}
+        </H2>
+      )}
+      {section.h3title && (
+        <H3 className="mb-2">
+          {section.h3title}
+        </H3>
+      )}
     </>
   );
 
@@ -82,7 +98,7 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
     case "text-left-image-right":
     case "text-left-video-right":
       return (
-        <div className="flex flex-col gap-5 sm:flex-row">
+        <div className="flex flex-col-reverse gap-5 sm:flex-row">
           <div
             className={`flex flex-col gap-0 ${textSizeClass[section.textSize]} text-gray-700`}
           >
@@ -105,9 +121,13 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
       return (
         <div className="flex flex-col items-center w-full gap-10">
           {renderMedia()}
-          <div className={`flex flex-col gap-0 ${textSizeClass.full}`}>
+          <div
+            className={`flex flex-col gap-0 ${textSizeClass.full}`}
+          >
             {renderHeading()}
-            <p className="text-lg text-gray-700">{section.text}</p>
+            <p className="text-lg text-gray-700">
+              {section.text}
+            </p>
           </div>
         </div>
       );
