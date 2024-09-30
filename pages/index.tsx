@@ -34,13 +34,28 @@ export default function Home() {
             md:pt-24 md:pb-20 md:w-[400px] md:gap-10 md:border-none
             lg:gap-10 lg:pb-0"
           >
-            <MobileHeader>Selected projects</MobileHeader>
-            <div className="flex flex-col gap-10 ">
+            <MobileHeader>
+              Selected projects
+            </MobileHeader>
+            <div className="flex flex-col gap-10 lg:gap-20">
               {projects
-                .sort((a: ProjectDetail, b: ProjectDetail) => a.id - b.id) // Sorting by ID in ascending order
-                .map((project: ProjectDetail, index: number) => (
-                  <ProjectCard key={index} project={project} />
-                ))}
+                .sort(
+                  (
+                    a: ProjectDetail,
+                    b: ProjectDetail
+                  ) => a.id - b.id
+                ) // Sorting by ID in ascending order
+                .map(
+                  (
+                    project: ProjectDetail,
+                    index: number
+                  ) => (
+                    <ProjectCard
+                      key={index}
+                      project={project}
+                    />
+                  )
+                )}
               {/* 
             Uncomment if you want to show an "All Projects" button
             <div className="w-full grow flex items-end justify-end">
@@ -61,21 +76,29 @@ export default function Home() {
             md:pt-0 md:w-[400px] md:gap-10
             lg:gap-10"
           >
-            <MobileHeader>Experience</MobileHeader>
+            <MobileHeader>
+              Experience
+            </MobileHeader>
 
             <div
               id="Experience"
               className="max-w-xs pt-10 flex w-full gap-20 
               md:gap-20 md:w-[400px] md:pt-16 flex-col"
             >
-              {experiences.map((experience, index) => (
-                <ExperienceCard key={index} experience={experience} />
-              ))}
+              {experiences.map(
+                (experience, index) => (
+                  <ExperienceCard
+                    key={index}
+                    experience={experience}
+                  />
+                )
+              )}
             </div>
             <div className="w-full grow flex items-end justify-center">
               <Link href="https://drive.google.com/file/d/1MhFiBrNiMgVt2VmDXghoalQOtlVfFcZ3/view?usp=sharing">
                 <Button>
-                  In-depth CV <ArrowUpRight className="ml-1 h-4 w-4" />
+                  In-depth CV{" "}
+                  <ArrowUpRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
             </div>
