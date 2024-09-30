@@ -8,25 +8,68 @@ interface ArticleSectionProps {
   section: ArticleSection;
 }
 
-const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
+const ProjectProcess: FC<ArticleSectionProps> = ({
+  section,
+}) => {
   switch (section.type) {
     case "image-left-text-right":
       return (
         <div className="flex flex-col gap-0 h-auto">
-          <RenderHeading h2title={section.h2title} h3title={section.h3title} />
           <div
             className="flex flex-col w-full gap-5 items-start
           sm:flex-row"
           >
             <Image
               className=""
-              src={section.src || "/fallback-image.jpg"}
+              src={
+                section.src ||
+                "/fallback-image.jpg"
+              }
               alt={section.alt || ""}
               width={468}
               height={336}
               unoptimized={true}
             />
-            <p className="max-w-[346px] text-gray-700">{section.text}</p>
+            <div className="flex flex-col gap-0">
+              <RenderHeading
+                h2title={section.h2title}
+                h3title={section.h3title}
+              />
+              <p className="max-w-[468px] text-gray-700">
+                {section.text}
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+
+    case "text-left-image-right":
+      return (
+        <div className="flex flex-col gap-0 h-auto">
+          <div
+            className="flex flex-col w-full gap-5 items-center
+          sm:flex-row"
+          >
+            <div className="flex flex-col gap-0">
+              <RenderHeading
+                h2title={section.h2title}
+                h3title={section.h3title}
+              />
+              <p className="max-w-[468px] text-gray-700">
+                {section.text}
+              </p>
+            </div>
+            <Image
+              className="max-w-[468px]"
+              src={
+                section.src ||
+                "/fallback-image.jpg"
+              }
+              alt={section.alt || ""}
+              width={1000}
+              height={1000}
+              unoptimized={true}
+            />
           </div>
         </div>
       );
@@ -43,7 +86,9 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
               h2title={section.h2title}
               h3title={section.h3title}
             />
-            <p className="text-gray-700">{section.text}</p>
+            <p className="text-gray-700">
+              {section.text}
+            </p>
           </div>
           <div className="w-auto m-5">
             <video
@@ -54,8 +99,12 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
               playsInline
               controls={false}
             >
-              <source src={section.src} type="video/mp4" />
-              Your browser does not support the video tag.
+              <source
+                src={section.src}
+                type="video/mp4"
+              />
+              Your browser does not support the
+              video tag.
             </video>
           </div>
         </div>
@@ -73,8 +122,12 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
               playsInline
               controls={false}
             >
-              <source src={section.src} type="video/mp4" />
-              Your browser does not support the video tag.
+              <source
+                src={section.src}
+                type="video/mp4"
+              />
+              Your browser does not support the
+              video tag.
             </video>
           </div>
           <div className="w-auto max-w-[346px]">
@@ -82,7 +135,9 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
               h2title={section.h2title}
               h3title={section.h3title}
             />
-            <p className="text-gray-700">{section.text}</p>
+            <p className="text-gray-700">
+              {section.text}
+            </p>
           </div>
         </div>
       );
@@ -104,8 +159,12 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
             playsInline
             controls={false}
           >
-            <source src={section.src} type="video/mp4" />
-            Your browser does not support the video tag.
+            <source
+              src={section.src}
+              type="video/mp4"
+            />
+            Your browser does not support the
+            video tag.
           </video>
         </div>
       );
@@ -130,7 +189,9 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
             />
 
             {/* Challenge text */}
-            <p className="text-lg text-gray-700">{section.text}</p>
+            <p className="text-lg text-gray-700">
+              {section.text}
+            </p>
           </div>
         </div>
       );
@@ -147,7 +208,10 @@ interface HeadingProps {
   h3title?: string; // Optional string value for H3 title
 }
 
-const RenderHeading: React.FC<HeadingProps> = ({ h2title, h3title }) => {
+const RenderHeading: React.FC<HeadingProps> = ({
+  h2title,
+  h3title,
+}) => {
   if (h2title) {
     return <H2 className="mb-2">{h2title}</H2>; // If there's an h2title, render the H2 tag
   }

@@ -9,21 +9,51 @@ interface ProjectDetailCardProps {
 const ProjectDetailCard: React.FC<
   ProjectDetailCardProps
 > = ({ project }) => {
+  // Check if indexImage is a video or image
+  const isVideo = (src: string) => {
+    return (
+      src.endsWith(".mp4") ||
+      src.endsWith(".webm") ||
+      src.endsWith(".ogg") ||
+      src.endsWith(".mov")
+    );
+  };
+
   return (
     <div className="max-w-xs flex-col space-y-2">
       {/* Link now points to the slug (based on employer name) */}
       <Link href={`/projects/${project.slug}`}>
         <div className="relative overflow-hidden group">
-          {/* Image wrapper with hover animation */}
+          {/* Image or video wrapper with hover animation */}
           <div className="duration-1000 group-hover:scale-105 transform transition-transform">
-            <Image
-              height={403}
-              width={403}
-              alt={project.title}
-              src={project.indexImage}
-              priority
-              className="object-cover w-full h-full"
-            />
+            {isVideo(project.indexImage) ? (
+              <video
+                height={403}
+                width={403}
+                className="object-cover w-full h-full"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+              >
+                <source
+                  src={project.indexImage}
+                  type="video/mp4"
+                />
+                Your browser does not support the
+                video tag.
+              </video>
+            ) : (
+              <Image
+                height={403}
+                width={403}
+                alt={project.title}
+                src={project.indexImage}
+                priority
+                className="object-cover w-full h-full"
+              />
+            )}
           </div>
         </div>
       </Link>

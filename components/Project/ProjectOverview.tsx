@@ -12,6 +12,15 @@ interface ProjectHeaderProps {
 const ProjectOverview: FC<ProjectHeaderProps> = ({
   project,
 }) => {
+  // Check if a file is a video based on its extension
+  const isVideo = (src: string) => {
+    return (
+      src.endsWith(".mp4") ||
+      src.endsWith(".webm") ||
+      src.endsWith(".ogg")
+    );
+  };
+
   return (
     <div
       className="flex flex-col gap-14 mx-auto font-inter text-base leading-7 text-gray-700 tracking-normal
@@ -25,31 +34,97 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           </h1>
 
           <div className="flex w-full gap-5">
-            {/* Project Image */}
+            {/* Project Media (Image or Video) */}
             <div>
               {/* Conditional rendering based on heroImage2 existence */}
               {project.overview.heroImage2 ? (
                 <div className="flex gap-5">
-                  <Image
-                    className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
-                    width={834}
-                    height={336}
+                  {isVideo(
+                    project.overview.heroImage
+                  ) ? (
+                    <video
+                      className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
+                      width={834}
+                      height={336}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls={false}
+                    >
+                      <source
+                        src={
+                          project.overview
+                            .heroImage
+                        }
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    <Image
+                      className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
+                      width={834}
+                      height={336}
+                      src={
+                        project.overview.heroImage
+                      }
+                      alt="Primary Hero Image"
+                    />
+                  )}
+
+                  {isVideo(
+                    project.overview.heroImage2
+                  ) ? (
+                    <video
+                      className="max-w-[468px] hidden lg:block"
+                      width={834}
+                      height={336}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls={false}
+                    >
+                      <source
+                        src={
+                          project.overview
+                            .heroImage2
+                        }
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    <Image
+                      className="max-w-[468px] hidden lg:block"
+                      width={834}
+                      height={336}
+                      src={
+                        project.overview
+                          .heroImage2
+                      }
+                      alt="Secondary Hero Image"
+                    />
+                  )}
+                </div>
+              ) : isVideo(
+                  project.overview.heroImage
+                ) ? (
+                <video
+                  width={834}
+                  height={336}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls={false}
+                >
+                  <source
                     src={
                       project.overview.heroImage
                     }
-                    alt="Secondary Hero Image"
+                    type="video/mp4"
                   />
-
-                  <Image
-                    className="max-w-[468px] hidden lg:block"
-                    width={834}
-                    height={336}
-                    src={
-                      project.overview.heroImage2
-                    }
-                    alt="Secondary Hero Image"
-                  />
-                </div>
+                </video>
               ) : (
                 <Image
                   width={834}
@@ -58,12 +133,13 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
                     project.overview.heroImage ||
                     ""
                   }
-                  alt="Secondary Hero Image"
+                  alt="Primary Hero Image"
                 />
               )}
             </div>
           </div>
         </div>
+
         {/* Challenge text */}
         <p className="text-lg text-gray-700">
           {project.overview.challenge}

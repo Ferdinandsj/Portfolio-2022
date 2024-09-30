@@ -114,3 +114,10 @@ body {
 #Result {
   scroll-margin-top: 80px; /* Adjust this value to leave space at the top */
 }
+
+@layer utilities {
+  ::selection {
+    background-color: #1f933ca9; /* Change to your preferred highlight color */
+    color: #ffffff; /* Change the text color */
+  }
+}

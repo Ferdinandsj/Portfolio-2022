@@ -21,7 +21,8 @@ export const projects: ProjectDetail[] = [
     employer: "Naer",
 
     overview: {
-      heroImage: "/images/naer/cliff-loop.gif",
+      heroImage:
+        "/images/naer/naer-cliff-loop.mp4",
       challenge:
         "Naer, a Norwegian XR startup, needed a robust design system for its web app and VR application to streamline development and improve design consistency. With a small startup team and limited resources, the challenge was to create a flexible, scalable system that could be easily implemented by developers while also being adaptable for future iterations across both 2D and 3D platforms.",
       responsabilitites:
@@ -101,7 +102,7 @@ export const projects: ProjectDetail[] = [
   {
     id: 2,
     indexImage:
-      "/images/iterate-demo/iterate-demo-1.gif",
+      "/images/iterate/iterate-squirl-animation.mov",
     title:
       "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],
@@ -125,10 +126,23 @@ export const projects: ProjectDetail[] = [
     },
     process: [
       {
-        h2title: "Humble beginnings",
-        type: "image-left-text-right",
+        h2title: "Getting caught up to speed",
+        type: "text-left-image-right",
         src: "/images/iterate/rocketship-adventure.webp",
-        text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
+        text: "At a 24-hour hackaton, a team at iterate had come up with the idea of gathering data from Figma prototypes. My team's task was to elaborate on their idea in order to create an MVP of the solution which could be used by actual startups. We began by interviewing the team that came up with the idea and investigated the need behind the idea. The initial findings were that innovators tend to sit too long with an idea within a team before probing the market and gaining knowledge about he actual market interest. We therefore set out to better understand how we could tailor this tool towards innovators and help them understand market interest earlier.",
+      },
+      {
+        h3title: "Finding collaborators",
+        type: "image-left-text-right",
+        src: "/images/iterate/emil-max-working.jpg",
+        text: "We conducted interviews to understand the needs of potential users. We interviewed designers, developers, entrepreneurs, and product managers. Following the Lean startup methodology, we set up seven problem interviews to gather insights. We found that five out of seven interviewees were interested and became co-creators in the process, participating in weekly feedback sessions.",
+      },
+      {
+        h3title:
+          "Information in the right context",
+        type: "text-left-image-right",
+        src: "/images/iterate/affinity.jpg",
+        text: "I was the lead designer in the team and we all participated in interviews and activities to ensure everyone was aligned. After conducting interviews, we organized our findings into an affinity diagram, which helped us identify key insights and formulate a problem statement to guide development. We followed a structured weekly process: Mondays were for organizing and prioritizing tasks, Tuesday to Thursday were for development, and Fridays were for solution interviews with stakeholders.",
       },
     ],
     result: [],
