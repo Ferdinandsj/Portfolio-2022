@@ -4,6 +4,7 @@ import H3 from "../typography/h3";
 import { Badge } from "../ui/badge";
 import Subtle from "../typography/subtle";
 import Image from "next/image";
+import { Skeleton } from "../ui/skeleton";
 
 interface ProjectHeaderProps {
   project: ProjectDetail;
@@ -25,6 +26,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
       <div className="flex flex-col gap-10">
         {/* Project Title */}
         <div className="flex flex-col-reverse gap-5 sm:flex-col">
+          <Skeleton className=" rounded-none" />
           <h1 className="text-3xl font-semibold text-gray-700">
             {project.title}
           </h1>

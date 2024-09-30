@@ -58,7 +58,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
               </div>
 
               {/* Process Section */}
-              <div id="Process" className="flex flex-col gap-20 sm:gap-20">
+              <div id="Process" className="flex flex-col gap-24">
                 {project.process.map((section, index) => (
                   <ProjectProcess key={index} section={section} />
                 ))}

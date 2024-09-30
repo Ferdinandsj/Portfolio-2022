@@ -31,6 +31,7 @@ export interface ProjectDetail {
 export interface ArticleSection {
   h2title?: string;
   h3title?: string;
+  textSize: "small" | "wide" | "full";
   type:
     | "image-left-text-right"
     | "text-left-video-right"

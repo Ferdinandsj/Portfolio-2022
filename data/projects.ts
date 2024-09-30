@@ -34,24 +34,28 @@ export const projects: ProjectDetail[] = [
     process: [
       {
         type: "image-left-text-right",
+        textSize: "small",
         h2title: "Research and discovery",
         src: "/images/naer/rnd-image.png",
         text: "I organized and conducted user testing for both the web and VR platforms, and created a user testing suite in Notion to collect the feedback. Weekly user testing sessions with in-house and remote participants helped identify key issues, which I incorporated into the user flows and design system. The research included understanding user behavior in 2D and 3D environments. By understanding our developers preferred workflows, I could easily tailor the design system to their visual languages/technologies; Tailwind and Unity. In this way our developers were already familiar with the tech and could implement immediately. ",
       },
       {
         type: "text-left-video-right",
+        textSize: "wide",
         h3title: "One building block at a time",
         src: "/images/naer/label-animation.mp4",
         text: "I based the design system on atomic design principles, using atoms, molecules, and organisms to ensure the components were modular and adaptable across platforms. The system was built in Figma with semantic naming, variables and animations to streamline wireframe creation and facilitate faster design iterations. It also incorporated cross-platform compatibility, ensuring consistency between web, mobile, and VR experiences. As Figma is based in 2D, the developers brought exports of 2D wireframes into 3D to recreate components in Unity.",
       },
       {
         type: "video-left-text-right",
+        textSize: "small",
         h3title: "Making implementation easier",
         src: "/images/naer/responsive-animation.mp4",
         text: "Working closely with Naer’s development team, I ensured the design system was developer-friendly by reusing Tailwind CSS base metrics for fast, scalable implementation. The system was continually updated as both design and development progressed, ensuring it remained the source of truth for all assets used across Naer’s platforms.",
       },
       {
         type: "image-left-text-right",
+        textSize: "small",
         src: "/images/naer/component-documentation.png",
         text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
       },
@@ -59,6 +63,7 @@ export const projects: ProjectDetail[] = [
     result: [
       {
         h2title: "The Design System",
+        textSize: "full",
         type: "full-video",
         src: "/images/naer/button-animation.mp4",
         text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
@@ -66,6 +71,7 @@ export const projects: ProjectDetail[] = [
 
       {
         type: "text-left-video-right",
+        textSize: "wide",
         h3title: "Implementation",
         src: "/images/naer/naer-mobile-live.mp4",
         text: "The design system built in Figma is now used by the Naer team across its web app and XR app. It incorporates responsive, reusable components that can be adapted to different platforms, from 2D UI on the web to 3D interactions in VR through Unity. This design system has improved collaboration between designers and developers, reduced production time and increased overall design consistency across Naer’s platforms. This is a live demonstration of the webapp on mobile today.",
@@ -73,6 +79,7 @@ export const projects: ProjectDetail[] = [
 
       {
         type: "full-img-full-text",
+        textSize: "full",
         h3title: "Impact for Naer",
         src: "/images/naer/naer-hero-image.png",
         text: "With a reliable design system across platforms, Naer has been rewarded the best educational VR experience in the nordics and holds the position as the number 1 productivity app in the Meta app store. The app has also been featured in The New York Times, Wired and Bloomberg as a refreshing and exciting way of brainstorming.",
@@ -102,29 +109,32 @@ export const projects: ProjectDetail[] = [
       challenge:
         "Startups often fail at the seed or concept stage due to a lack of product-market fit. The challenge was to create a tool that could help entrepreneurs test their prototypes on real customers and gather market feedback earlier and more cheaply than traditional methods, improving the chances of success. We developed a tool that allows startups to test market interest in their products by using Figma prototypes to gather real-world user engagement data and assess product-market fit.",
       responsabilitites:
-        "As the sole designer, I led the design process, conducted over 20 interviews, and worked closely with two developers. I was responsible for developing the UI, branding and animating the product. I also led user testing, workshops, and maintained stakeholder relationships.",
+        "As the sole designer, I led the design process, conducted over 20 interviews, and worked closely with two developers. I was responsible for developing the UI, branding and animating the product. I also led user testing, workshops and maintained stakeholder relationships.",
       result:
         "Successfully developed a tool that allows entrepreneurs to test their Figma prototypes in real-world settings. The tool tracks user interactions, provides engagement metrics, and offers actionable insights to improve product-market fit. The MVP was validated by two startups, with Iterate continuing development post-internship.",
       role: "UX & UI Designer",
       timeline: "2 months",
       crew: "Product Trio",
-      tags: ["User Testing", "UX", "UI"],
+      tags: ["User Testing", "UX", "UI", "Product management", "Graph UI"],
     },
     process: [
       {
         h2title: "Getting caught up to speed",
+        textSize: "wide",
         type: "text-left-image-right",
         src: "/images/iterate/rocketship-adventure.webp",
         text: "At a 24-hour hackaton, a team at iterate had come up with the idea of gathering data from Figma prototypes. My team's task was to elaborate on their idea in order to create an MVP of the solution which could be used by actual startups. We began by interviewing the team that came up with the idea and investigated the need behind the idea. The initial findings were that innovators tend to sit too long with an idea within a team before probing the market and gaining knowledge about he actual market interest. We therefore set out to better understand how we could tailor this tool towards innovators and help them understand market interest earlier.",
       },
       {
         h3title: "Finding collaborators",
+        textSize: "small",
         type: "image-left-text-right",
         src: "/images/iterate/emil-max-working.jpg",
         text: "We conducted interviews to understand the needs of potential users. We interviewed designers, developers, entrepreneurs, and product managers. Following the Lean startup methodology, we set up seven problem interviews to gather insights. We found that five out of seven interviewees were interested and became co-creators in the process, participating in weekly feedback sessions.",
       },
       {
         h3title: "Information in the right context",
+        textSize: "small",
         type: "text-left-image-right",
         src: "/images/iterate/affinity.jpg",
         text: "I was the lead designer in the team and we all participated in interviews and activities to ensure everyone was aligned. After conducting interviews, we organized our findings into an affinity diagram, which helped us identify key insights and formulate a problem statement to guide development. We followed a structured weekly process: Mondays were for organizing and prioritizing tasks, Tuesday to Thursday were for development, and Fridays were for solution interviews with stakeholders.",
@@ -132,7 +142,7 @@ export const projects: ProjectDetail[] = [
     ],
     result: [],
     footer: {
-      title: "Title",
+      title: "Want to talk more about UI for startups?",
     },
   },
 
