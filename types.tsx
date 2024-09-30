@@ -32,6 +32,7 @@ export interface ArticleSection {
   h2title?: string;
   h3title?: string;
   textSize: "small" | "wide" | "full";
+  mediaRounded?: string;
   type:
     | "image-left-text-right"
     | "text-left-video-right"

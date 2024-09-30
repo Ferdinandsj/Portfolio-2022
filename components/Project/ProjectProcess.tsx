@@ -32,9 +32,11 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
     if (!section.src) return null;
 
     return isVideo(section.src) ? (
-      <div className="w-full h-full">
+      <div
+        className={`w-full h-full overflow-hidden ${section.mediaRounded}`}
+      >
         <video
-          className="w-full h-full border shadow-inner rounded-base"
+          className={`w-full h-full border shadow-inner `}
           autoPlay
           loop
           muted
@@ -84,7 +86,9 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
     case "image-left-text-right":
     case "video-left-text-right":
       return (
-        <div className="flex flex-col gap-5 items-center sm:flex-row">
+        <div
+          className={`flex flex-col gap-5 items-center ${section.mediaRounded} sm:flex-row`}
+        >
           {renderMedia()}
           <div
             className={`flex flex-col gap-0 ${textSizeClass[section.textSize]} text-gray-700`}
@@ -111,9 +115,18 @@ const ProjectProcess: FC<ArticleSectionProps> = ({
 
     case "full-video":
       return (
-        <div className="flex flex-col items-center w-full gap-5">
+        <div
+          className={`flex flex-col items-start w-full ${section.mediaRounded} gap-5`}
+        >
           {renderHeading()}
           {renderMedia()}
+          {section.text && (
+            <div
+              className={`flex flex-col gap-0 ${textSizeClass[section.textSize]} text-gray-700`}
+            >
+              <p>{section.text}</p>
+            </div>
+          )}
         </div>
       );
 
