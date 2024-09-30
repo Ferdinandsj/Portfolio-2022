@@ -6,9 +6,7 @@ interface ProjectDetailCardProps {
   project: ProjectDetail;
 }
 
-const ProjectDetailCard: React.FC<
-  ProjectDetailCardProps
-> = ({ project }) => {
+const ProjectDetailCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
   // Check if indexImage is a video or image
   const isVideo = (src: string) => {
     return (
@@ -37,12 +35,8 @@ const ProjectDetailCard: React.FC<
                 playsInline
                 controls={false}
               >
-                <source
-                  src={project.indexImage}
-                  type="video/mp4"
-                />
-                Your browser does not support the
-                video tag.
+                <source src={project.indexImage} type="video/mp4" />
+                Your browser does not support the video tag.
               </video>
             ) : (
               <Image
@@ -63,11 +57,7 @@ const ProjectDetailCard: React.FC<
         <Link href={`/projects/${project.slug}`}>
           <div className="flex gap-x-3 text-xs uppercase text-gray-600 font-medium tracking-wide">
             <div className="flex flex-wrap mb-2">
-              <span>
-                {formatCategories(
-                  project.categories
-                )}
-              </span>
+              <span>{formatCategories(project.categories)}</span>
             </div>
             <h4 className="text-gray-300">|</h4>
             <h4>{project.employer}</h4>
@@ -86,25 +76,15 @@ const ProjectDetailCard: React.FC<
   );
 };
 
-const formatCategories = (
-  categories: string[]
-): string => {
+const formatCategories = (categories: string[]): string => {
   if (categories.length === 0) return "";
-  if (categories.length === 1)
-    return categories[0];
-  if (categories.length === 2)
-    return categories.join(" & ");
+  if (categories.length === 1) return categories[0];
+  if (categories.length === 2) return categories.join(" & ");
 
-  const lastTwo = categories
-    .slice(-2)
-    .join(" & ");
-  const allButLastTwo = categories
-    .slice(0, -2)
-    .join(", ");
+  const lastTwo = categories.slice(-2).join(" & ");
+  const allButLastTwo = categories.slice(0, -2).join(", ");
 
-  return allButLastTwo
-    ? `${allButLastTwo}, ${lastTwo}`
-    : lastTwo;
+  return allButLastTwo ? `${allButLastTwo}, ${lastTwo}` : lastTwo;
 };
 
 export default ProjectDetailCard;

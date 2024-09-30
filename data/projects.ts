@@ -102,7 +102,7 @@ export const projects: ProjectDetail[] = [
   {
     id: 2,
     indexImage:
-      "/images/iterate/iterate-squirl-animation.mov",
+      "/images/iterate/iterate-squirl-animation.mp4",
     title:
       "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],

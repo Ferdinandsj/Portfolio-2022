@@ -5,9 +5,7 @@ interface ExperienceCardProps {
   experience: ExperienceDetail;
 }
 
-const ExperienceCard: React.FC<
-  ExperienceCardProps
-> = ({ experience }) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div className="w-full sm:max-w-[460px] flex flex-col flex-grow gap-2">
       <div className="flex">
@@ -27,16 +25,14 @@ const ExperienceCard: React.FC<
         </div>
       </div>
       <ul className="space-y-2 list-disc list-outside pl-0">
-        {experience.summary.map(
-          (summary, index) => (
-            <li
-              className="ml-[2px] text-base text-gray-600  before:absolute before:left-0 before:top-0"
-              key={index}
-            >
-              {summary}
-            </li>
-          )
-        )}
+        {experience.summary.map((summary, index) => (
+          <li
+            className="ml-[2px] text-base text-gray-600  before:absolute before:left-0 before:top-0"
+            key={index}
+          >
+            {summary}
+          </li>
+        ))}
       </ul>
     </div>
   );

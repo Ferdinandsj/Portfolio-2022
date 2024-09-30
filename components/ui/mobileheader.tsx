@@ -7,14 +7,12 @@ type mobileHeaderProps = {
   className?: string; // Optional className prop
 };
 
-const MobileHeader: React.FC<
-  mobileHeaderProps
-> = ({ children, className }) => {
+const MobileHeader: React.FC<mobileHeaderProps> = ({ children, className }) => {
   return (
     <div
       className={classNames(
         "w-full max-w-xs  text-gray-300 md:max-w-full text-xl font-semibold lg:hidden",
-        className
+        className,
       )}
     >
       <H3>{children}</H3>
