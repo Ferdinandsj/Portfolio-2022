@@ -25,7 +25,7 @@ const ProjectDetailCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
       <Link href={`/projects/${project.slug}`}>
         <div className="relative overflow-hidden group">
           {/* Image or video wrapper with hover animation */}
-          <div className="duration-1000 group-hover:scale-105 transform transition-transform">
+          <div className="w-full h-full duration-1000 group-hover:scale-105 transform transition-transform">
             {isVideo(project.indexImage) ? (
               <video
                 height={403}
