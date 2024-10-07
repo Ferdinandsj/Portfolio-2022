@@ -1,12 +1,45 @@
 import React, { FC } from "react";
 import H2 from "../typography/h2";
 import H3 from "../typography/h3";
+import Link from "next/link";
+import { Button } from "../ui/button";
 import { ArticleSection } from "@/types";
 import Image from "next/image";
 
 interface ArticleSectionProps {
   section: ArticleSection;
 }
+
+const links: { [key: string]: string } = {
+  Byks: "https://byks.io/",
+  Hjernelæring: "https://www.hjernelaering.no/",
+};
+
+const replaceTextWithLinks = (text: string) => {
+  // Create a set to track words that have already been converted into links
+  const linkedWords = new Set<string>();
+
+  return text.split(" ").map((word, index) => {
+    // If the word is a key in the links object and hasn't been linked yet, render it as a link
+    if (links[word] && !linkedWords.has(word)) {
+      // Add the word to the set to mark it as linked
+      linkedWords.add(word);
+      return (
+        <React.Fragment key={index}>
+          <Link
+            className=" underline-offset-auto bg-green-200"
+            href={links[word]}
+          >
+            {word}
+          </Link>{" "}
+        </React.Fragment>
+      );
+    }
+
+    // If not a link or the word has already been linked, return the word as is
+    return <React.Fragment key={index}>{word} </React.Fragment>;
+  });
+};
 
 // Utility function to determine if the media is a video
 const isVideo = (src?: string) => {
@@ -118,7 +151,9 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
           {renderMedia()}
           <div className={`flex flex-col gap-0 ${textSizeClass.full}`}>
             {renderHeading()}
-            <p className="text-lg text-gray-700">{section.text}</p>
+            <p className="text-lg text-gray-700">
+              {replaceTextWithLinks(section.text || "")}
+            </p>
           </div>
         </div>
       );

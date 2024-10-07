@@ -12,17 +12,14 @@ export const projects: ProjectDetail[] = [
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    indexImage:
-      "/images/naer/naer-square-image.png",
-    title:
-      "A Cross-Platform Design System for Web and VR",
+    indexImage: "/images/naer/naer-square-image.png",
+    title: "A Cross-Platform Design System for Web and VR",
     categories: ["UI", "UX", "XR"],
     date: "2024",
     employer: "Naer",
 
     overview: {
-      heroImage:
-        "/images/naer/naer-cliff-loop.mp4",
+      heroImage: "/images/naer/naer-cliff-loop.mp4",
       challenge:
         "Naer, a Norwegian XR startup, needed a robust design system for its web app and VR application to streamline development and improve design consistency. With a small startup team and limited resources, the challenge was to create a flexible, scalable system that could be easily implemented by developers while also being adaptable for future iterations across both 2D and 3D platforms.",
       responsabilitites:
@@ -31,14 +28,7 @@ export const projects: ProjectDetail[] = [
         "Launched the design system, ensuring seamless UI/UX for Naer’s web app and supporting its expansion in VR. The system provides consis-tent UI and improved development speeds across both Web and VR.",
       role: "UI & UX Designer",
       timeline: "9 months",
-      tags: [
-        "Atomic Design system",
-        "UX",
-        "UI",
-        "VR",
-        "Unity",
-        "Tailwind",
-      ],
+      tags: ["Atomic Design system", "UX", "UI", "VR", "Unity", "Tailwind"],
     },
 
     process: [
@@ -97,8 +87,7 @@ export const projects: ProjectDetail[] = [
     ],
 
     footer: {
-      title:
-        "Curious about building cross-platform design systems?",
+      title: "Curious about building cross-platform design systems?",
       description:
         "Read my university report on how 3D UI differs from 2D UI and its design principles.",
       link: "https://drive.google.com/file/d/1kxaarvNgw-LlHyHxIS7Z3h-Mby9b2Ren/view",
@@ -108,18 +97,15 @@ export const projects: ProjectDetail[] = [
 
   {
     id: 2,
-    indexImage:
-      "/images/iterate/squirl-animation.mp4",
-    title:
-      "Testing Market Interest of Product Ideas Early",
+    indexImage: "/images/iterate/squirl-animation.mp4",
+    title: "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],
     date: "2022",
     employer: "Iterate",
     slug: slugify("Iterate"),
     overview: {
       heroImage: "/images/iterate/demo-hero1.png",
-      heroImage2:
-        "/images/iterate/demo-hero2.png",
+      heroImage2: "/images/iterate/demo-hero2.png",
       challenge:
         "Startups often fail at the seed or concept stage due to a lack of product-market fit. The challenge was to create a tool that could help entrepreneurs test their prototypes on real customers and gather market feedback earlier and more cheaply than traditional methods, improving the chances of success. We developed a tool that allows startups to test market interest in their products by using Figma prototypes to gather real-world user engagement data and assess product-market fit.",
       responsabilitites:
@@ -129,13 +115,7 @@ export const projects: ProjectDetail[] = [
       role: "UX & UI Designer",
       timeline: "2 months",
       crew: "Product Trio",
-      tags: [
-        "User Testing",
-        "UX",
-        "UI",
-        "Product management",
-        "Graph UI",
-      ],
+      tags: ["User Testing", "UX", "UI", "Product management", "Graph UI"],
     },
     process: [
       {
@@ -153,16 +133,14 @@ export const projects: ProjectDetail[] = [
         text: "We conducted interviews to understand the needs of potential users. We interviewed designers, developers, entrepreneurs, and product managers. Following the Lean startup methodology, we set up seven problem interviews to gather insights. We found that five out of seven interviewees were interested and became co-creators in the process, participating in weekly feedback sessions.",
       },
       {
-        h3title:
-          "Information in the right context",
+        h3title: "Information in the right context",
         textSize: "small",
         type: "text-left-image-right",
         src: "/images/iterate/affinity.jpg",
         text: "I was the lead designer in the team and we all participated in interviews and activities to ensure everyone was aligned. After conducting interviews, we organized our findings into an affinity diagram, which helped us identify key insights and formulate a problem statement to guide development. We followed a structured weekly process: Mondays were for organizing and prioritizing tasks, Tuesday to Thursday were for development, and Fridays were for solution interviews with stakeholders.",
       },
       {
-        h3title:
-          "Information in the right context",
+        h3title: "Information in the right context",
         textSize: "small",
         type: "image-left-text-right",
         src: "/images/iterate/funnel.jpg",
@@ -176,19 +154,27 @@ export const projects: ProjectDetail[] = [
         type: "full-video",
         mediaRounded: "rounded-xl",
         src: "/images/iterate/onboarding.mp4",
-        text: "The tool allowed entrepreneurs to gain user-data on Figma prototypes by tracking the users action when they opened a Figma prototype. This flow showcases how an entrepreneur could submit their prototype and how they could flag buttons that were important in the app. Once the prototype was sent out to users, the data on each prototype was showcased in a dashboard to be analysed.",
+        text: "The webapp Iterate DEMO allowed entrepreneurs to gain quantitative user-data on Figma prototypes. This was achieved by tracking clicks and time spent in each page of the Figma prototype. This flow showcases how an entrepreneur submits their prototype and how they could flag buttons that were important in the app. They would then recieve a costumizable link they to provide to users through social media or any preffered platform. Once the prototype was sent out to users, the data on each prototype was showcased in realtime on that Demo's dashboard.",
       },
       {
         textSize: "wide",
+        h3title: "Acquisition funnel",
         type: "full-video",
         mediaRounded: "rounded-xl",
         src: "/images/iterate/metrics-animation.mp4",
-        text: "The tool allowed entrepreneurs to gain user-data on Figma prototypes by tracking the users action when they opened a Figma prototype. This flow showcases how an entrepreneur could submit their prototype and how they could flag buttons that were important in the app. Once the prototype was sent out to users, the data on each prototype was showcased in a dashboard to be analysed. bla bla bla",
+        text: "Product owners were selected as the primary user group, as they tend to have a holistic view of the product or idea. In interviewing product owners (and others) we found that the acquisition funnel was a good benchmark for analysing the market value of the prototype. The funnel visualised acquisition, engagement, activation and retention of the users – which led to an increased understanding of the products strengths and faults.",
+      },
+      {
+        textSize: "full",
+        h3title: "Value for Iterate",
+        type: "full-img-full-text",
+        mediaRounded: "rounded-xl",
+        src: "/images/iterate/dashboard.mp4",
+        text: "In just six weeks, the team and I had created and published a working version of the webapp. The webapp was pilot tested together with two startups; Hjernelæring and Byks and had immediate impact. Byks achieved value by publishing their entire webapp as a Figma prototype – in addition to gaining data on their users in a format that was easy to understand. This allowed Byks to offer a range of workouts to their users and better understand which workouts were the most popular. Hjernelæring tested different types of content with their users and made a decision on which to pursue further. All in all, this project was a success and was continued after our internship.",
       },
     ],
     footer: {
-      title:
-        "Want to talk more about UI for startups?",
+      title: "Want to talk more about UI for startups?",
     },
   },
 
