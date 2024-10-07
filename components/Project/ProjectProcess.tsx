@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import H2 from "../typography/h2";
 import H3 from "../typography/h3";
 import Link from "next/link";
-import { Button } from "../ui/button";
 import { ArticleSection } from "@/types";
 import Image from "next/image";
 
