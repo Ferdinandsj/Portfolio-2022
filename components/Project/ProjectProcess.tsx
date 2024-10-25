@@ -4,6 +4,7 @@ import H3 from "../typography/h3";
 import Link from "next/link";
 import { ArticleSection } from "@/types";
 import Image from "next/image";
+import MediaCaption from "../typography/mediaDetail";
 
 interface ArticleSectionProps {
   section: ArticleSection;
@@ -15,18 +16,15 @@ const links: { [key: string]: string } = {
 };
 
 const replaceTextWithLinks = (text: string) => {
-  // Create a set to track words that have already been converted into links
   const linkedWords = new Set<string>();
 
   return text.split(" ").map((word, index) => {
-    // If the word is a key in the links object and hasn't been linked yet, render it as a link
     if (links[word] && !linkedWords.has(word)) {
-      // Add the word to the set to mark it as linked
       linkedWords.add(word);
       return (
         <React.Fragment key={index}>
           <Link
-            className=" underline-offset-auto bg-green-200"
+            className="underline-offset-auto bg-green-200"
             href={links[word]}
           >
             {word}
@@ -34,20 +32,16 @@ const replaceTextWithLinks = (text: string) => {
         </React.Fragment>
       );
     }
-
-    // If not a link or the word has already been linked, return the word as is
     return <React.Fragment key={index}>{word} </React.Fragment>;
   });
 };
 
-// Utility function to determine if the media is a video
 const isVideo = (src?: string) => {
   return (
     src?.endsWith(".mp4") || src?.endsWith(".webm") || src?.endsWith(".ogg")
   );
 };
 
-// Mapping text sizes to max-width classes
 const textSizeClass = {
   small: "max-w-[346px]",
   wide: "max-w-[468px]",
@@ -55,14 +49,13 @@ const textSizeClass = {
 };
 
 const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
-  // Helper function to render media (image or video)
   const renderMedia = () => {
     if (!section.src) return null;
 
-    return isVideo(section.src) ? (
+    const mediaElement = isVideo(section.src) ? (
       <div className={`w-full h-full overflow-hidden ${section.mediaRounded}`}>
         <video
-          className={`w-full h-full border shadow-inner `}
+          className="w-full h-full border shadow-inner"
           autoPlay
           loop
           muted
@@ -85,9 +78,17 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
         />
       </div>
     );
+
+    return (
+      <MediaCaption
+        media={mediaElement}
+        caption={section.caption}
+        sourceName={section.sourceName || ""}
+        link={section.src}
+      />
+    );
   };
 
-  // Helper function to render the heading
   const renderHeading = () => (
     <>
       {section.h2title && <H2 className="mb-2 w-full">{section.h2title}</H2>}
@@ -95,7 +96,6 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
     </>
   );
 
-  // Render the component based on the section type
   switch (section.type) {
     case "image-left-text-right":
     case "video-left-text-right":
@@ -127,7 +127,7 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
         </div>
       );
 
-    case "full-video":
+    case "full-media":
       return (
         <div
           className={`flex flex-col items-start w-full ${section.mediaRounded} gap-5`}

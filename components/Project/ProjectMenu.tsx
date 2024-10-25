@@ -70,7 +70,7 @@ const ProjectMenu: React.FC = () => {
             Home
           </Button>
         </Link>
-        <div className="flex flex-col gap-2 items-end">
+        <div className="flex flex-col gap-0 items-end">
           {sections.map((section) => (
             <FlagButton
               variantType={"ghost"}

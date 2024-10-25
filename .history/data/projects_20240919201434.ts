@@ -1,4 +1,4 @@
-import { ProjectDetail } from "../types";
+import { ProjectDetail } from "../types.tsx";
 
 //Makes any string URL friendly
 const slugify = (text: string): string => {
@@ -22,7 +22,7 @@ export const projects: ProjectDetail[] = [
       {
         type: "image-left-text-right",
         title: "Research and discovery",
-        src: "/images/naer/rnd-image.png",
+        src: "/images/naer/vr-usertest.png",
         text: "I organized and conducted user testing for both the web and VR platforms, and created a user testing suite in Notion to collect the feedback. Weekly user testing sessions with in-house and remote participants helped identify key issues, which I incorporated into the user flows and design system. The research included understanding user behavior in 2D and 3D environments. By understanding our developers preferred workflows, I could easily tailor the design system to their visual languages/technologies; Tailwind and Unity. In this way our developers were already familiar with the tech and could implement immediately. ",
       },
       {

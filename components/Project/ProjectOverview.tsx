@@ -1,16 +1,24 @@
-import type { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import type { ProjectDetail } from "@/types";
 import H3 from "../typography/h3";
 import { Badge } from "../ui/badge";
 import Subtle from "../typography/subtle";
 import Image from "next/image";
 import { Skeleton } from "../ui/skeleton";
+import MediaDetail from "../typography/mediaDetail";
 
 interface ProjectHeaderProps {
   project: ProjectDetail;
 }
 
 const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    // Trigger the animation when the component mounts
+    setAnimationClass("animate-slideIn");
+  }, []);
+
   // Check if a file is a video based on its extension
   const isVideo = (src: string) => {
     return (
@@ -19,15 +27,14 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
   };
 
   return (
-    <div
-      className="flex flex-col gap-14 mx-auto font-inter text-base leading-7 text-gray-700 tracking-normal
-    sm:w-full"
-    >
+    <div className="flex flex-col gap-14 mx-auto font-inter text-base leading-7 text-gray-700 tracking-normal sm:w-full">
       <div className="flex flex-col gap-10">
         {/* Project Title */}
         <div className="flex flex-col-reverse gap-5 sm:flex-col">
           <Skeleton className="w-full h-full rounded-none" />
-          <h1 className="text-3xl font-semibold text-gray-700">
+          <h1
+            className={`text-3xl font-semibold text-gray-700 ${animationClass}`}
+          >
             {project.title}
           </h1>
 
@@ -35,9 +42,9 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
             {/* Project Media (Image or Video) */}
             <div>
               {/* Conditional rendering based on heroImage2 existence */}
-              {project.overview.heroImage2 ? (
+              {project.overview.heroImage.image2 ? (
                 <div className="flex gap-5">
-                  {isVideo(project.overview.heroImage) ? (
+                  {isVideo(project.overview.heroImage.image1) ? (
                     <video
                       className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
                       width={834}
@@ -49,7 +56,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
                       controls={false}
                     >
                       <source
-                        src={project.overview.heroImage}
+                        src={project.overview.heroImage.image1}
                         type="video/mp4"
                       />
                     </video>
@@ -58,14 +65,51 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
                       className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
                       width={834}
                       height={336}
-                      src={project.overview.heroImage}
+                      src={project.overview.heroImage.image1}
                       alt="Primary Hero Image"
                     />
                   )}
 
-                  {isVideo(project.overview.heroImage2) ? (
-                    <video
+                  {isVideo(project.overview.heroImage.image2) ? (
+                    <MediaDetail
+                      caption={project.overview.heroImage.caption}
+                      sourceName={project.overview.heroImage.sourceName || ""}
+                      link={project.overview.heroImage.link}
+                      media={
+                        <video
+                          className="max-w-[468px] hidden lg:block"
+                          width={834}
+                          height={336}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          controls={false}
+                        >
+                          <source
+                            src={project.overview.heroImage.image2}
+                            type="video/mp4"
+                          />
+                        </video>
+                      }
+                    />
+                  ) : (
+                    <Image
                       className="max-w-[468px] hidden lg:block"
+                      width={834}
+                      height={336}
+                      src={project.overview.heroImage.image2}
+                      alt="Secondary Hero Image"
+                    />
+                  )}
+                </div>
+              ) : isVideo(project.overview.heroImage.image1) ? (
+                <MediaDetail
+                  caption={project.overview.heroImage.caption || ""}
+                  sourceName={project.overview.heroImage.sourceName || ""}
+                  link={project.overview.heroImage.link}
+                  media={
+                    <video
                       width={834}
                       height={336}
                       autoPlay
@@ -75,37 +119,17 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
                       controls={false}
                     >
                       <source
-                        src={project.overview.heroImage2}
+                        src={project.overview.heroImage.image1}
                         type="video/mp4"
                       />
                     </video>
-                  ) : (
-                    <Image
-                      className="max-w-[468px] hidden lg:block"
-                      width={834}
-                      height={336}
-                      src={project.overview.heroImage2}
-                      alt="Secondary Hero Image"
-                    />
-                  )}
-                </div>
-              ) : isVideo(project.overview.heroImage) ? (
-                <video
-                  width={834}
-                  height={336}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  controls={false}
-                >
-                  <source src={project.overview.heroImage} type="video/mp4" />
-                </video>
+                  }
+                />
               ) : (
                 <Image
                   width={834}
                   height={336}
-                  src={project.overview.heroImage || ""}
+                  src={project.overview.heroImage.image1 || ""}
                   alt="Primary Hero Image"
                 />
               )}
@@ -118,11 +142,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
       </div>
 
       {/* Two-Column Layout for Challenge & Result */}
-      <div
-        className="flex flex-col w-full justify-between gap-10
-        
-        lg:flex-row lg:gap-5 lg:flex-none"
-      >
+      <div className="flex flex-col w-full justify-between gap-10 lg:flex-row lg:gap-5 lg:flex-none">
         <div className="flex flex-col gap-14 max-w-[468px]">
           {/* Responsibilities */}
           <div className="flex flex-col gap-[2px]">
@@ -135,20 +155,10 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
           </div>
         </div>
 
-        <div
-          className="flex flex-col gap-8
-        sm:gap-10"
-        >
-          {/* Project Details and tags*/}
-          <div
-            className="flex flex-col w-full h-full gap-10 min-w-[346px]
-          lg:border-gray-300 lg:border-r-[1px] lg:items-end lg:pr-10"
-          >
-            <div
-              className="flex justify-start gap-10
-            lg:gap-10 lg:max-w-48 lg:justify-end lg:w-auto lg:flex-col lg:text-end
-            "
-            >
+        <div className="flex flex-col gap-8 sm:gap-10">
+          {/* Project Details and tags */}
+          <div className="flex flex-col w-full h-full gap-10 min-w-[346px] lg:border-gray-300 lg:border-r-[1px] lg:items-end lg:pr-10">
+            <div className="flex justify-start gap-10 lg:gap-10 lg:max-w-48 lg:justify-end lg:w-auto lg:flex-col lg:text-end">
               <div>
                 <Subtle>Client</Subtle>
                 <div>{project.employer}</div>
@@ -157,12 +167,10 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
                 <Subtle>Role</Subtle>
                 <p>{project.overview.role}</p>
               </div>
-
               <div>
                 <Subtle>Timeline</Subtle>
                 <p>{project.overview.timeline}</p>
               </div>
-
               {project.overview.crew && (
                 <div>
                   <Subtle>Crew</Subtle>
@@ -171,10 +179,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
               )}
             </div>
             {/* Tags/Technologies */}
-            <div
-              className="flex flex-wrap justify-start gap-3 w-full
-            lg:justify-end"
-            >
+            <div className="flex flex-wrap justify-start gap-3 w-full lg:justify-end">
               {project.overview.tags.map((tag, index) => (
                 <Badge
                   key={index}

@@ -19,7 +19,12 @@ export const projects: ProjectDetail[] = [
     employer: "Naer",
 
     overview: {
-      heroImage: "/images/naer/naer-cliff-loop.mp4",
+      heroImage: {
+        image1: "/images/naer/naer-cliff-loop.mp4",
+        caption: "Illustrations by",
+        sourceName: "Umble",
+        link: "https://www.umble.no/",
+      },
       challenge:
         "Naer, a Norwegian XR startup, needed a robust design system for its web app and VR application to streamline development and improve design consistency. With a small startup team and limited resources, the challenge was to create a flexible, scalable system that could be easily implemented by developers while also being adaptable for future iterations across both 2D and 3D platforms.",
       responsabilitites:
@@ -34,9 +39,10 @@ export const projects: ProjectDetail[] = [
     process: [
       {
         type: "image-left-text-right",
-        textSize: "small",
+        textSize: "wide",
         h2title: "Research and discovery",
-        src: "/images/naer/rnd-image.png",
+        src: "/images/naer/vr-usertest.png",
+
         text: "I organized and conducted user testing for both the web and VR platforms, and created a user testing suite in Notion to collect the feedback. Weekly user testing sessions with in-house and remote participants helped identify key issues, which I incorporated into the user flows and design system. The research included understanding user behavior in 2D and 3D environments. By understanding our developers preferred workflows, I could easily tailor the design system to their visual languages/technologies; Tailwind and Unity. In this way our developers were already familiar with the tech and could implement immediately. ",
       },
       {
@@ -51,22 +57,22 @@ export const projects: ProjectDetail[] = [
         textSize: "small",
         h3title: "Making implementation easier",
         src: "/images/naer/responsive-animation.mp4",
-        text: "Working closely with Naer’s development team, I ensured the design system was developer-friendly by reusing Tailwind CSS base metrics for fast, scalable implementation. The system was continually updated as both design and development progressed, ensuring it remained the source of truth for all assets used across Naer’s platforms.",
+        text: "Working closely with Naer’s development team, I ensured the design system was developer-friendly by reusing Tailwind CSS base metrics for fast, scalable imple-mentation. The system was continually updated as both design and development progressed, ensuring it remained the source of truth for all assets used across Naer’s platforms.",
       },
       {
         type: "image-left-text-right",
         textSize: "small",
         src: "/images/naer/component-documentation.png",
-        text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
+        text: "Each component was neatly documented to inform developers about the intended use-case. This included accessibility concerns, naming cenvention, empty-states, error, success and loading where it was relevant.",
       },
     ],
     result: [
       {
         h2title: "The Design System",
         textSize: "full",
-        type: "full-video",
+        type: "full-media",
         src: "/images/naer/button-animation.mp4",
-        text: "Each component was neatly documented with intended use-case and other design decisions. This included empty-states, error, success and loading. Upon recreating the old user journeys each flow and interaction was organized for responsive screen sizes and kept tidy by using appropriate spacings and arrows. ",
+        text: "At the end of the project, the entire webapp had been rebuildt using the new Design System. The 2D aesthetics had also been applied and transformed to work with the 2D surfaces within the 3D app (whiteboards, menus and onboarding). The user experience therefore became more coherent as the users transitioned between our 2D and 3D environments.",
       },
 
       {
@@ -77,6 +83,12 @@ export const projects: ProjectDetail[] = [
         text: "The design system built in Figma is now used by the Naer team across its web app and XR app. It incorporates responsive, reusable components that can be adapted to different platforms, from 2D UI on the web to 3D interactions in VR through Unity. This design system has improved collaboration between designers and developers, reduced production time and increased overall design consistency across Naer’s platforms. This is a live demonstration of the webapp on mobile today.",
       },
 
+      {
+        type: "full-media",
+        textSize: "full",
+        src: "/images/naer/2d-ui-in-naer.png",
+        caption: "Showcase of the 2D UI in the 3D environment of naer",
+      },
       {
         type: "full-img-full-text",
         textSize: "full",
@@ -104,8 +116,11 @@ export const projects: ProjectDetail[] = [
     employer: "Iterate",
     slug: slugify("Iterate"),
     overview: {
-      heroImage: "/images/iterate/demo-hero1.png",
-      heroImage2: "/images/iterate/demo-hero2.png",
+      heroImage: {
+        image1: "/images/iterate/demo-hero1.png",
+        image2: "/images/iterate/demo-hero2.png",
+      },
+
       challenge:
         "Startups often fail at the seed or concept stage due to a lack of product-market fit. The challenge was to create a tool that could help entrepreneurs test their prototypes on real customers and gather market feedback earlier and more cheaply than traditional methods, improving the chances of success. We developed a tool that allows startups to test market interest in their products by using Figma prototypes to gather real-world user engagement data and assess product-market fit.",
       responsabilitites:
@@ -151,7 +166,7 @@ export const projects: ProjectDetail[] = [
       {
         h2title: "Iterate DEMO",
         textSize: "wide",
-        type: "full-video",
+        type: "full-media",
         mediaRounded: "rounded-xl",
         src: "/images/iterate/onboarding.mp4",
         text: "The webapp Iterate DEMO allowed entrepreneurs to gain quantitative user-data on Figma prototypes. This was achieved by tracking clicks and time spent in each page of the Figma prototype. This flow showcases how an entrepreneur submits their prototype and how they could flag buttons that were important in the app. They would then recieve a costumizable link they to provide to users through social media or any preffered platform. Once the prototype was sent out to users, the data on each prototype was showcased in realtime on that Demo's dashboard.",
@@ -159,7 +174,7 @@ export const projects: ProjectDetail[] = [
       {
         textSize: "wide",
         h3title: "Acquisition funnel",
-        type: "full-video",
+        type: "full-media",
         mediaRounded: "rounded-xl",
         src: "/images/iterate/metrics-animation.mp4",
         text: "Product owners were selected as the primary user group, as they tend to have a holistic view of the product or idea. In interviewing product owners (and others) we found that the acquisition funnel was a good benchmark for analysing the market value of the prototype. The funnel visualised acquisition, engagement, activation and retention of the users – which led to an increased understanding of the products strengths and faults.",

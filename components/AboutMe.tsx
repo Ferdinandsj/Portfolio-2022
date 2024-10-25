@@ -43,7 +43,8 @@ const AboutMe: React.FC = () => {
             <p className="text-semibold text-gray-500 hover:text-gray-700 transition duration-300">
               Portfolio made by Ferdinand with{" "}
               <span className="text-gray-700">React</span>,{" "}
-              <span className="text-gray-700">Next.js</span>,{" "}
+              <span className="text-gray-700">Next.js</span>
+              {" & "}
               <span className="text-gray-700">Tailwind</span>
             </p>
           </div>

@@ -74,7 +74,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <div className="w-full">
         <ProjectFooter project={project} />

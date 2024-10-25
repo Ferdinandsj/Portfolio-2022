@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import FlagButton from "@/components/ui/flagButton";
 import classNames from "classnames"; // Optional: classnames utility for combining classes
 
-const sections = ["Selected projects", "Experience", "About me"];
+const sections = [
+  "Selected projects",
+  "Experience",
+  /*   "About me", */
+];
 
 interface FlagMenuProps {
   className?: string; // Optional className prop to receive external classes
@@ -77,7 +81,7 @@ const FlagMenu: React.FC<FlagMenuProps> = ({ className }) => {
   return (
     <div
       className={classNames(
-        "flex flex-col items-end gap-2 w-full pt-[-10px]", // Default classes
+        "flex flex-col items-end gap-0 w-full pt-[-10px]", // Default classes
         className, // External className prop
       )}
     >

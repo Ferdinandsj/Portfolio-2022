@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface ProjectDetail {
   id: number;
   indexImage: string;
@@ -9,8 +11,13 @@ export interface ProjectDetail {
   process: ArticleSection[];
   result: ArticleSection[];
   overview: {
-    heroImage: string;
-    heroImage2?: string;
+    heroImage: {
+      image1: string;
+      image2?: string;
+      caption?: string;
+      sourceName?: string;
+      link?: string;
+    };
     challenge: string;
     responsabilitites: string;
     result: string;
@@ -39,10 +46,13 @@ export interface ArticleSection {
     | "text-left-image-right"
     | "video-left-text-right"
     | "full-img-full-text"
-    | "full-video";
+    | "full-media";
 
   text?: string;
   src?: string;
+  caption?: string;
+  sourceName?: string;
+
   alt?: string; // Alt text for images
 }
 
