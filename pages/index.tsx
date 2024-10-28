@@ -112,6 +112,3 @@ export default function Home() {
     </div>
   );
 }
-function setAnimationClass(arg0: string) {
-  throw new Error("Function not implemented.");
-}

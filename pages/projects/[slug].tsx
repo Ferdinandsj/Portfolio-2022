@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { projects } from "@/data/projects";
 import ProjectOverview from "@/components/Project/ProjectOverview";
