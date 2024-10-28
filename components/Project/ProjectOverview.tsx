@@ -12,12 +12,38 @@ interface ProjectHeaderProps {
 }
 
 const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust the loading time as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
     // Trigger the animation when the component mounts
-    setAnimationClass("animate-slideIn");
+    setAnimationClass("animate-slideUp");
   }, []);
+
+  const videoPlayer = (
+    <video
+      className="w-full lg:max-h-full lg:w-auto"
+      autoPlay
+      loop
+      muted
+      playsInline
+      controls={false}
+      onCanPlayThrough={() => {
+        setIsLoading(false);
+        console.log("Video loaded");
+      }}
+    >
+      <source src={project.overview.heroImage.image1} type="video/mp4" />
+    </video>
+  );
 
   // Check if a file is a video based on its extension
   const isVideo = (src: string) => {
@@ -26,12 +52,54 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
     );
   };
 
+  const renderMedia = (src: string) => {
+    if (isVideo(src)) {
+      return videoPlayer;
+    } else if (
+      project.overview.heroImage.image1 &&
+      project.overview.heroImage.image2
+    ) {
+      return (
+        <div className="flex flex-row gap-5 h-[500px] overflow-hidden max-h-[500px]">
+          <Image
+            style={{
+              objectFit: "cover",
+            }}
+            placeholder="empty"
+            width={300}
+            height={500}
+            src={project.overview.heroImage.image1}
+            alt="Primary Hero Image"
+          />
+          <Image
+            style={{
+              objectFit: "cover",
+            }}
+            placeholder="empty"
+            width={1000}
+            height={500}
+            src={project.overview.heroImage.image2}
+            alt="Secondary Hero Image"
+          />
+        </div>
+      );
+    } else {
+      <Image
+        className="w-full lg:max-h-[336px] lg:w-auto"
+        width={834}
+        height={336}
+        src={project.overview.heroImage.image1}
+        alt="Primary Hero Image"
+        onLoad={() => setIsLoading(false)}
+      />;
+    }
+  };
+
   return (
     <div className="flex flex-col gap-14 mx-auto font-inter text-base leading-7 text-gray-700 tracking-normal sm:w-full">
       <div className="flex flex-col gap-10">
         {/* Project Title */}
         <div className="flex flex-col-reverse gap-5 sm:flex-col">
-          <Skeleton className="w-full h-full rounded-none" />
           <h1
             className={`text-3xl font-semibold text-gray-700 ${animationClass}`}
           >
@@ -40,100 +108,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
 
           <div className="flex w-full gap-5">
             {/* Project Media (Image or Video) */}
-            <div>
-              {/* Conditional rendering based on heroImage2 existence */}
-              {project.overview.heroImage.image2 ? (
-                <div className="flex gap-5">
-                  {isVideo(project.overview.heroImage.image1) ? (
-                    <video
-                      className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
-                      width={834}
-                      height={336}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      controls={false}
-                    >
-                      <source
-                        src={project.overview.heroImage.image1}
-                        type="video/mp4"
-                      />
-                    </video>
-                  ) : (
-                    <Image
-                      className="max-w-[336px] lg:max-h-[336px] lg:w-auto"
-                      width={834}
-                      height={336}
-                      src={project.overview.heroImage.image1}
-                      alt="Primary Hero Image"
-                    />
-                  )}
-
-                  {isVideo(project.overview.heroImage.image2) ? (
-                    <MediaDetail
-                      caption={project.overview.heroImage.caption}
-                      sourceName={project.overview.heroImage.sourceName || ""}
-                      link={project.overview.heroImage.link}
-                      media={
-                        <video
-                          className="max-w-[468px] hidden lg:block"
-                          width={834}
-                          height={336}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          controls={false}
-                        >
-                          <source
-                            src={project.overview.heroImage.image2}
-                            type="video/mp4"
-                          />
-                        </video>
-                      }
-                    />
-                  ) : (
-                    <Image
-                      className="max-w-[468px] hidden lg:block"
-                      width={834}
-                      height={336}
-                      src={project.overview.heroImage.image2}
-                      alt="Secondary Hero Image"
-                    />
-                  )}
-                </div>
-              ) : isVideo(project.overview.heroImage.image1) ? (
-                <MediaDetail
-                  caption={project.overview.heroImage.caption || ""}
-                  sourceName={project.overview.heroImage.sourceName || ""}
-                  link={project.overview.heroImage.link}
-                  media={
-                    <video
-                      width={834}
-                      height={336}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      controls={false}
-                    >
-                      <source
-                        src={project.overview.heroImage.image1}
-                        type="video/mp4"
-                      />
-                    </video>
-                  }
-                />
-              ) : (
-                <Image
-                  width={834}
-                  height={336}
-                  src={project.overview.heroImage.image1 || ""}
-                  alt="Primary Hero Image"
-                />
-              )}
-            </div>
+            {renderMedia(project.overview.heroImage.image1)}
           </div>
         </div>
 

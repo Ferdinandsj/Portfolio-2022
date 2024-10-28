@@ -1,3 +1,4 @@
+import { FC, useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { projects } from "@/data/projects";
 import ProjectOverview from "@/components/Project/ProjectOverview";
@@ -14,6 +15,13 @@ interface ProjectPageProps {
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    // Trigger the animation when the component mounts
+    setAnimationClass("animate-slideLeft");
+  }, []);
+
   return (
     <div className="font-inter flex flex-col items-center justify-between w-full min-h-screen mt-10">
       <div
@@ -28,8 +36,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
         >
           {/* Project Menu (Sticky on larger screens) */}
           <div
-            className="hidden sticky top-10 h-screen
-          lg:block lg:px-0 lg:mx-0"
+            className={`hidden sticky top-10 h-screen
+          lg:block lg:px-0 lg:mx-0 ${animationClass}`}
           >
             <ProjectMenu />
           </div>

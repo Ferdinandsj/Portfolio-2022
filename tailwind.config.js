@@ -84,13 +84,33 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        slideIn: {
+        slideUp: {
           "0%": {
             transform: "translateY(60%)",
             opacity: "0.8",
           },
           "100%": {
             transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        slideLeft: {
+          "0%": {
+            transform: "translateX(20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideRight: {
+          "0%": {
+            transform: "translateX(-20%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
             opacity: "1",
           },
         },
@@ -112,7 +132,9 @@ module.exports = {
         },
       },
       animation: {
-        slideIn: "slideIn 0.4s ease-out",
+        slideUp: "slideUp 0.5s ease-out",
+        slideLeft: "slideLeft 0.5s ease-out",
+        slideRight: "slideRight 0.5s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

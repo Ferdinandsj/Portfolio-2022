@@ -10,15 +10,22 @@ import { ProjectDetail } from "@/types";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import MobileHeader from "@/components/ui/mobileheader";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    // Trigger the animation when the component mounts
+    setAnimationClass("animate-slideRight");
+  }, []);
   return (
     <div className="flex flex-col justify-start">
       <div
         className="flex flex-col gap-10 lg:gap-24 justify-center
       lg:flex-row "
       >
-        {/* Left Section: Hide on smaller screens */}
+        {/* Left Section */}
         <div
           className="top-0 h-full pt-24 block
                     lg:sticky lg:pb-40"
@@ -27,7 +34,9 @@ export default function Home() {
         </div>
 
         {/* Main Content Section */}
-        <div className="flex flex-col gap-10 items-center md:gap-20">
+        <div
+          className={`flex flex-col gap-10 items-center md:gap-20 ${animationClass}`}
+        >
           <div
             id="Selected projects"
             className="flex flex-col gap-5 justify-center w-full items-center pt-10  border-t-[1px] border-gray-300 pb-10
@@ -102,4 +111,7 @@ export default function Home() {
       {/* About Me Section */}
     </div>
   );
+}
+function setAnimationClass(arg0: string) {
+  throw new Error("Function not implemented.");
 }

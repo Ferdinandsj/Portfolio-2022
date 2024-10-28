@@ -1,10 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import H2 from "../typography/h2";
 import H3 from "../typography/h3";
 import Link from "next/link";
 import { ArticleSection } from "@/types";
 import Image from "next/image";
 import MediaCaption from "../typography/mediaDetail";
+import { Skeleton } from "../ui/skeleton";
 
 interface ArticleSectionProps {
   section: ArticleSection;
@@ -49,6 +50,15 @@ const textSizeClass = {
 };
 
 const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust the loading time as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   const renderMedia = () => {
     if (!section.src) return null;
 
@@ -61,6 +71,7 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
           muted
           playsInline
           controls={false}
+          onLoad={() => setIsLoading(false)}
         >
           <source src={section.src} type="video/mp4" />
           Your browser does not support the video tag.
@@ -75,13 +86,16 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
           width={1000}
           height={600}
           unoptimized={true}
+          onLoad={() => setIsLoading(false)}
         />
       </div>
     );
 
     return (
       <MediaCaption
-        media={mediaElement}
+        media={
+          isLoading ? <Skeleton className="w-full h-full" /> : mediaElement
+        }
         caption={section.caption}
         sourceName={section.sourceName || ""}
         link={section.src}
