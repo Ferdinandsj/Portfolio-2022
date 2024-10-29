@@ -9,11 +9,8 @@ interface ProjectHeaderProps {
   project: ProjectDetail;
 }
 
-const ProjectOverview: FC<ProjectHeaderProps> = ({
-  project,
-}) => {
-  const [animationClass, setAnimationClass] =
-    useState("");
+const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
+  const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
     // Trigger the animation when the component mounts
@@ -21,27 +18,24 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
   }, []);
 
   const videoPlayer = (
-    <video
-      className="w-full lg:max-h-full lg:w-auto"
-      autoPlay
-      loop
-      muted
-      playsInline
-      controls={false}
-    >
-      <source
-        src={project.overview.heroImage.image1}
-        type="video/mp4"
-      />
-    </video>
+    <div className="flex flex-row gap-5 h-[500px] overflow-hidden max-h-[500px]">
+      <video
+        className="w-full lg:max-h-full lg:w-auto"
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={false}
+      >
+        <source src={project.overview.heroImage.image1} type="video/mp4" />
+      </video>
+    </div>
   );
 
   // Check if a file is a video based on its extension
   const isVideo = (src: string) => {
     return (
-      src.endsWith(".mp4") ||
-      src.endsWith(".webm") ||
-      src.endsWith(".ogg")
+      src.endsWith(".mp4") || src.endsWith(".webm") || src.endsWith(".ogg")
     );
   };
 
@@ -59,11 +53,10 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               objectFit: "cover",
             }}
             placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
             width={300}
             height={500}
-            src={
-              project.overview.heroImage.image1
-            }
+            src={project.overview.heroImage.image1}
             alt="Primary Hero Image"
           />
           <Image
@@ -71,11 +64,10 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               objectFit: "cover",
             }}
             placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
             width={1000}
             height={500}
-            src={
-              project.overview.heroImage.image2
-            }
+            src={project.overview.heroImage.image2}
             alt="Secondary Hero Image"
           />
         </div>
@@ -84,6 +76,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
       <Image
         className="w-full lg:max-h-[336px] lg:w-auto"
         placeholder="blur"
+        blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
         width={834}
         height={336}
         src={project.overview.heroImage.image1}
@@ -105,16 +98,12 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
 
           <div className="flex w-full gap-5">
             {/* Project Media (Image or Video) */}
-            {renderMedia(
-              project.overview.heroImage.image1
-            )}
+            {renderMedia(project.overview.heroImage.image1)}
           </div>
         </div>
 
         {/* Challenge text */}
-        <p className="text-lg text-gray-700">
-          {project.overview.challenge}
-        </p>
+        <p className="text-lg text-gray-700">{project.overview.challenge}</p>
       </div>
 
       {/* Two-Column Layout for Challenge & Result */}
@@ -123,9 +112,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {/* Responsibilities */}
           <div className="flex flex-col gap-[2px]">
             <H3>Responsibilities</H3>
-            <p>
-              {project.overview.responsabilitites}
-            </p>
+            <p>{project.overview.responsabilitites}</p>
           </div>
           <div className="flex flex-col gap-[2px]">
             <H3>Result</H3>
@@ -152,24 +139,20 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               {project.overview.crew && (
                 <div>
                   <Subtle>Crew</Subtle>
-                  <p className="text-gray-800">
-                    {project.overview.crew}
-                  </p>
+                  <p className="text-gray-800">{project.overview.crew}</p>
                 </div>
               )}
             </div>
             {/* Tags/Technologies */}
             <div className="flex flex-wrap justify-start gap-3 w-full lg:justify-end">
-              {project.overview.tags.map(
-                (tag, index) => (
-                  <Badge
-                    key={index}
-                    className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
-                  >
-                    {tag}
-                  </Badge>
-                )
-              )}
+              {project.overview.tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
+                >
+                  {tag}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>
