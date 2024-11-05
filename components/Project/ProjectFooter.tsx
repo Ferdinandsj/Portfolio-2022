@@ -99,15 +99,15 @@ export const ProjectFooter: FC<ProjectFooterProps> = ({ project }) => {
             </div>
             {/* bottom Right footer section */}
             <div className="flex flex-col">
-              <FooterLink icon={false} href="testytest">
+              <FooterLink icon={false} href="/">
                 Home
               </FooterLink>
-              <FooterLink icon={false} href="testytest">
+              {/*               <FooterLink icon={false} href="testytest">
                 All Projects
-              </FooterLink>
-              <FooterLink icon={false} href="testytest">
+              </FooterLink> */}
+              {/*               <FooterLink icon={false} href="testytest">
                 To the Top
-              </FooterLink>
+              </FooterLink> */}
             </div>
           </div>
         </div>
