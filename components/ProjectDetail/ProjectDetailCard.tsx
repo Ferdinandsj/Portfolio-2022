@@ -8,11 +8,8 @@ interface ProjectDetailCardProps {
   project: ProjectDetail;
 }
 
-export const ProjectCard: React.FC<
-  ProjectDetailCardProps
-> = ({ project }) => {
-  const [isLoading, setIsLoading] =
-    useState(true);
+export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,8 +43,7 @@ export const ProjectCard: React.FC<
         controls={false}
       >
         <source src={src} type="video/mp4" />
-        Your browser does not support the video
-        tag.
+        Your browser does not support the video tag.
       </video>
     ) : (
       <Image
@@ -84,11 +80,7 @@ export const ProjectCard: React.FC<
         <Link href={`/projects/${project.slug}`}>
           <div className="flex gap-x-3 text-xs uppercase text-gray-600 font-medium tracking-wide">
             <div className="flex flex-wrap mb-2">
-              <span>
-                {formatCategories(
-                  project.categories
-                )}
-              </span>
+              <span>{formatCategories(project.categories)}</span>
             </div>
             <h4 className="text-gray-300">|</h4>
             <h4>{project.employer}</h4>
@@ -107,32 +99,21 @@ export const ProjectCard: React.FC<
   );
 };
 
-const formatCategories = (
-  categories: string[]
-): string => {
+const formatCategories = (categories: string[]): string => {
   if (categories.length === 0) return "";
-  if (categories.length === 1)
-    return categories[0];
-  if (categories.length === 2)
-    return categories.join(" & ");
+  if (categories.length === 1) return categories[0];
+  if (categories.length === 2) return categories.join(" & ");
 
-  const lastTwo = categories
-    .slice(-2)
-    .join(" & ");
-  const allButLastTwo = categories
-    .slice(0, -2)
-    .join(", ");
+  const lastTwo = categories.slice(-2).join(" & ");
+  const allButLastTwo = categories.slice(0, -2).join(", ");
 
-  return allButLastTwo
-    ? `${allButLastTwo}, ${lastTwo}`
-    : lastTwo;
+  return allButLastTwo ? `${allButLastTwo}, ${lastTwo}` : lastTwo;
 };
 
-export const ProjectDetailCardMini: React.FC<
-  ProjectDetailCardProps
-> = ({ project }) => {
-  const [isLoading, setIsLoading] =
-    useState(true);
+export const ProjectDetailCardMini: React.FC<ProjectDetailCardProps> = ({
+  project,
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -166,8 +147,7 @@ export const ProjectDetailCardMini: React.FC<
         controls={false}
       >
         <source src={src} type="video/mp4" />
-        Your browser does not support the video
-        tag.
+        Your browser does not support the video tag.
       </video>
     ) : (
       <Image

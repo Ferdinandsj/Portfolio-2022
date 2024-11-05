@@ -6,11 +6,7 @@ interface Props {
   className?: string;
 }
 
-export default function ExternalLink({
-  url,
-  text,
-  className,
-}: Props) {
+export default function ExternalLink({ url, text, className }: Props) {
   return (
     <a
       style={style.linkContainer}
