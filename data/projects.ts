@@ -212,10 +212,7 @@ export const projects: ProjectDetail[] = [
         text: "In just six weeks, the team and I had created and published a working version of the webapp. The webapp was pilot tested together with two startups; Hjernelæring and Byks and had immediate impact. Byks achieved value by publishing their entire webapp as a Figma prototype – in addition to gaining data on their users in a format that was easy to understand. This allowed Byks to offer a range of workouts to their users and better understand which workouts were the most popular. Hjernelæring tested different types of content with their users and made a decision on which to pursue further. All in all, this project was a success and was continued after our internship.",
       },
     ],
-    footer: {
-      title:
-        "Want to talk more about UI for startups?",
-    },
+    footer: {},
   },
 
   /* AESTHETIC GUIDE */

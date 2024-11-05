@@ -28,7 +28,7 @@ export interface ProjectDetail {
   };
 
   footer: {
-    title: string;
+    title?: string;
     description?: string;
     link?: string;
     buttonText?: string;
