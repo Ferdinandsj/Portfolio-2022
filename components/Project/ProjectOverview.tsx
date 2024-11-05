@@ -42,10 +42,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
   const renderMedia = (src: string) => {
     if (isVideo(src)) {
       return videoPlayer;
-    } else if (
-      project.overview.heroImage.image1 &&
-      project.overview.heroImage.image2
-    ) {
+    } else if (!project.overview.heroImage.image2) {
       return (
         <div className="flex flex-row gap-5 h-[500px] overflow-hidden max-h-[500px]">
           <Image
@@ -54,34 +51,39 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
             }}
             placeholder="blur"
             blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-            width={300}
-            height={500}
-            src={project.overview.heroImage.image1}
-            alt="Primary Hero Image"
-          />
-          <Image
-            style={{
-              objectFit: "cover",
-            }}
-            placeholder="blur"
-            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
             width={1000}
             height={500}
-            src={project.overview.heroImage.image2}
+            src={project.overview.heroImage.image1}
             alt="Secondary Hero Image"
           />
+          ;
         </div>
       );
     } else {
-      <Image
-        className="w-full lg:max-h-[336px] lg:w-auto"
-        placeholder="blur"
-        blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-        width={834}
-        height={336}
-        src={project.overview.heroImage.image1}
-        alt="Primary Hero Image"
-      />;
+      return (
+        <div className="flex flex-row justify-start items-start gap-5 h-[400px] max-h-[500px]">
+          <div className="max-h-[400px]">
+            <Image
+              src={src}
+              alt={project.overview.heroImage.caption || ""}
+              className="w-full h-full object-contain"
+              width={1000}
+              height={600}
+              unoptimized={true}
+            />
+          </div>
+          <div className="max-h-[400px]">
+            <Image
+              src={project.overview.heroImage.image2}
+              alt={project.overview.heroImage.caption || ""}
+              className="w-full h-full object-contain object-top"
+              width={1000}
+              height={600}
+              unoptimized={true}
+            />
+          </div>
+        </div>
+      );
     }
   };
 

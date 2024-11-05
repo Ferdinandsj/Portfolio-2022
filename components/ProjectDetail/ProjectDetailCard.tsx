@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ProjectDetail } from "@/types";
+import { useEffect, useState } from "react";
 import { Skeleton } from "../ui/skeleton";
 
 interface ProjectDetailCardProps {
@@ -8,6 +9,17 @@ interface ProjectDetailCardProps {
 }
 
 const ProjectDetailCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Adjust the loading time as needed
+    return () => clearTimeout(timer);
+  }, []);
+
+  const src = project.indexImage;
+
   // Check if indexImage is a video or image
   const isVideo = (src: string) => {
     return (
@@ -18,37 +30,46 @@ const ProjectDetailCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
     );
   };
 
+  const renderMedia = () =>
+    isVideo(project.indexImage) ? (
+      <video
+        height={400}
+        width={400}
+        className="object-cover w-full h-full"
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={false}
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    ) : (
+      <Image
+        height={400}
+        width={400}
+        alt={project.title}
+        src={src}
+        priority
+        style={{
+          objectFit: "cover",
+        }}
+        onLoad={() => setIsLoading(false)}
+      />
+    );
+
   return (
-    <div className="max-w-xs lg:max-w-sm flex-col space-y-2">
-      <Skeleton className=" rounded-none" />
+    <div className="max-w-xs lg:max-w-[400px] flex-col space-y-2">
       {/* Link now points to the slug (based on employer name) */}
       <Link href={`/projects/${project.slug}`}>
         <div className="relative overflow-hidden group">
           {/* Image or video wrapper with hover animation */}
-          <div className="w-full h-full duration-1000 group-hover:scale-105 transform transition-transform">
-            {isVideo(project.indexImage) ? (
-              <video
-                height={403}
-                width={403}
-                className="object-cover w-full h-full"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls={false}
-              >
-                <source src={project.indexImage} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+          <div className="w-[400px] h-[400px] duration-1000 group-hover:scale-105 transform transition-transform">
+            {isLoading ? (
+              <Skeleton className="w-full h-full rounded-none" />
             ) : (
-              <Image
-                height={403}
-                width={403}
-                alt={project.title}
-                src={project.indexImage}
-                priority
-                className="object-cover w-full h-full"
-              />
+              renderMedia()
             )}
           </div>
         </div>

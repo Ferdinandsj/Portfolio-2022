@@ -35,7 +35,7 @@ export default function Home() {
 
         {/* Main Content Section */}
         <div
-          className={`flex flex-col gap-10 items-center md:gap-20 ${animationClass}`}
+          className={`flex flex-col gap-10 items-center md:gap-40 ${animationClass}`}
         >
           <div
             id="Selected projects"

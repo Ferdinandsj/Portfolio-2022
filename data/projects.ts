@@ -9,18 +9,22 @@ const slugify = (text: string): string => {
 };
 
 export const projects: ProjectDetail[] = [
+  /* NAER */
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    indexImage: "/images/naer/naer-square-image.png",
-    title: "A Cross-Platform Design System for Web and VR",
+    indexImage:
+      "/images/naer/naer-square-image.png",
+    title:
+      "A Cross-Platform Design System for Web and VR",
     categories: ["UI", "UX", "XR"],
     date: "2024",
     employer: "Naer",
 
     overview: {
       heroImage: {
-        image1: "/images/naer/naer-cliff-loop.mp4",
+        image1:
+          "/images/naer/naer-cliff-loop.mp4",
         caption: "Illustrations by",
         sourceName: "Umble",
         link: "https://www.umble.no/",
@@ -33,7 +37,14 @@ export const projects: ProjectDetail[] = [
         "Launched the design system, ensuring seamless UI/UX for Naer’s web app and supporting its expansion in VR. The system provides consis-tent UI and improved development speeds across both Web and VR.",
       role: "UI & UX Designer",
       timeline: "9 months",
-      tags: ["Atomic Design system", "UX", "UI", "VR", "Unity", "Tailwind"],
+      tags: [
+        "Atomic Design system",
+        "UX",
+        "UI",
+        "VR",
+        "Unity",
+        "Tailwind",
+      ],
     },
 
     process: [
@@ -87,7 +98,8 @@ export const projects: ProjectDetail[] = [
         type: "full-media",
         textSize: "full",
         src: "/images/naer/2d-ui-in-naer.png",
-        caption: "Showcase of the 2D UI in the 3D environment of naer",
+        caption:
+          "Showcase of the 2D UI in the 3D environment of naer",
       },
       {
         type: "full-img-full-text",
@@ -99,7 +111,8 @@ export const projects: ProjectDetail[] = [
     ],
 
     footer: {
-      title: "Curious about building cross-platform design systems?",
+      title:
+        "Curious about building cross-platform design systems?",
       description:
         "Read my university report on how 3D UI differs from 2D UI and its design principles.",
       link: "https://drive.google.com/file/d/1kxaarvNgw-LlHyHxIS7Z3h-Mby9b2Ren/view",
@@ -107,10 +120,13 @@ export const projects: ProjectDetail[] = [
     },
   },
 
+  /* ITERATE DEMO */
   {
     id: 2,
-    indexImage: "/images/iterate/squirl-animation.mp4",
-    title: "Testing Market Interest of Product Ideas Early",
+    indexImage:
+      "/images/iterate/squirl-animation.mp4",
+    title:
+      "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],
     date: "2022",
     employer: "Iterate",
@@ -130,7 +146,13 @@ export const projects: ProjectDetail[] = [
       role: "UX & UI Designer",
       timeline: "2 months",
       crew: "Product Trio",
-      tags: ["User Testing", "UX", "UI", "Product management", "Graph UI"],
+      tags: [
+        "User Testing",
+        "UX",
+        "UI",
+        "Product management",
+        "Graph UI",
+      ],
     },
     process: [
       {
@@ -148,14 +170,16 @@ export const projects: ProjectDetail[] = [
         text: "We conducted interviews to understand the needs of potential users. We interviewed designers, developers, entrepreneurs, and product managers. Following the Lean startup methodology, we set up seven problem interviews to gather insights. We found that five out of seven interviewees were interested and became co-creators in the process, participating in weekly feedback sessions.",
       },
       {
-        h3title: "Information in the right context",
+        h3title:
+          "Information in the right context",
         textSize: "small",
         type: "text-left-image-right",
         src: "/images/iterate/affinity.jpg",
         text: "I was the lead designer in the team and we all participated in interviews and activities to ensure everyone was aligned. After conducting interviews, we organized our findings into an affinity diagram, which helped us identify key insights and formulate a problem statement to guide development. We followed a structured weekly process: Mondays were for organizing and prioritizing tasks, Tuesday to Thursday were for development, and Fridays were for solution interviews with stakeholders.",
       },
       {
-        h3title: "Information in the right context",
+        h3title:
+          "Information in the right context",
         textSize: "small",
         type: "image-left-text-right",
         src: "/images/iterate/funnel.jpg",
@@ -189,7 +213,109 @@ export const projects: ProjectDetail[] = [
       },
     ],
     footer: {
-      title: "Want to talk more about UI for startups?",
+      title:
+        "Want to talk more about UI for startups?",
+    },
+  },
+
+  /* AESTHETIC GUIDE */
+  {
+    id: 3,
+    indexImage:
+      "/images/aesthetic-guide/hero-square.jpg",
+    title:
+      "How Can We Build a Beautiful, Sustainable Oslo?",
+    categories: [
+      "Service",
+      "Graphic",
+      "UI/UX Design",
+    ],
+    date: "2022",
+    employer: "KOI",
+    slug: slugify("KOI"),
+    overview: {
+      heroImage: {
+        image1:
+          "/images/aesthetic-guide/hero-filipstad-blueprint.png",
+      },
+
+      challenge:
+        "With minimal regulatory oversight on materials and design, Oslo’s city-development has increasingly overlooked aesthetic considerations, impacting the quality of life for its residents. How can we help stakeholders make better aesthetic city planning decisions? For Oslo’s revamp of the Filipstad District, a team of thirty students was tasked with pro-posing a new approach to integrating aesthetics and functionality into urban design. The goal was to advocate for the importance of aesthe-tics to policymakers in shaping the city’s future.",
+      responsabilitites:
+        "Shaped the branding, book layout, and website as a lead in the design team. I oversaw the curation and organization the content that went into the final publication, ensuring that the information, imagery, and design were cohesive and answered our project goals.",
+      result:
+        "Published a book about urban aesthetic city planning which was handed to the Oslo’s Head of Urban Planning. The project sparked a public debate about urban aesthetics and was an inspiration for Oslo’s fargeveileder.",
+      role: "Lead editor, designer & web developer",
+      timeline: "18 Months",
+      crew: "30 Volunteers, KOI & Oslo Municipality ",
+      tags: [
+        "Service Design",
+        "UX",
+        "Giga-map",
+        "Branding",
+        "Webflow",
+      ],
+    },
+    process: [
+      {
+        h2title: "Filipstad District [2022]",
+        textSize: "full",
+        type: "full-img-full-text",
+        mediaRounded: "rounded-xl",
+        src: "/images/aesthetic-guide/field-study-collage.png",
+        text: "We initially conducted a field study of Filipstad  and its surrounding districts in groups of 6 students. We were accompanied by the Director of Cultural Heritage Management, who highlighted which aspects of the area the City would like to preserve. We had a closer look at the district’s materials, location and its characteristic buildings. Afterward, we triangulated these findings together with a survey and ethnographic studies of the neighboring districts inhabitants to map their user needs.",
+        caption: "Foto:",
+        sourceName: "Einar Rosenhaug",
+      },
+      {
+        h3title: "Visualising Insights",
+        textSize: "wide",
+        type: "text-left-image-right",
+        src: "/images/aesthetic-guide/filipstad-winter-activity-survey.png",
+        text: "My group chose to visualise findings from the three insight methods in a GIGA-map to make relations between insights more apparent. The GIGA-map served us as our source of truth, and made it easier to communicate with stakeholders and the other teams. From our research, we identified a need for year-round usability of the district, particularly addressing the oversight in previous city planning that focused heavily on warmer seasons. To tackle this, we used a table to analyze how different age groups interact with the district across all seasons, ensuring our design solutions were inclusive of cold winter challenges.",
+      },
+      {
+        h3title: "Design by committee",
+        textSize: "small",
+        type: "image-left-text-right",
+        src: "/images/aesthetic-guide/maja-aurora-workshop.png",
+        text: "The biggest challenge of the project was to include the voices and opinions of the 30 collaborators. To manage and decide on the content of the book, we chose one person from each team to champion that teams opinions. Each team champion would have frequent meetings with the editorial team led by me. To manage the opinions, we chose to use Google Docs for version control and later on InDesign Online in order to place the opinion at the specific area in question. The editorial team also produced the layout and branding in addition to making the final decisions on content that was published.",
+      },
+    ],
+    result: [
+      {
+        h2title: "The Book",
+        textSize: "full",
+        type: "full-img-full-text",
+        mediaRounded: "rounded-xl",
+        src: "/images/aesthetic-guide/book-collage.png",
+        text: "The book was crafted as an easy to use encyclopedia for urban development. It covered building facades, materials, colors, universal design and green areas. Each chapter had a summary with a toolkit of what one should keep in mind for each of the categories. Multiple copies were handed to the key stakeholders; Oslo municipality, Multiconsult, Oslo Havn KF, Arkitekturopprøret and ROM Eiendom AS.",
+      },
+
+      {
+        h2title: "Hasvold Seaside Pool Concept",
+        textSize: "full",
+        type: "full-media",
+        mediaRounded: "rounded-xl",
+        src: "/images/aesthetic-guide/hasvold-bad.png",
+      },
+
+      {
+        textSize: "full",
+        type: "full-img-full-text",
+        mediaRounded: "rounded-xl",
+        text: "Creating spaces in our city that encourage social interaction and activity is crucial, but how do we ensure this when autumn and winter bring darkness and cold? The concept of a year-round city focuses on making urban spaces accessible and active throughout all seasons. There are many benefits to developing a year-round city, from fostering a sense of belonging to providing enjoyable activities. This is something the community strongly desires. By introducing year-round activities, we create a vibrant city that invites people outdoors, helping them feel connected to their local area without the need to travel elsewhere for experiences.",
+        src: "/images/aesthetic-guide/hasvold-facilities.png",
+      },
+      {
+        textSize: "full",
+        type: "full-img-full-text",
+        mediaRounded: "rounded-xl",
+        src: "/images/aesthetic-guide/hasvold-pool.png",
+      },
+    ],
+    footer: {
+      title: "...",
     },
   },
 
