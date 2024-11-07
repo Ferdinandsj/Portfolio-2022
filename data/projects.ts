@@ -259,7 +259,7 @@ export const projects: ProjectDetail[] = [
         textSize: "full",
         type: "full-media",
         mediaRounded: "rounded-xl",
-        src: "/images/aesthetic-guide/hasvold-bad.png",
+        src: "/images/aesthetic-guide/winter-hasvold-sjobad.png",
       },
 
       {
