@@ -26,11 +26,7 @@ interface FooterLinkProps {
   children: React.ReactNode;
 }
 
-const FooterLink: FC<FooterLinkProps> = ({
-  icon,
-  href,
-  children,
-}) => {
+const FooterLink: FC<FooterLinkProps> = ({ icon, href, children }) => {
   return (
     <Link
       className="inline-flex gap-1 text-gray-700 text-lg font-medium "
@@ -38,34 +34,21 @@ const FooterLink: FC<FooterLinkProps> = ({
     >
       <div className="flex max-w-80 lg:max-w-none items-center hover:bg-green-300 hover:cursor-pointer p-1">
         {children}
-        {icon ? (
-          <ArrowUpRight className="invisible sm:visible" />
-        ) : (
-          <></>
-        )}
+        {icon ? <ArrowUpRight className="invisible sm:visible" /> : <></>}
       </div>
     </Link>
   );
 };
 
-export const ProjectFooter: FC<
-  ProjectFooterProps
-> = ({ project }) => {
+export const ProjectFooter: FC<ProjectFooterProps> = ({ project }) => {
   // Filter out the current project
-  const otherProjects = projects.filter(
-    (p) => p.id !== project.id
-  );
+  const otherProjects = projects.filter((p) => p.id !== project.id);
 
   // Shuffle the other projects to get a random selection
-  const shuffledProjects = otherProjects.sort(
-    () => 0.5 - Math.random()
-  );
+  const shuffledProjects = otherProjects.sort(() => 0.5 - Math.random());
 
   // Select two projects from the shuffled list
-  const projectsToShow = shuffledProjects.slice(
-    0,
-    2
-  );
+  const projectsToShow = shuffledProjects.slice(0, 2);
 
   return (
     <div
@@ -78,14 +61,9 @@ export const ProjectFooter: FC<
           Explore other projects
         </H2>
         <div className="flex flex-wrap lg:flex-nowrap flex-row gap-10 lg:gap-10">
-          {projectsToShow.map(
-            (project, index) => (
-              <ProjectDetailCardMini
-                key={index}
-                project={project}
-              />
-            )
-          )}
+          {projectsToShow.map((project, index) => (
+            <ProjectDetailCardMini key={index} project={project} />
+          ))}
         </div>
         {/* <div className="w-full grow flex items-start justify-start">
           <Button>
@@ -108,14 +86,9 @@ export const ProjectFooter: FC<
                     icon={true}
                     href="mailto:ferdinand@steen-johnsen.com"
                   >
-                    <section>
-                      Ferdinand@steen-johnsen.com
-                    </section>
+                    <section>Ferdinand@steen-johnsen.com</section>
                   </FooterLink>
-                  <FooterLink
-                    icon={true}
-                    href="tel:+47 480 85 049"
-                  >
+                  <FooterLink icon={true} href="tel:+47 480 85 049">
                     +47 480 85 049
                   </FooterLink>
                   <FooterLink
@@ -149,18 +122,14 @@ export const ProjectFooter: FC<
   );
 };
 
-export const ProjectCTA: FC<
-  ProjectFooterProps
-> = ({ project }) => {
+export const ProjectCTA: FC<ProjectFooterProps> = ({ project }) => {
   return (
     <Card className="max-w-xs">
       <CardHeader>
         <CardTitle>
           <H2>{project.footer.title}</H2>
         </CardTitle>
-        <CardDescription>
-          {project.footer.description}
-        </CardDescription>
+        <CardDescription>{project.footer.description}</CardDescription>
       </CardHeader>
       <CardContent>
         {project.footer.link ? (
