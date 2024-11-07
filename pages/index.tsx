@@ -74,19 +74,19 @@ export default function Home() {
 
             <div
               id="Experience"
-              className="max-w-xs flex-col pt-10 flex w-full gap-20 
+              className="max-w-xs items-center justify-center md:justify-end md:items-end flex-col pt-10 flex w-full gap-20 
               md:gap-20 md:w-[400px] md:pt-16 md:max-w-full"
             >
               {experiences.map((experience, index) => (
                 <ExperienceCard key={index} experience={experience} />
               ))}
-            </div>
-            <div className="w-full grow flex items-start px-6 lg:px-none lg:px-none">
-              <Link href="https://drive.google.com/file/d/1MhFiBrNiMgVt2VmDXghoalQOtlVfFcZ3/view?usp=sharing">
-                <Button>
-                  In-depth CV <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
+              <div className="grow flex  lg:px-none">
+                <Link href="https://drive.google.com/file/d/1MhFiBrNiMgVt2VmDXghoalQOtlVfFcZ3/view?usp=sharing">
+                  <Button className=" w-64 md:w-48">
+                    In-depth CV <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* Footer (kind of) */}
