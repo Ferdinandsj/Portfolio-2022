@@ -8,8 +8,11 @@ interface ProjectDetailCardProps {
   project: ProjectDetail;
 }
 
-export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
-  const [isLoading, setIsLoading] = useState(true);
+export const ProjectCard: React.FC<
+  ProjectDetailCardProps
+> = ({ project }) => {
+  const [isLoading, setIsLoading] =
+    useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,7 +46,8 @@ export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
         controls={false}
       >
         <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
+        Your browser does not support the video
+        tag.
       </video>
     ) : (
       <Image
@@ -80,7 +84,11 @@ export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
         <Link href={`/projects/${project.slug}`}>
           <div className="flex gap-x-3 text-xs uppercase text-gray-600 font-medium tracking-wide">
             <div className="flex flex-wrap mb-2">
-              <span>{formatCategories(project.categories)}</span>
+              <span>
+                {formatCategories(
+                  project.categories
+                )}
+              </span>
             </div>
             <h4 className="text-gray-300">|</h4>
             <h4>{project.employer}</h4>
@@ -99,21 +107,32 @@ export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
   );
 };
 
-const formatCategories = (categories: string[]): string => {
+const formatCategories = (
+  categories: string[]
+): string => {
   if (categories.length === 0) return "";
-  if (categories.length === 1) return categories[0];
-  if (categories.length === 2) return categories.join(" & ");
+  if (categories.length === 1)
+    return categories[0];
+  if (categories.length === 2)
+    return categories.join(" & ");
 
-  const lastTwo = categories.slice(-2).join(" & ");
-  const allButLastTwo = categories.slice(0, -2).join(", ");
+  const lastTwo = categories
+    .slice(-2)
+    .join(" & ");
+  const allButLastTwo = categories
+    .slice(0, -2)
+    .join(", ");
 
-  return allButLastTwo ? `${allButLastTwo}, ${lastTwo}` : lastTwo;
+  return allButLastTwo
+    ? `${allButLastTwo}, ${lastTwo}`
+    : lastTwo;
 };
 
-export const ProjectDetailCardMini: React.FC<ProjectDetailCardProps> = ({
-  project,
-}) => {
-  const [isLoading, setIsLoading] = useState(true);
+export const ProjectDetailCardMini: React.FC<
+  ProjectDetailCardProps
+> = ({ project }) => {
+  const [isLoading, setIsLoading] =
+    useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -147,7 +166,8 @@ export const ProjectDetailCardMini: React.FC<ProjectDetailCardProps> = ({
         controls={false}
       >
         <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
+        Your browser does not support the video
+        tag.
       </video>
     ) : (
       <Image
@@ -164,12 +184,15 @@ export const ProjectDetailCardMini: React.FC<ProjectDetailCardProps> = ({
     );
 
   return (
-    <div className="flex flex-col max-w-80 gap-2 ">
+    <div className="flex flex-row min-w-80  max-w-96 wrap lg:flex-nowrap lg:flex-col lg:max-w-80 gap-2 ">
       {/* Link now points to the slug (based on employer name) */}
       <Link href={`/projects/${project.slug}`}>
         <div className="relative overflow-hidden group">
           {/* Image or video wrapper with hover animation */}
-          <div className="w-80 h-80 duration-1000 group-hover:scale-105 transform transition-transform">
+          <div
+            className="w-40 h-40 duration-1000 group-hover:scale-105 transform transition-transform
+          lg:w-80 lg:h-80"
+          >
             {isLoading ? (
               <Skeleton className="w-full h-full rounded-none" />
             ) : (
@@ -179,10 +202,10 @@ export const ProjectDetailCardMini: React.FC<ProjectDetailCardProps> = ({
         </div>
       </Link>
 
-      <div className="flex-col">
+      <div className="flex-col pt-4 lg:pt-0">
         {/* Link to project details page */}
         <Link href={`/projects/${project.slug}`}>
-          <h1 className="text-wrap font-serif text-[26px]/[34px] text-gray-900 grow-0 break-normal hover:text-gray-600">
+          <h1 className="text-wrap font-serif text-[20px]/[28px] lg:text-[26px]/[34px] text-gray-900 grow-0 break-normal hover:text-gray-600">
             {project.title}
           </h1>
         </Link>
