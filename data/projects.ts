@@ -13,15 +13,18 @@ export const projects: ProjectDetail[] = [
   {
     id: 1,
     slug: slugify("Naer"), // Add the slug here
-    indexImage: "/images/naer/naer-square-image.png",
-    title: "A Cross-Platform Design System for Web and VR",
+    indexImage:
+      "/images/naer/naer-square-image.png",
+    title:
+      "A Cross-Platform Design System for Web and VR",
     categories: ["UI", "UX", "XR"],
     date: "2024",
     employer: "Naer",
 
     overview: {
       heroImage: {
-        image1: "/images/naer/naer-cliff-loop.mp4",
+        image1:
+          "/images/naer/naer-cliff-loop.mp4",
         caption: "Illustrations by",
         sourceName: "Umble",
         link: "https://www.umble.no/",
@@ -34,7 +37,14 @@ export const projects: ProjectDetail[] = [
         "Launched the design system, ensuring seamless UI/UX for Naer’s web app and supporting its expansion in VR. The system provides consis-tent UI and improved development speeds across both Web and VR.",
       role: "UI & UX Designer",
       timeline: "9 months",
-      tags: ["Atomic Design system", "UX", "UI", "VR", "Unity", "Tailwind"],
+      tags: [
+        "Atomic Design system",
+        "UX",
+        "UI",
+        "VR",
+        "Unity",
+        "Tailwind",
+      ],
     },
 
     process: [
@@ -88,7 +98,8 @@ export const projects: ProjectDetail[] = [
         type: "full-media",
         textSize: "full",
         src: "/images/naer/2d-ui-in-naer.png",
-        caption: "Showcase of the 2D UI in the 3D environment of naer",
+        caption:
+          "Showcase of the 2D UI in the 3D environment of naer",
       },
       {
         type: "full-img-full-text",
@@ -100,7 +111,8 @@ export const projects: ProjectDetail[] = [
     ],
 
     footer: {
-      title: "Curious about building cross-platform design systems?",
+      title:
+        "Curious about building cross-platform design systems?",
       description:
         "Read my university report on how 3D UI differs from 2D UI and its design principles.",
       link: "https://drive.google.com/file/d/1kxaarvNgw-LlHyHxIS7Z3h-Mby9b2Ren/view",
@@ -111,8 +123,10 @@ export const projects: ProjectDetail[] = [
   /* ITERATE DEMO */
   {
     id: 2,
-    indexImage: "/images/iterate/squirl-animation.mp4",
-    title: "Testing Market Interest of Product Ideas Early",
+    indexImage:
+      "/images/iterate/squirl-animation.mp4",
+    title:
+      "Testing Market Interest of Product Ideas Early",
     categories: ["UI", "UX"],
     date: "2022",
     employer: "Iterate",
@@ -132,7 +146,13 @@ export const projects: ProjectDetail[] = [
       role: "UX & UI Designer",
       timeline: "2 months",
       crew: "Product Trio",
-      tags: ["User Testing", "UX", "UI", "Product management", "Graph UI"],
+      tags: [
+        "User Testing",
+        "UX",
+        "UI",
+        "Product management",
+        "Graph UI",
+      ],
     },
     process: [
       {
@@ -150,14 +170,16 @@ export const projects: ProjectDetail[] = [
         text: "We conducted interviews to understand the needs of potential users. We interviewed designers, developers, entrepreneurs, and product managers. Following the Lean startup methodology, we set up seven problem interviews to gather insights. We found that five out of seven interviewees were interested and became co-creators in the process, participating in weekly feedback sessions.",
       },
       {
-        h3title: "Information in the right context",
+        h3title:
+          "Information in the right context",
         textSize: "small",
         type: "text-left-image-right",
         src: "/images/iterate/affinity.jpg",
         text: "I was the lead designer in the team and we all participated in interviews and activities to ensure everyone was aligned. After conducting interviews, we organized our findings into an affinity diagram, which helped us identify key insights and formulate a problem statement to guide development. We followed a structured weekly process: Mondays were for organizing and prioritizing tasks, Tuesday to Thursday were for development, and Fridays were for solution interviews with stakeholders.",
       },
       {
-        h3title: "Information in the right context",
+        h3title:
+          "Information in the right context",
         textSize: "small",
         type: "image-left-text-right",
         src: "/images/iterate/funnel.jpg",
@@ -196,15 +218,22 @@ export const projects: ProjectDetail[] = [
   /* AESTHETIC GUIDE */
   {
     id: 3,
-    indexImage: "/images/aesthetic-guide/hero-square.jpg",
-    title: "How Can We Build a Beautiful, Sustainable Oslo?",
-    categories: ["Service", "Graphic", "UI/UX Design"],
+    indexImage:
+      "/images/aesthetic-guide/hero-square.jpg",
+    title:
+      "How Can We Build a Beautiful, Sustainable Oslo?",
+    categories: [
+      "Service",
+      "Graphic",
+      "UI/UX Design",
+    ],
     date: "2022",
     employer: "KOI",
     slug: slugify("KOI"),
     overview: {
       heroImage: {
-        image1: "/images/aesthetic-guide/hero-filipstad-blueprint.png",
+        image1:
+          "/images/aesthetic-guide/hero-filipstad-blueprint.png",
       },
 
       challenge:
@@ -216,7 +245,13 @@ export const projects: ProjectDetail[] = [
       role: "Lead editor, designer & web developer",
       timeline: "18 Months",
       crew: "30 Volunteers, KOI & Oslo Municipality ",
-      tags: ["Service Design", "UX", "Giga-map", "Branding", "Webflow"],
+      tags: [
+        "Service Design",
+        "UX",
+        "Giga-map",
+        "Branding",
+        "Webflow",
+      ],
     },
     process: [
       {
@@ -276,9 +311,7 @@ export const projects: ProjectDetail[] = [
         src: "/images/aesthetic-guide/hasvold-pool.png",
       },
     ],
-    footer: {
-      title: "...",
-    },
+    footer: {},
   },
 
   /*   {
