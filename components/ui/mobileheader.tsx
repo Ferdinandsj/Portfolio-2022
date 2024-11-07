@@ -1,22 +1,16 @@
 import React from "react";
-import classNames from "classnames";
-import H3 from "../typography/h3";
+import H2 from "../typography/h2";
 
 type mobileHeaderProps = {
   children: React.ReactNode;
   className?: string; // Optional className prop
 };
 
-const MobileHeader: React.FC<mobileHeaderProps> = ({ children, className }) => {
+const MobileHeader: React.FC<mobileHeaderProps> = ({ children }) => {
   return (
-    <div
-      className={classNames(
-        "w-full max-w-xs  text-gray-300 md:max-w-full text-xl font-semibold lg:hidden",
-        className,
-      )}
-    >
-      <H3>{children}</H3>
-    </div>
+    <H2 className="text-2xl font-bold tracking-normal lg:hidden lg:text-4xl max-w-md">
+      {children}
+    </H2>
   );
 };
 

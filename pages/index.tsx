@@ -40,8 +40,8 @@ export default function Home() {
           <div
             id="Selected projects"
             className="flex flex-col gap-5 justify-center w-full items-center pt-10  border-t-[1px] border-gray-300 pb-10
-            md:pt-24 md:pb-20 md:w-[400px] md:gap-10 md:border-none
-            lg:gap-10 lg:pb-0"
+            lg:pt-24 lg:pb-20 lg:w-[400px] lg:gap-10 lg:border-none
+            "
           >
             <MobileHeader>Selected projects</MobileHeader>
             <div className="flex flex-col gap-10 lg:gap-20">
