@@ -81,7 +81,7 @@ export default function Home() {
                 <ExperienceCard key={index} experience={experience} />
               ))}
             </div>
-            <div className="w-full grow flex items-start px-6 lg:px-none">
+            <div className="w-full grow flex items-start px-6 lg:px-none lg:px-none">
               <Link href="https://drive.google.com/file/d/1MhFiBrNiMgVt2VmDXghoalQOtlVfFcZ3/view?usp=sharing">
                 <Button>
                   In-depth CV <ArrowUpRight className="ml-1 h-4 w-4" />

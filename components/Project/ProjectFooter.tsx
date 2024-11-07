@@ -32,9 +32,9 @@ const FooterLink: FC<FooterLinkProps> = ({ icon, href, children }) => {
       className="inline-flex gap-1 text-gray-700 text-lg font-medium "
       href={href}
     >
-      <div className="flex max-w-80 lg:max-w-none items-center hover:bg-green-300 hover:cursor-pointer p-1">
+      <div className="flex max-w-80 sm:max-w-none items-center hover:bg-green-300 hover:cursor-pointer p-1">
         {children}
-        {icon ? <ArrowUpRight className="invisible sm:visible" /> : <></>}
+        {icon ? <ArrowUpRight className="" /> : <></>}
       </div>
     </Link>
   );
@@ -84,7 +84,7 @@ export const ProjectFooter: FC<ProjectFooterProps> = ({ project }) => {
                 Get in Touch
               </H2>
               <div className="flex flex-col gap-5">
-                <div className="w-full flex flex-col ">
+                <div className="w-80 flex flex-col ">
                   <FooterLink
                     icon={true}
                     href="mailto:ferdinand@steen-johnsen.com"
