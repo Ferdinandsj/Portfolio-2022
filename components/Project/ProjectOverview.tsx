@@ -9,11 +9,8 @@ interface ProjectHeaderProps {
   project: ProjectDetail;
 }
 
-const ProjectOverview: FC<ProjectHeaderProps> = ({
-  project,
-}) => {
-  const [animationClass, setAnimationClass] =
-    useState("");
+const ProjectOverview: FC<ProjectHeaderProps> = ({ project }) => {
+  const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
     // Trigger the animation when the component mounts
@@ -33,10 +30,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
         playsInline
         controls={false}
       >
-        <source
-          src={project.overview.heroImage.image1}
-          type="video/mp4"
-        />
+        <source src={project.overview.heroImage.image1} type="video/mp4" />
       </video>
     </div>
   );
@@ -44,18 +38,14 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
   // Check if a file is a video based on its extension
   const isVideo = (src: string) => {
     return (
-      src.endsWith(".mp4") ||
-      src.endsWith(".webm") ||
-      src.endsWith(".ogg")
+      src.endsWith(".mp4") || src.endsWith(".webm") || src.endsWith(".ogg")
     );
   };
 
   const renderMedia = (src: string) => {
     if (isVideo(src)) {
       return videoPlayer;
-    } else if (
-      !project.overview.heroImage.image2
-    ) {
+    } else if (!project.overview.heroImage.image2) {
       return (
         <div className="flex flex-row gap-5 h-[500px] overflow-hidden max-h-[500px]">
           <Image
@@ -64,9 +54,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
             }}
             width={1000}
             height={500}
-            src={
-              project.overview.heroImage.image1
-            }
+            src={project.overview.heroImage.image1}
             alt="Secondary Hero Image"
           />
           ;
@@ -78,10 +66,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           <div className="max-h-[400px]">
             <Image
               src={src}
-              alt={
-                project.overview.heroImage
-                  .caption || ""
-              }
+              alt={project.overview.heroImage.caption || ""}
               className="w-full h-full object-contain"
               width={1000}
               height={600}
@@ -89,13 +74,8 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           </div>
           <div className="max-h-[400px]">
             <Image
-              src={
-                project.overview.heroImage.image2
-              }
-              alt={
-                project.overview.heroImage
-                  .caption || ""
-              }
+              src={project.overview.heroImage.image2}
+              alt={project.overview.heroImage.caption || ""}
               className="hidden md:inline-block w-full h-full object-contain object-top"
               width={1000}
               height={600}
@@ -119,16 +99,12 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
 
           <div className="flex w-full gap-5">
             {/* Project Media (Image or Video) */}
-            {renderMedia(
-              project.overview.heroImage.image1
-            )}
+            {renderMedia(project.overview.heroImage.image1)}
           </div>
         </div>
 
         {/* Challenge text */}
-        <p className="text-lg text-gray-700">
-          {project.overview.challenge}
-        </p>
+        <p className="text-lg text-gray-700">{project.overview.challenge}</p>
       </div>
 
       {/* Two-Column Layout for Challenge & Result */}
@@ -137,9 +113,7 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
           {/* Responsibilities */}
           <div className="flex flex-col gap-[2px]">
             <H3>Responsibilities</H3>
-            <p>
-              {project.overview.responsabilitites}
-            </p>
+            <p>{project.overview.responsabilitites}</p>
           </div>
           <div className="flex flex-col gap-[2px]">
             <H3>Result</H3>
@@ -166,24 +140,20 @@ const ProjectOverview: FC<ProjectHeaderProps> = ({
               {project.overview.crew && (
                 <div>
                   <Subtle>Crew</Subtle>
-                  <p className="text-gray-800">
-                    {project.overview.crew}
-                  </p>
+                  <p className="text-gray-800">{project.overview.crew}</p>
                 </div>
               )}
             </div>
             {/* Tags/Technologies */}
             <div className="flex flex-wrap justify-start gap-3 w-full lg:justify-end">
-              {project.overview.tags.map(
-                (tag, index) => (
-                  <Badge
-                    key={index}
-                    className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
-                  >
-                    {tag}
-                  </Badge>
-                )
-              )}
+              {project.overview.tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  className="font-normal text-sm bg-white text-gray-700 border-[1px] border-gray-300 rounded-none px-2 py-[6px] hover:bg-white"
+                >
+                  {tag}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>
