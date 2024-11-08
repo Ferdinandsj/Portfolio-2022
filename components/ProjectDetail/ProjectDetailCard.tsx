@@ -55,7 +55,10 @@ export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
         style={{
           objectFit: "cover",
         }}
-        onLoad={() => setIsLoading(false)}
+        onLoad={() => {
+          setIsLoading(false);
+          console.log("Image loaded");
+        }}
       />
     );
 
@@ -67,7 +70,7 @@ export const ProjectCard: React.FC<ProjectDetailCardProps> = ({ project }) => {
           {/* Image or video wrapper with hover animation */}
           <div className="lg:w-[400px] lg:h-[400px] duration-1000 group-hover:scale-105 transform transition-transform">
             {isLoading ? (
-              <Skeleton className="w-full h-full rounded-none" />
+              <Skeleton className="w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] rounded-none" />
             ) : (
               renderMedia()
             )}
