@@ -7,7 +7,9 @@ export const experiences: ExperienceDetail[] = [
     position: "Design consultant",
     startDate: "AUG 2024",
     endDate: "Ongoing",
-    summary: [],
+    summary: [
+      "UX and Front-End for Novo Nordisk",
+    ],
   },
 
   {
