@@ -5,9 +5,7 @@ type mobileHeaderProps = {
   className?: string; // Optional className prop
 };
 
-const MobileHeader: React.FC<
-  mobileHeaderProps
-> = ({ children }) => {
+const MobileHeader: React.FC<mobileHeaderProps> = ({ children }) => {
   return (
     <h2 className="text-2xl font-bold tracking-normal lg:hidden lg:text-4xl max-w-md">
       {children}

@@ -10,24 +10,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export default function MyApp({
-  Component,
-  pageProps,
-}: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main
-      className={`${inter.variable} font-sans`}
-    >
+    <main className={`${inter.variable} font-sans`}>
       <Head>
         <title>Ferdinand S-J</title>
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width"
-        />
-        <link
-          rel="stylesheet"
-          href="https://use.typekit.net/vmk3sno.css"
-        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="stylesheet" href="https://use.typekit.net/vmk3sno.css" />
       </Head>
       <GlobalContextProvider>
         <Toaster />
