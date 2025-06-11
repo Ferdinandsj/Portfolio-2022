@@ -13,8 +13,7 @@ import MobileHeader from "@/components/ui/mobileheader";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [animationClass, setAnimationClass] =
-    useState("");
+  const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
     // Trigger the animation when the component mounts
@@ -44,28 +43,13 @@ export default function Home() {
             lg:pt-24 lg:pb-20 lg:w-[400px] lg:gap-10 lg:border-none
             "
           >
-            <MobileHeader>
-              Selected projects
-            </MobileHeader>
+            <MobileHeader>Selected projects</MobileHeader>
             <div className="flex flex-col gap-10 lg:gap-20">
               {projects
-                .sort(
-                  (
-                    a: ProjectDetail,
-                    b: ProjectDetail
-                  ) => a.id - b.id
-                ) // Sorting by ID in ascending order
-                .map(
-                  (
-                    project: ProjectDetail,
-                    index: number
-                  ) => (
-                    <ProjectCard
-                      key={index}
-                      project={project}
-                    />
-                  )
-                )}
+                .sort((a: ProjectDetail, b: ProjectDetail) => a.id - b.id) // Sorting by ID in ascending order
+                .map((project: ProjectDetail, index: number) => (
+                  <ProjectCard key={index} project={project} />
+                ))}
               {/* 
             Uncomment if you want to show an "All Projects" button
             <div className="w-full grow flex items-end justify-end">
@@ -86,28 +70,20 @@ export default function Home() {
             md:pt-0 md:w-[400px] md:gap-10
             lg:gap-10"
           >
-            <MobileHeader>
-              Experience
-            </MobileHeader>
+            <MobileHeader>Experience</MobileHeader>
 
             <div
               id="Experience"
               className="max-w-xs items-center justify-center md:justify-end md:items-end flex-col pt-10 flex w-full gap-20 
               md:gap-20 md:w-[400px] md:pt-16 md:max-w-full"
             >
-              {experiences.map(
-                (experience, index) => (
-                  <ExperienceCard
-                    key={index}
-                    experience={experience}
-                  />
-                )
-              )}
+              {experiences.map((experience, index) => (
+                <ExperienceCard key={index} experience={experience} />
+              ))}
               <div className="grow flex  lg:px-none">
                 <Link href="https://drive.google.com/file/d/1GoqzjXF7X3OhmMQpBJILQa28pMw1xEQ_/view?usp=sharing">
                   <Button className=" w-64 md:w-48">
-                    In-depth CV{" "}
-                    <ArrowUpRight className="ml-1 h-4 w-4" />
+                    In-depth CV <ArrowUpRight className="ml-1 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -119,19 +95,11 @@ export default function Home() {
                 <div className="flex gap-2">
                   <GitHubLogoIcon className="h-6 w-6 text-gray-700" />
                   <p className="text-semibold text-gray-500 hover:text-gray-700 transition duration-300">
-                    Portfolio made by Ferdinand
-                    with{" "}
-                    <span className="text-gray-700">
-                      React
-                    </span>
-                    ,{" "}
-                    <span className="text-gray-700">
-                      Next.js
-                    </span>
+                    Portfolio made by Ferdinand with{" "}
+                    <span className="text-gray-700">React</span>,{" "}
+                    <span className="text-gray-700">Next.js</span>
                     {" & "}
-                    <span className="text-gray-700">
-                      Tailwind
-                    </span>
+                    <span className="text-gray-700">Tailwind</span>
                   </p>
                 </div>
               </a>
