@@ -5,15 +5,11 @@ import MailIcon from "../icons/MailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import { Button } from "@/components/ui/button";
 import FlagMenu from "./FlagMenu";
-import Subtle from "../typography/subtle";
 
 import { Linkedin } from "lucide-react";
-import H4 from "../typography/h4";
-import H3 from "../typography/h3";
 
 export default function LeftHomeSection() {
-  const [animationClass, setAnimationClass] =
-    useState("");
+  const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
     // Trigger the animation when the component mounts
@@ -34,9 +30,7 @@ export default function LeftHomeSection() {
           <div className={`${animationClass}`}>
             <div className="flex w-[225px] gap-4 flex-col items-center">
               <Image
-                src={
-                  "/images/home-page/portrett-signatur-animasjon.gif"
-                }
+                src={"/images/home-page/portrett-signatur-animasjon.gif"}
                 unoptimized
                 alt={"Portrait image"}
                 width={600}
@@ -65,14 +59,10 @@ export default function LeftHomeSection() {
 }
 
 const GetInTouch: React.FC = () => {
-  const [shouldAnimate, setShouldAnimate] =
-    useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(
-      () => setShouldAnimate(true),
-      2600
-    ); // 2 seconds delay
+    const timer = setTimeout(() => setShouldAnimate(true), 2600); // 2 seconds delay
     return () => clearTimeout(timer); // Cleanup on component unmount
   }, []);
 
@@ -92,11 +82,7 @@ const GetInTouch: React.FC = () => {
             <PhoneIcon number="+4748085049" />
             <MailIcon mail="ferdinand@steen-johnsen.com" />
             <Link href="https://www.linkedin.com/in/ferdinandsj/">
-              <Button
-                className="h-8 w-8"
-                variant="ghost"
-                size="icon"
-              >
+              <Button className="h-8 w-8" variant="ghost" size="icon">
                 <Linkedin className="h-5 w-5 stroke-gray-700" />
               </Button>
             </Link>

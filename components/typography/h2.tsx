@@ -6,16 +6,10 @@ type H2Props = {
   className?: string; // Optional className prop
 };
 
-const H2: React.FC<H2Props> = ({
-  children,
-  className,
-}) => {
+const H2: React.FC<H2Props> = ({ children, className }) => {
   return (
     <div
-      className={classNames(
-        "text-gray-700 text-3xl font-semibold",
-        className
-      )}
+      className={classNames("text-gray-700 text-3xl font-semibold", className)}
     >
       {children}
     </div>
