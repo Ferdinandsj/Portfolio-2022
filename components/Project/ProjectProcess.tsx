@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArticleSection } from "@/types";
 import Image from "next/image";
 import MediaCaption from "../typography/mediaDetail";
+import H2 from "../typography/h2";
 
 interface ArticleSectionProps {
   section: ArticleSection;
@@ -31,13 +32,19 @@ const replaceTextWithLinks = (text: string) => {
         </React.Fragment>
       );
     }
-    return <React.Fragment key={index}>{word} </React.Fragment>;
+    return (
+      <React.Fragment key={index}>
+        {word}{" "}
+      </React.Fragment>
+    );
   });
 };
 
 const isVideo = (src?: string) => {
   return (
-    src?.endsWith(".mp4") || src?.endsWith(".webm") || src?.endsWith(".ogg")
+    src?.endsWith(".mp4") ||
+    src?.endsWith(".webm") ||
+    src?.endsWith(".ogg")
   );
 };
 
@@ -47,12 +54,16 @@ const textSizeClass = {
   full: "w-full",
 };
 
-const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
+const ProjectProcess: FC<ArticleSectionProps> = ({
+  section,
+}) => {
   const renderMedia = () => {
     if (!section.src) return null;
 
     const mediaElement = isVideo(section.src) ? (
-      <div className={`w-full h-full overflow-hidden ${section.mediaRounded}`}>
+      <div
+        className={`w-full h-full overflow-hidden ${section.mediaRounded}`}
+      >
         <video
           className="w-full h-full border shadow-inner"
           autoPlay
@@ -61,8 +72,12 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
           playsInline
           controls={false}
         >
-          <source src={section.src} type="video/mp4" />
-          Your browser does not support the video tag.
+          <source
+            src={section.src}
+            type="video/mp4"
+          />
+          Your browser does not support the video
+          tag.
         </video>
       </div>
     ) : (
@@ -89,8 +104,16 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
 
   const renderHeading = () => (
     <>
-      {section.h2title && <h2 className="mb-2 w-full">{section.h2title}</h2>}
-      {section.h3title && <H3 className="mb-2">{section.h3title}</H3>}
+      {section.h2title && (
+        <H2 className="mb-2 w-full">
+          {section.h2title}
+        </H2>
+      )}
+      {section.h3title && (
+        <H3 className="mb-2">
+          {section.h3title}
+        </H3>
+      )}
     </>
   );
 
@@ -145,13 +168,19 @@ const ProjectProcess: FC<ArticleSectionProps> = ({ section }) => {
     case "full-img-full-text":
       return (
         <div className="flex flex-col items-center w-full gap-4">
-          <div className={`flex flex-col gap-0 ${textSizeClass.full}`}>
+          <div
+            className={`flex flex-col gap-0 ${textSizeClass.full}`}
+          >
             {renderHeading()}
           </div>
           {renderMedia()}
-          <div className={`flex flex-col gap-0 ${textSizeClass.full}`}>
+          <div
+            className={`flex flex-col gap-0 ${textSizeClass.full}`}
+          >
             <p className="text-lg text-gray-700">
-              {replaceTextWithLinks(section.text || "")}
+              {replaceTextWithLinks(
+                section.text || ""
+              )}
             </p>
           </div>
         </div>
